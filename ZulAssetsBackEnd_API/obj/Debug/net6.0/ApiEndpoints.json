@@ -1,0 +1,3331 @@
+[
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AdditionalCostTypeController",
+    "Method": "GetAllAddCostType",
+    "RelativePath": "api/AdditionalCostType/GetAllAddCostType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addCostTypeReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAddCostTypeReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Additional Cost Type"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AdditionalCostTypeController",
+    "Method": "InsertAddCostType",
+    "RelativePath": "api/AdditionalCostType/InsertAddCostType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addCostTypeReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAddCostTypeReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Additional Cost Type"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AddressTemplateController",
+    "Method": "DeleteAddressTemplate",
+    "RelativePath": "api/AddressTemplate/DeleteAddressTemplate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addTempReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAddTempReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Address Template"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AddressTemplateController",
+    "Method": "GetAllAddressTemplates",
+    "RelativePath": "api/AddressTemplate/GetAllAddressTemplates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addTempReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAddTempReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Address Template"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AddressTemplateController",
+    "Method": "InsertAddressTemplate",
+    "RelativePath": "api/AddressTemplate/InsertAddressTemplate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addTempReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAddTempReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Address Template"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AddressTemplateController",
+    "Method": "UpdateAddressTemplate",
+    "RelativePath": "api/AddressTemplate/UpdateAddressTemplate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addTempReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAddTempReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Address Template"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "AnonymousAssets",
+    "RelativePath": "api/Assets/AnonymousAssets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "anonymousAstReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAnonymousAssetsRequests",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "AssetTrackingByID",
+    "RelativePath": "api/Assets/AssetTrackingByID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assetTrackingReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAssetTrackingRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "DeleteAssetDetails",
+    "RelativePath": "api/Assets/DeleteAssetDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstInformationReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "DeleteAssetItem",
+    "RelativePath": "api/Assets/DeleteAssetItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astItemReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAssetItemReq",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "DeleteAstCodingDef",
+    "RelativePath": "api/Assets/DeleteAstCodingDef",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astCodingDef",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstCodingDefReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAllAnonymousAssets",
+    "RelativePath": "api/Assets/GetAllAnonymousAssets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAllAssetItems",
+    "RelativePath": "api/Assets/GetAllAssetItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astItemReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAssetItemReq",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAllAssets",
+    "RelativePath": "api/Assets/GetAllAssets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAllAssetsAdministrator",
+    "RelativePath": "api/Assets/GetAllAssetsAdministrator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astAdmin",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAssetAdministrator",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAllAstCodingDef",
+    "RelativePath": "api/Assets/GetAllAstCodingDef",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astCodingDef",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstCodingDefReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAssetItemsAgainstCatID",
+    "RelativePath": "api/Assets/GetAssetItemsAgainstCatID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astItemReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAssetItemReq",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAssetsStatus",
+    "RelativePath": "api/Assets/GetAssetsStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAssetsStatusWeb",
+    "RelativePath": "api/Assets/GetAssetsStatusWeb",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAstInfoByAstID",
+    "RelativePath": "api/Assets/GetAstInfoByAstID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstInformationReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAstInfoByAstIDLowerAdminGrid",
+    "RelativePath": "api/Assets/GetAstInfoByAstIDLowerAdminGrid",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstInformationReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "GetAstInfoByItemCodeLowerAdminGrid",
+    "RelativePath": "api/Assets/GetAstInfoByItemCodeLowerAdminGrid",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstInformationReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "InsertAssetDetails",
+    "RelativePath": "api/Assets/InsertAssetDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstInformationReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "InsertAssetItem",
+    "RelativePath": "api/Assets/InsertAssetItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astItemReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAssetItemReq",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "InsertAstCodingDef",
+    "RelativePath": "api/Assets/InsertAstCodingDef",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astCodingDef",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstCodingDefReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "ItemCategoryTransfer",
+    "RelativePath": "api/Assets/ItemCategoryTransfer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemCategoryTransferReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BItemCategoryTransferReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "Location_Custody_Transfer",
+    "RelativePath": "api/Assets/Location_Custody_Transfer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locCustTransferReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLocCustTransferReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "SearchAssets",
+    "RelativePath": "api/Assets/SearchAssets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchAstsParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BSearchAstsParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "TransferFromBEToTemp",
+    "RelativePath": "api/Assets/TransferFromBEToTemp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "UpdateAssetDetails",
+    "RelativePath": "api/Assets/UpdateAssetDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstInformationReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "UpdateAssetItem",
+    "RelativePath": "api/Assets/UpdateAssetItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astItemReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAssetItemReq",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "UpdateAssetLocation",
+    "RelativePath": "api/Assets/UpdateAssetLocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updAstLoc",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUpdateAssetLocation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "UpdateAssetStatusByBarcode",
+    "RelativePath": "api/Assets/UpdateAssetStatusByBarcode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updAstStatus",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUpdateAssetStatus",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "UpdateAstCodingDef",
+    "RelativePath": "api/Assets/UpdateAstCodingDef",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "astCodingDef",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAstCodingDefReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.AssetsController",
+    "Method": "UpdateDepForAsset",
+    "RelativePath": "api/Assets/UpdateDepForAsset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updDepAsset",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUpdateDepreciationOnAsset",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BackendInvController",
+    "Method": "GetAllAssetsAgainstLocID_InvSchCode",
+    "RelativePath": "api/BackendInv/GetAllAssetsAgainstLocID_InvSchCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "backendInvReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBackendInvReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Backend Inventory"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BarcodeStructureController",
+    "Method": "ApplyBarcodePolicy",
+    "RelativePath": "api/BarcodeStructure/ApplyBarcodePolicy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcode_AssignCompanyReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcode_AssignCompany",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BarcodeStructureController",
+    "Method": "ApplyBarcodePolicyAgainstAssetItems",
+    "RelativePath": "api/BarcodeStructure/ApplyBarcodePolicyAgainstAssetItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodePolicyOnAssetItems",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodePolicyOnAssetItems",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BarcodeStructureController",
+    "Method": "DeleteBarcodeStructure",
+    "RelativePath": "api/BarcodeStructure/DeleteBarcodeStructure",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeStructureReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeStructureReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BarcodeStructureController",
+    "Method": "GetAllBarcodeStructureCol",
+    "RelativePath": "api/BarcodeStructure/GetAllBarcodeStructureCol",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeStructColReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeStructCol",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BarcodeStructureController",
+    "Method": "GetAllBarcodeStructures",
+    "RelativePath": "api/BarcodeStructure/GetAllBarcodeStructures",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeStructureReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeStructureReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BarcodeStructureController",
+    "Method": "GetAllBarcodingPolicy",
+    "RelativePath": "api/BarcodeStructure/GetAllBarcodingPolicy",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BarcodeStructureController",
+    "Method": "InsertBarcodeStructure",
+    "RelativePath": "api/BarcodeStructure/InsertBarcodeStructure",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeStructureReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeStructureReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BarcodeStructureController",
+    "Method": "UpdateBarcodeStructure",
+    "RelativePath": "api/BarcodeStructure/UpdateBarcodeStructure",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeStructureReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeStructureReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BooksController",
+    "Method": "DeleteBook",
+    "RelativePath": "api/Books/DeleteBook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "booksReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBooksReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Books"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BooksController",
+    "Method": "GetAllBooks",
+    "RelativePath": "api/Books/GetAllBooks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "booksReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBooksReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Books"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BooksController",
+    "Method": "GetBookAgainstCompanyID",
+    "RelativePath": "api/Books/GetBookAgainstCompanyID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CompanyID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Books"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BooksController",
+    "Method": "InsertBook",
+    "RelativePath": "api/Books/InsertBook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "booksReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBooksReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Books"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BooksController",
+    "Method": "UpdateBook",
+    "RelativePath": "api/Books/UpdateBook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "booksReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBooksReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Books"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BrandsController",
+    "Method": "DeleteBrand",
+    "RelativePath": "api/Brands/DeleteBrand",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBrandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Brands"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BrandsController",
+    "Method": "GetAllBrands",
+    "RelativePath": "api/Brands/GetAllBrands",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBrandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Brands"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BrandsController",
+    "Method": "InsertBrand",
+    "RelativePath": "api/Brands/InsertBrand",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBrandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Brands"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.BrandsController",
+    "Method": "UpdateBrand",
+    "RelativePath": "api/Brands/UpdateBrand",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brandReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBrandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Brands"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CategoryController",
+    "Method": "DeleteCategory",
+    "RelativePath": "api/Category/DeleteCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "catTreeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCategoryTree",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CategoryController",
+    "Method": "GetAllCategoriesTreeView",
+    "RelativePath": "api/Category/GetAllCategoriesTreeView",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "catTreeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCategoryTree",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CategoryController",
+    "Method": "GetAllCategory",
+    "RelativePath": "api/Category/GetAllCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CategoryController",
+    "Method": "InsertCategory",
+    "RelativePath": "api/Category/InsertCategor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "catTreeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCategoryTree",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CategoryController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/Category/UpdateCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "catTreeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCategoryTree",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "DeleteCompany",
+    "RelativePath": "api/Company/DeleteCompany",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCompReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "GetAllCompanies",
+    "RelativePath": "api/Company/GetAllCompanies",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCompReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "GetAstInfo",
+    "RelativePath": "api/Company/GetAstInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "interCompanyTransferReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInterCompanyTransferReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "GetCompanyInfo",
+    "RelativePath": "api/Company/GetCompanyInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCompInfoReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "GetGLCodesAgainstCompanyID",
+    "RelativePath": "api/Company/GetGLCodesAgainstCompanyID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCompInfoReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "InsertCompany",
+    "RelativePath": "api/Company/InsertCompany",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCompReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "InsertCompanyInfo",
+    "RelativePath": "api/Company/InsertCompanyInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCompInfoReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "UpdateAstCompany",
+    "RelativePath": "api/Company/UpdateAstCompany",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "interCompanyTransferReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInterCompanyTransferReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "UpdateCompany",
+    "RelativePath": "api/Company/UpdateCompany",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCompReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CompanyController",
+    "Method": "UpdateCompanyInfo",
+    "RelativePath": "api/Company/UpdateCompanyInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compInfoReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCompInfoReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CostCenterController",
+    "Method": "DeleteCostCenter",
+    "RelativePath": "api/CostCenter/DeleteCostCenter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "costCenterReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCostCenterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Cost Center"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CostCenterController",
+    "Method": "GetAllCostCenters",
+    "RelativePath": "api/CostCenter/GetAllCostCenters",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "costCenterReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCostCenterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Cost Center"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CostCenterController",
+    "Method": "InsertCostCenter",
+    "RelativePath": "api/CostCenter/InsertCostCenter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "costCenterReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCostCenterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Cost Center"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CostCenterController",
+    "Method": "UpdateCostCenter",
+    "RelativePath": "api/CostCenter/UpdateCostCenter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "costCenterReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCostCenterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Cost Center"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CustodiansController",
+    "Method": "DeleteCustodian",
+    "RelativePath": "api/Custodians/DeleteCustodian",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "custReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCustodianReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CustodiansController",
+    "Method": "GetAllCustodians",
+    "RelativePath": "api/Custodians/GetAllCustodians",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "custReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCustodianReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CustodiansController",
+    "Method": "InsertCustodian",
+    "RelativePath": "api/Custodians/InsertCustodian",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "custReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCustodianReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.CustodiansController",
+    "Method": "UpdateCustodian",
+    "RelativePath": "api/Custodians/UpdateCustodian",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "custReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BCustodianReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DashboardController",
+    "Method": "GetAllDashboardCounts",
+    "RelativePath": "api/Dashboard/GetAllDashboardCounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DepreciationMethodController",
+    "Method": "DeleteDepMethod",
+    "RelativePath": "api/DepreciationMethod/DeleteDepMethod",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "depMethodReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDepreciationMethodsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Depreciation Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DepreciationMethodController",
+    "Method": "GetAllDepMethods",
+    "RelativePath": "api/DepreciationMethod/GetAllDepMethods",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "depMethodReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDepreciationMethodsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Depreciation Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DepreciationMethodController",
+    "Method": "GetAstBooksAgainstCompanyIDForDepreciation",
+    "RelativePath": "api/DepreciationMethod/GetAstBooksAgainstCompanyIDForDepreciation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "depEngineReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeprecitionEngineReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Depreciation Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DepreciationMethodController",
+    "Method": "GetDepPolicyAgainstAstCatID",
+    "RelativePath": "api/DepreciationMethod/GetDepPolicyAgainstAstCatID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "depPolicyReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDepPolicyReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Depreciation Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DepreciationMethodController",
+    "Method": "InsertDepMethod",
+    "RelativePath": "api/DepreciationMethod/InsertDepMethod",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "depMethodReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDepreciationMethodsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Depreciation Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DepreciationMethodController",
+    "Method": "InsertDepPolicy",
+    "RelativePath": "api/DepreciationMethod/InsertDepPolicy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "depPolicyReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDepPolicyReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Depreciation Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DepreciationMethodController",
+    "Method": "RunDepreciationEngineonAssets",
+    "RelativePath": "api/DepreciationMethod/RunDepreciationEngineonAssets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "depEngineReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeprecitionEngineReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Depreciation Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DepreciationMethodController",
+    "Method": "UpdateDepMethod",
+    "RelativePath": "api/DepreciationMethod/UpdateDepMethod",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "depMethodReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDepreciationMethodsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Depreciation Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DepreciationMethodController",
+    "Method": "UpdateDepPolicy",
+    "RelativePath": "api/DepreciationMethod/UpdateDepPolicy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "depPolicyReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDepPolicyReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Depreciation Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DesignationController",
+    "Method": "DeleteDesignation",
+    "RelativePath": "api/Designation/DeleteDesignation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "designationReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDesignationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DesignationController",
+    "Method": "GetAllDesignations",
+    "RelativePath": "api/Designation/GetAllDesignations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "designationReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDesignationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DesignationController",
+    "Method": "InsertDesignation",
+    "RelativePath": "api/Designation/InsertDesignation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "designationReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDesignationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DesignationController",
+    "Method": "UpdateDesignation",
+    "RelativePath": "api/Designation/UpdateDesignation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "designationReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDesignationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController",
+    "Method": "DeleteDevice",
+    "RelativePath": "api/DeviceConfiguration/DeleteDevice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceReg",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeviceReg",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Device Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController",
+    "Method": "DeleteProcessingData",
+    "RelativePath": "api/DeviceConfiguration/DeleteProcessingData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteProcReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeleteProcessingReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Device Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController",
+    "Method": "GenerateLicKey",
+    "RelativePath": "api/DeviceConfiguration/GenerateLicKey",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceReg",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeviceReg",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Device Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController",
+    "Method": "GetAllDevices",
+    "RelativePath": "api/DeviceConfiguration/GetAllDevices",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceReg",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeviceReg",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Device Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController",
+    "Method": "GetProcessingData",
+    "RelativePath": "api/DeviceConfiguration/GetProcessingData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dataProcReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDataProcessingReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Device Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController",
+    "Method": "InitializeDevice",
+    "RelativePath": "api/DeviceConfiguration/InitializeDevice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceReg",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeviceReg",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Device Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController",
+    "Method": "ProcessAuditData",
+    "RelativePath": "api/DeviceConfiguration/ProcessAuditData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "procAuditData",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BProcessAuditData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Device Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController",
+    "Method": "UpdateDevice",
+    "RelativePath": "api/DeviceConfiguration/UpdateDevice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceReg",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeviceReg",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Device Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController",
+    "Method": "VerifyDeviceLicKey",
+    "RelativePath": "api/DeviceConfiguration/VerifyDeviceLicKey",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceReg",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeviceReg",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Device Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DisposalMethodController",
+    "Method": "DeleteDispMethod",
+    "RelativePath": "api/DisposalMethod/DeleteDispMethod",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dispMethodReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDisposalMethodsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Disposal Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DisposalMethodController",
+    "Method": "GetAllDepMethods",
+    "RelativePath": "api/DisposalMethod/GetAllDispMethods",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dispMethodReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDisposalMethodsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Disposal Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DisposalMethodController",
+    "Method": "InsertDispMethod",
+    "RelativePath": "api/DisposalMethod/InsertDispMethod",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dispMethodReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDisposalMethodsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Disposal Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.DisposalMethodController",
+    "Method": "UpdateDispMethod",
+    "RelativePath": "api/DisposalMethod/UpdateDispMethod",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dispMethodReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDisposalMethodsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Disposal Methods"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.EmailController",
+    "Method": "ForgetPasswordEmail",
+    "RelativePath": "api/Email/ForgetPasswordEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AppliedUserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmailTo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordResetToken",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.EmailController",
+    "Method": "GeneratePasswordResetTokenEmail",
+    "RelativePath": "api/Email/GeneratePasswordResetTokenEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AppliedUserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmailTo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PasswordResetToken",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.GLCodesController",
+    "Method": "DeleteGLCode",
+    "RelativePath": "api/GLCodes/DeleteGLCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "glcodeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BGLCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "GL Codes"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.GLCodesController",
+    "Method": "GetAllGLCodes",
+    "RelativePath": "api/GLCodes/GetAllGLCodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "glcodeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BGLCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "GL Codes"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.GLCodesController",
+    "Method": "InsertGLCode",
+    "RelativePath": "api/GLCodes/InsertGLCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "glcodeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BGLCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "GL Codes"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.GLCodesController",
+    "Method": "UpdateGLCode",
+    "RelativePath": "api/GLCodes/UpdateGLCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "glcodeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BGLCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "GL Codes"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ImportDataController",
+    "Method": "ImportData",
+    "RelativePath": "api/ImportData/ImportData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "importDataReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BImportDataReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.InsurerController",
+    "Method": "DeleteInsurer",
+    "RelativePath": "api/Insurer/DeleteInsurer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInsurerReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.InsurerController",
+    "Method": "GetAllInsurers",
+    "RelativePath": "api/Insurer/GetAllInsurers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInsurerReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.InsurerController",
+    "Method": "InsertInsurer",
+    "RelativePath": "api/Insurer/InsertInsurer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInsurerReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.InsurerController",
+    "Method": "UpdateInsurer",
+    "RelativePath": "api/Insurer/UpdateInsurer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInsurerReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.InvSchController",
+    "Method": "DeleteInvSch",
+    "RelativePath": "api/InvSch/DeleteInvSch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invSchReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInvSchReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Inventory Schedules"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.InvSchController",
+    "Method": "GetAllInvSchs",
+    "RelativePath": "api/InvSch/GetAllInvSchs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invSchReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInvSchReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Inventory Schedules"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.InvSchController",
+    "Method": "InsertInvSch",
+    "RelativePath": "api/InvSch/InsertInvSch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invSchReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInvSchReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Inventory Schedules"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.InvSchController",
+    "Method": "UpdateInvSch",
+    "RelativePath": "api/InvSch/UpdateInvSch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "invSchReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BInvSchReqParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Inventory Schedules"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LabelsController",
+    "Method": "DeleteBarcodeLabels",
+    "RelativePath": "api/Labels/DeleteBarcodeLabels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeLabelsReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeLabelsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Barcode Labels"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LabelsController",
+    "Method": "GetAllBarcodeLabels",
+    "RelativePath": "api/Labels/GetAllBarcodeLabels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeLabelsReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeLabelsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Barcode Labels"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LabelsController",
+    "Method": "GetLabelDesignForPrinting",
+    "RelativePath": "api/Labels/GetLabelDesignForPrinting",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeLabelsReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeLabelsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Barcode Labels"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LabelsController",
+    "Method": "InsertBarcodeLabels",
+    "RelativePath": "api/Labels/InsertBarcodeLabels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeLabelsReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeLabelsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Barcode Labels"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LabelsController",
+    "Method": "UpdateBarcodeLabels",
+    "RelativePath": "api/Labels/UpdateBarcodeLabels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barcodeLabelsReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BBarcodeLabelsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Barcode Labels"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LevelsController",
+    "Method": "DeleteLevel",
+    "RelativePath": "api/Levels/DeleteLevel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lvlParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLevelsParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LevelsController",
+    "Method": "GetAllLevels",
+    "RelativePath": "api/Levels/GetAllLevels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lvlParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLevelsParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LevelsController",
+    "Method": "InsertLevel",
+    "RelativePath": "api/Levels/InsertLevel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lvlParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLevelsParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LevelsController",
+    "Method": "UpdateLevel",
+    "RelativePath": "api/Levels/UpdateLevel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lvlParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLevelsParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LocationsController",
+    "Method": "DeleteLocation",
+    "RelativePath": "api/Locations/DeleteLocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locTreeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLocationTree",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LocationsController",
+    "Method": "GetAllLocations",
+    "RelativePath": "api/Locations/GetAllLocations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LocationsController",
+    "Method": "GetAllLocationsByHardwareID",
+    "RelativePath": "api/Locations/GetAllLocationsByHardwareID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deviceReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BDeviceReg",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LocationsController",
+    "Method": "GetAllLocationsTreeView",
+    "RelativePath": "api/Locations/GetAllLocationsTreeView",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locTree",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLocationTree",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LocationsController",
+    "Method": "GetAssetsByLocationID",
+    "RelativePath": "api/Locations/GetAssetsByLocationID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLocationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LocationsController",
+    "Method": "InsertLocation",
+    "RelativePath": "api/Locations/InsertLocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locTreeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLocationTree",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.LocationsController",
+    "Method": "UpdateLocation",
+    "RelativePath": "api/Locations/UpdateLocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locTreeReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLocationTree",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.MenusController",
+    "Method": "GetAllMenus",
+    "RelativePath": "api/Menus/GetAllMenus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menu",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BMenus",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.MenusController",
+    "Method": "GetAllMenusWithNoRights",
+    "RelativePath": "api/Menus/GetAllMenusWithNoRights",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.MenusController",
+    "Method": "GetMenuOptionsWithRights",
+    "RelativePath": "api/Menus/GetMenuOptionsWithRights",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "menuOptions",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BMenuOptions",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.OrgHierController",
+    "Method": "DeleteOrgHier",
+    "RelativePath": "api/OrgHier/DeleteOrgHier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orgHierReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BOrgHierReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Organization Hierarchy"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.OrgHierController",
+    "Method": "GetAllOrgHier",
+    "RelativePath": "api/OrgHier/GetAllOrgHier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orgHierReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BOrgHierReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Organization Hierarchy"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.OrgHierController",
+    "Method": "InsertOrgHier",
+    "RelativePath": "api/OrgHier/InsertOrgHier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orgHierReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BOrgHierReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Organization Hierarchy"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.OrgHierController",
+    "Method": "UpdateOrgHier",
+    "RelativePath": "api/OrgHier/UpdateOrgHier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orgHierReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BOrgHierReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Organization Hierarchy"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.POController",
+    "Method": "ApprovePOWithItems",
+    "RelativePath": "api/PO/ApprovePOWithItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "POReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BPOReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Purchase Order"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.POController",
+    "Method": "DeletePOWithItems",
+    "RelativePath": "api/PO/DeletePOWithItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "POReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BPOReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Purchase Order"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.POController",
+    "Method": "GetAllPOItems",
+    "RelativePath": "api/PO/GetAllPOItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PODetailsReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BPODetailsReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Purchase Order"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.POController",
+    "Method": "GetAllPurchaseOrders",
+    "RelativePath": "api/PO/GetAllPurchaseOrders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "POReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BPOReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Purchase Order"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.POController",
+    "Method": "GetApprovedPOsForTransit",
+    "RelativePath": "api/PO/GetApprovedPOsForTransit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pOReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BPOReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Purchase Order"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.POController",
+    "Method": "GetPendingPOsForApproval",
+    "RelativePath": "api/PO/GetPendingPOsForApproval",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pOReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BPOReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Purchase Order"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.POController",
+    "Method": "InsertPOWithItems",
+    "RelativePath": "api/PO/InsertPOWithItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "POReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BPOReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Purchase Order"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.POController",
+    "Method": "TransferAssetsFromPOToERP",
+    "RelativePath": "api/PO/TransferAssetsFromPOToERP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assetsInTransit",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BAssetsInTransit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Purchase Order"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.POController",
+    "Method": "UpdatePOWithItems",
+    "RelativePath": "api/PO/UpdatePOWithItems",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "POReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BPOReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "Purchase Order"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "AllAssetsAuditReport",
+    "RelativePath": "api/Report/AllAssetsAuditReport",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportAllAssetsReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportAllAssetsReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "AssetDetails",
+    "RelativePath": "api/Report/AssetDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "AssetLedger",
+    "RelativePath": "api/Report/AssetLedger",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "AssetLog",
+    "RelativePath": "api/Report/AssetLog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "AssetTagging",
+    "RelativePath": "api/Report/AssetTagging",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "CompanyAssets",
+    "RelativePath": "api/Report/CompanyAssets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "DisposedAssets",
+    "RelativePath": "api/Report/DisposedAssets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "FoundAssets",
+    "RelativePath": "api/Report/FoundAssets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rptFMTAReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportFoundMisplacedTransferredAssetsReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "GetAllAuditReportsDD",
+    "RelativePath": "api/Report/GetAllAuditReportsDD",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "ItemsInventory",
+    "RelativePath": "api/Report/ItemsInventory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "MisplacedAssets",
+    "RelativePath": "api/Report/MisplacedAssets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rptFMTAReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportFoundMisplacedTransferredAssetsReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "MissingAssets",
+    "RelativePath": "api/Report/MissingAssets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportAllAssetsReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportAllAssetsReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "NewTags",
+    "RelativePath": "api/Report/NewTags",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reportReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.ReportController",
+    "Method": "TransferredAssets",
+    "RelativePath": "api/Report/TransferredAssets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rptFMTAReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BReportFoundMisplacedTransferredAssetsReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.RolesController",
+    "Method": "DeleteRole",
+    "RelativePath": "api/Roles/DeleteRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.RolesController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Roles/GetAllRoles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.RolesController",
+    "Method": "GetAssignedMenuOptions",
+    "RelativePath": "api/Roles/GetAssignedMenuOptions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rightParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BRightsParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.RolesController",
+    "Method": "GetAssignedMenus",
+    "RelativePath": "api/Roles/GetAssignedMenus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rightParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BRightsParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.RolesController",
+    "Method": "GetRoleByID",
+    "RelativePath": "api/Roles/GetRoleByID",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.RolesController",
+    "Method": "InsertRole",
+    "RelativePath": "api/Roles/InsertRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.RolesController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/Roles/UpdateRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.RolesController",
+    "Method": "UpdateRoleRights",
+    "RelativePath": "api/Roles/UpdateRoleRights",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BRoleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.SearchingController",
+    "Method": "ServerSideSearching",
+    "RelativePath": "api/Searching/ServerSideSearching",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serverSearchingParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BServerSideSearchingParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.SupplierController",
+    "Method": "DeleteSupplier",
+    "RelativePath": "api/Supplier/DeleteSupplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "suppReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BSupplierRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.SupplierController",
+    "Method": "GetAllSuppliers",
+    "RelativePath": "api/Supplier/GetAllSuppliers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "suppReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BSupplierRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.SupplierController",
+    "Method": "InsertSupplier",
+    "RelativePath": "api/Supplier/InsertSupplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "suppReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BSupplierRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.SupplierController",
+    "Method": "UpdateSupplier",
+    "RelativePath": "api/Supplier/UpdateSupplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "suppReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BSupplierRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.SysConfigController",
+    "Method": "GetSysConfigInfo",
+    "RelativePath": "api/SysConfig/GetSysConfigInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sysConfigReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BSysConfigReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "System Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.SysConfigController",
+    "Method": "InsertSysConfigInfo",
+    "RelativePath": "api/SysConfig/InsertSysConfigInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sysConfigReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BSysConfigReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "System Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.SysConfigController",
+    "Method": "UpdateSysConfigInfo",
+    "RelativePath": "api/SysConfig/UpdateSysConfigInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sysConfigReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BSysConfigReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "Tags": [
+      "System Configuration"
+    ]
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UnitController",
+    "Method": "DeleteUnit",
+    "RelativePath": "api/Unit/DeleteUnit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "unitReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUnitRequestParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UnitController",
+    "Method": "GetAllUnits",
+    "RelativePath": "api/Unit/GetAllUnits",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "unitReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUnitRequestParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UnitController",
+    "Method": "InsertUnit",
+    "RelativePath": "api/Unit/InsertUnit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "unitReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUnitRequestParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UnitController",
+    "Method": "UpdateUnit",
+    "RelativePath": "api/Unit/UpdateUnit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "unitReqParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUnitRequestParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/User/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePassword",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BChangePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "CheckAdminUserRole",
+    "RelativePath": "api/User/CheckAdminUserRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/DeleteUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "ForgetPassword",
+    "RelativePath": "api/User/ForgetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "forgotPassword",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BForgotPassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "GeneratePasswordToken",
+    "RelativePath": "api/User/GeneratePasswordToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "generatePasswordTokenParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BGeneratePasswordTokenParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/User/GetAllUsers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "InsertUser",
+    "RelativePath": "api/User/InsertUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "Login",
+    "RelativePath": "api/User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginParam",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BLoginparam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/User/RefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshTokenRequest",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BRefreshTokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/UpdateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userReq",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.WarrantyController",
+    "Method": "DeleteWarranty",
+    "RelativePath": "api/Warranty/DeleteWarranty",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "warrantyReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BWarrantyReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.WarrantyController",
+    "Method": "GetAllWarrantyAssets",
+    "RelativePath": "api/Warranty/GetAllWarrantyAssets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.WarrantyController",
+    "Method": "InsertWarranty",
+    "RelativePath": "api/Warranty/InsertWarranty",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "warrantyReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BWarrantyReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZulAssetsBackEnd_API.Controllers.WarrantyController",
+    "Method": "UpdateWarranty",
+    "RelativePath": "api/Warranty/UpdateWarranty",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "warrantyReqParams",
+        "Type": "ZulAssetsBackEnd_API.BAL.RequestParameters\u002BWarrantyReqParams",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

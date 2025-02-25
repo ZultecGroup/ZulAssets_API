@@ -1,0 +1,11 @@
+{
+  "add": 1,
+  "astCatID": "12-2",
+  "salvageValue": 0,
+  "salvageYear": "12",
+  "salvageMonth": "0",
+  "salvagePercent": "0",
+  "salvageValuePercent": "2.0",
+  "isSalvageValuePercentage": true,
+  "loginName": "Kbeer"
+}

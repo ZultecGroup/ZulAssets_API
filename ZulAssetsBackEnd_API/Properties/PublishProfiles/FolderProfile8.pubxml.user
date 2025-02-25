@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>F:\Publish folder\ZulAssetsAPI\12.05.2023</_PublishTargetUrl>
+    <History>True|2023-05-18T04:36:19.2124406Z;True|2023-05-12T17:34:50.8511736+05:00;True|2023-05-12T16:31:07.6600430+05:00;True|2023-05-12T13:12:45.8599138+05:00;True|2023-05-12T13:09:54.8440749+05:00;True|2023-05-12T12:57:01.9500389+05:00;True|2023-05-12T12:46:08.1361741+05:00;True|2023-05-12T11:50:54.6280480+05:00;True|2023-05-12T11:49:43.2607153+05:00;True|2023-05-12T11:48:06.4421704+05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

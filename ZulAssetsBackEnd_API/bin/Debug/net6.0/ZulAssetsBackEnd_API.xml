@@ -1,0 +1,1247 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZulAssetsBackEnd_API</name>
+    </assembly>
+    <members>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AdditionalCostTypeController.GetAllAddCostType(ZulAssetsBackEnd_API.BAL.RequestParameters.AddCostTypeReqParam)">
+            <summary>
+            Get all Additional Cost Types by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Additional Cost Types</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AdditionalCostTypeController.InsertAddCostType(ZulAssetsBackEnd_API.BAL.RequestParameters.AddCostTypeReqParam)">
+            <summary>
+            Insert a Additional Cost Type by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AddressTemplateController.GetAllAddressTemplates(ZulAssetsBackEnd_API.BAL.RequestParameters.AddTempReqParam)">
+            <summary>
+            Get all Address Templates by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Address Templates</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AddressTemplateController.InsertAddressTemplate(ZulAssetsBackEnd_API.BAL.RequestParameters.AddTempReqParam)">
+            <summary>
+            Insert an Address Template by passing all parameters with "Add = 1" and without AddressID parameter
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AddressTemplateController.UpdateAddressTemplate(ZulAssetsBackEnd_API.BAL.RequestParameters.AddTempReqParam)">
+            <summary>
+            Update an Address Template by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AddressTemplateController.DeleteAddressTemplate(ZulAssetsBackEnd_API.BAL.RequestParameters.AddTempReqParam)">
+            <summary>
+            Delete an Address Template by passing "Delete = 1" and AddressID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAllAssets">
+            <summary>
+            Get All Assets
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.AssetTrackingByID(ZulAssetsBackEnd_API.BAL.RequestParameters.AssetTrackingRequest)">
+            <summary>
+            Asset Tracking API
+            </summary>
+            <param name="assetTrackingReq"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAssetsStatus">
+            <summary>
+            Get All Assets Status
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAssetsStatusWeb">
+            <summary>
+            Get All Assets Status
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.UpdateAssetStatusByBarcode(ZulAssetsBackEnd_API.BAL.RequestParameters.UpdateAssetStatus)">
+            <summary>
+            Update Asset Status By Barcode
+            </summary>
+            <returns>Returns a message "Asset Status Updated"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.AnonymousAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.AnonymousAssetsRequests)">
+            <summary>
+            Anonymous Asset API
+            </summary>
+            <param name="anonymousAstReq"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAllAnonymousAssets">
+            <summary>
+            Asset Tracking API
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.UpdateAssetLocation(ZulAssetsBackEnd_API.BAL.RequestParameters.UpdateAssetLocation)">
+            <summary>
+            Update Asset Location
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.TransferFromBEToTemp(System.String)">
+            <summary>
+            Transfer Assets From BE To Temp
+            </summary>
+            <returns>Returns a DataSet with a message and status as well</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAllAstCodingDef(ZulAssetsBackEnd_API.BAL.RequestParameters.AstCodingDefReqParam)">
+            <summary>
+            Get all Asset Coding Definitions by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <param name="astCodingDef"></param>
+            <returns>This will return all the Asset Coding Definitions</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.InsertAstCodingDef(ZulAssetsBackEnd_API.BAL.RequestParameters.AstCodingDefReqParam)">
+            <summary>
+            Insert a Asset Coding Definition by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.UpdateAstCodingDef(ZulAssetsBackEnd_API.BAL.RequestParameters.AstCodingDefReqParam)">
+            <summary>
+            Update a Asset Coding Definition by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.DeleteAstCodingDef(ZulAssetsBackEnd_API.BAL.RequestParameters.AstCodingDefReqParam)">
+            <summary>
+            Delete a Asset Coding Definition by passing "Delete = 1" and AssetCodingID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAssetItemsAgainstCatID(ZulAssetsBackEnd_API.BAL.RequestParameters.AssetItemReq)">
+            <summary>
+            Get all Asset Items by passing a parameter "Get = 1 and pagination Parameters"
+            </summary>
+            <param name="astItemReq"></param>
+            <returns>This will return all the Asset Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAllAssetItems(ZulAssetsBackEnd_API.BAL.RequestParameters.AssetItemReq)">
+            <summary>
+            Get all Asset Items by passing a parameter "Get = 1 and pagination Parameters"
+            </summary>
+            <param name="astItemReq"></param>
+            <returns>This will return all the Asset Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.InsertAssetItem(ZulAssetsBackEnd_API.BAL.RequestParameters.AssetItemReq)">
+            <summary>
+            Insert a Asset Item by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.UpdateAssetItem(ZulAssetsBackEnd_API.BAL.RequestParameters.AssetItemReq)">
+            <summary>
+            Update a Asset Item Definition by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.DeleteAssetItem(ZulAssetsBackEnd_API.BAL.RequestParameters.AssetItemReq)">
+            <summary>
+            Delete a Asset Item by passing "Delete = 1" and ItemCode as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAstInfoByItemCodeLowerAdminGrid(ZulAssetsBackEnd_API.BAL.RequestParameters.AstInformationReqParam)">
+            <summary>
+            Get Asset Information for lower grid in Administrator Screen
+            </summary>
+            <param name="astInfoReqParam"></param>
+            <returns>This will return all the Asset Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAllAssetsAdministrator(ZulAssetsBackEnd_API.BAL.RequestParameters.AssetAdministrator)">
+            <summary>
+            Get all Assets for Administrator by passing a parameter "Get = 1 or for Searching = 1 and for the filters, send that filter column
+            and others as empty"
+            </summary>
+            <returns>This will return all the Assets</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAstInfoByAstIDLowerAdminGrid(ZulAssetsBackEnd_API.BAL.RequestParameters.AstInformationReqParam)">
+            <summary>
+            Get Asset Information for lower grid in Administrator Screen
+            </summary>
+            <param name="astInfoReqParam"></param>
+            <returns>This will return all the Asset Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.GetAstInfoByAstID(ZulAssetsBackEnd_API.BAL.RequestParameters.AstInformationReqParam)">
+            <summary>
+            Get Asset Information By AstID by passing AstID and it will return multiple tables. Table showing the Asset Information, Table1 showing the Depreciation Information, 
+            Table2 showing the Tracking History, Table3 showing the Custodian Transfer History, Table4 showing the Additional Cost History,
+            Table5 showing the Annual Expected Depreciation and Table6 showing the Monthly Expected Depreciation
+            </summary>
+            <param name="astInfoReqParam"></param>
+            <returns>This will return all the Asset Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.InsertAssetDetails(ZulAssetsBackEnd_API.BAL.RequestParameters.AstInformationReqParam)">
+            <summary>
+            Insert Asset Details by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.UpdateAssetDetails(ZulAssetsBackEnd_API.BAL.RequestParameters.AstInformationReqParam)">
+            <summary>
+            Update Asset Details by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.DeleteAssetDetails(ZulAssetsBackEnd_API.BAL.RequestParameters.AstInformationReqParam)">
+            <summary>
+            Delete Asset Details by passing "Delete = 1" and AstID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.SearchAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.SearchAstsParams)">
+            <summary>
+            Search By Asset by passing "Get = 1" and other Filtered paramters and Pagination Attributes
+            </summary>
+            <param name="searchAstsParams"></param>
+            <returns>This will return all the Asset Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.Location_Custody_Transfer(ZulAssetsBackEnd_API.BAL.RequestParameters.LocCustTransferReqParams)">
+            <summary>
+            This API is used when transferring the assets from a Location to other Location or from a Custodian to other Custodian or Changing the Assets
+            Status in BULK
+            </summary>
+            <param name="locCustTransferReqParams"></param>
+            <returns>This will return all the Asset Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.ItemCategoryTransfer(ZulAssetsBackEnd_API.BAL.RequestParameters.ItemCategoryTransferReqParams)">
+            <summary>
+            This API is used when transferring the Category of an Item or multiple items to another Category
+            Status in BULK
+            </summary>
+            <param name="itemCategoryTransferReqParams"></param>
+            <returns>This will return all the Asset Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.AssetsController.UpdateDepForAsset(ZulAssetsBackEnd_API.BAL.RequestParameters.UpdateDepreciationOnAsset)">
+            <summary>
+            This API is used when transferring the Category of an Item or multiple items to another Category
+            Status in BULK
+            </summary>
+            <param name="updDepAsset"></param>
+            <returns>This will return all the Asset Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BackendInvController.GetAllAssetsAgainstLocID_InvSchCode(ZulAssetsBackEnd_API.BAL.RequestParameters.BackendInvReqParams)">
+            <summary>
+            Get all Assets In Backend Inventory by passing a parameter LocationID and InvSchCode
+            </summary>
+            <returns>This will return all the Purchase Orders</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BarcodeStructureController.GetAllBarcodeStructureCol(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeStructCol)">
+            <summary>
+            Get all Barcode Structure Columns Parameters by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Cost Centers</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BarcodeStructureController.GetAllBarcodeStructures(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeStructureReqParam)">
+            <summary>
+            Get all Barcode Structures Parameters by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Cost Centers</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BarcodeStructureController.InsertBarcodeStructure(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeStructureReqParam)">
+            <summary>
+            Insert a Barcode Structure by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BarcodeStructureController.UpdateBarcodeStructure(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeStructureReqParam)">
+            <summary>
+            Update a Barcode Structure by passing all parameters with "Update = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BarcodeStructureController.DeleteBarcodeStructure(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeStructureReqParam)">
+            <summary>
+            Delete a Barcode Structure by passing "Delete = 1" and ID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BarcodeStructureController.ApplyBarcodePolicy(ZulAssetsBackEnd_API.BAL.RequestParameters.Barcode_AssignCompany)">
+            <summary>
+            This API is used to apply the Barcode Policy on all the Assets against a selected Company. Need to pass CompanyID to apply policy and LoginName to safe the Transaction
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BarcodeStructureController.ApplyBarcodePolicyAgainstAssetItems(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodePolicyOnAssetItems)">
+            <summary>
+            This API is used to apply the Barcode Policy on all the Assets against a selected Item Code(s). 
+            Need to pass Item Code to apply policy and LoginName to safe the transaction
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BarcodeStructureController.GetAllBarcodingPolicy">
+            <summary>
+            Get all Barcode Structures Parameters by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Cost Centers</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BooksController.GetAllBooks(ZulAssetsBackEnd_API.BAL.RequestParameters.BooksReqParam)">
+            <summary>
+            Get all Books by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Books</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BooksController.InsertBook(ZulAssetsBackEnd_API.BAL.RequestParameters.BooksReqParam)">
+            <summary>
+            Insert a Book by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BooksController.UpdateBook(ZulAssetsBackEnd_API.BAL.RequestParameters.BooksReqParam)">
+            <summary>
+            Update a Book by passing all parameters with "Update = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BooksController.DeleteBook(ZulAssetsBackEnd_API.BAL.RequestParameters.BooksReqParam)">
+            <summary>
+            Delete a Books by passing "Delete = 1" and BookID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BooksController.GetBookAgainstCompanyID(System.String)">
+            <summary>
+            Get Book by passing a parameter "CompanyID and others as empty"
+            </summary>
+            <returns>This will return all the Books</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BrandsController.GetAllBrands(ZulAssetsBackEnd_API.BAL.RequestParameters.BrandRequest)">
+            <summary>
+            Get all Brands by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Brands</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BrandsController.InsertBrand(ZulAssetsBackEnd_API.BAL.RequestParameters.BrandRequest)">
+            <summary>
+            Insert a Brand by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BrandsController.UpdateBrand(ZulAssetsBackEnd_API.BAL.RequestParameters.BrandRequest)">
+            <summary>
+            Update a Brand by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.BrandsController.DeleteBrand(ZulAssetsBackEnd_API.BAL.RequestParameters.BrandRequest)">
+            <summary>
+            Delete a Brand by passing "Delete = 1" and AstBrandID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CategoryController.GetAllCategory">
+            <summary>
+            Get All Category API
+            </summary>
+            <returns>Returns a message ""</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CategoryController.GetAllCategoriesTreeView(ZulAssetsBackEnd_API.BAL.RequestParameters.CategoryTree)">
+            <summary>
+            Get All Categories by passing the "Get = 1" and others as blank
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CategoryController.InsertCategory(ZulAssetsBackEnd_API.BAL.RequestParameters.CategoryTree)">
+            <summary>
+            Insert a Category by passing all parameters with "Add = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CategoryController.UpdateCategory(ZulAssetsBackEnd_API.BAL.RequestParameters.CategoryTree)">
+            <summary>
+            Update a Category by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CategoryController.DeleteCategory(ZulAssetsBackEnd_API.BAL.RequestParameters.CategoryTree)">
+            <summary>
+            Delete a Category by passing "Delete = 1" and CatID as parameters
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.GetAllCompanies(ZulAssetsBackEnd_API.BAL.RequestParameters.CompReqParam)">
+            <summary>
+            Get all Companies by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <param name="compReqParam"></param>
+            <returns>This will return all the Companies</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.InsertCompany(ZulAssetsBackEnd_API.BAL.RequestParameters.CompReqParam)">
+            <summary>
+            Insert a Company by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.UpdateCompany(ZulAssetsBackEnd_API.BAL.RequestParameters.CompReqParam)">
+            <summary>
+            Update a Company by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.DeleteCompany(ZulAssetsBackEnd_API.BAL.RequestParameters.CompReqParam)">
+            <summary>
+            Delete a Company by passing "Delete = 1" and CompanyId as parameters and others as empty
+            </summary>
+            <param name="compReqParam"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.GetCompanyInfo(ZulAssetsBackEnd_API.BAL.RequestParameters.CompInfoReqParam)">
+            <summary>
+            Get Company Info by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <param name="compInfoReqParam"></param>
+            <returns>This will return all the Companies</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.InsertCompanyInfo(ZulAssetsBackEnd_API.BAL.RequestParameters.CompInfoReqParam)">
+            <summary>
+            Insert a Company Info by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <param name="compInfoReqParam"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.UpdateCompanyInfo(ZulAssetsBackEnd_API.BAL.RequestParameters.CompInfoReqParam)">
+            <summary>
+            Update a Company Info by passing all parameters with "Update = 1"
+            </summary>
+            <param name="compInfoReqParam"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.GetGLCodesAgainstCompanyID(ZulAssetsBackEnd_API.BAL.RequestParameters.CompInfoReqParam)">
+            <summary>
+            This API is used to get All GLCodes against CompanyID
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.GetAstInfo(ZulAssetsBackEnd_API.BAL.RequestParameters.InterCompanyTransferReqParams)">
+            <summary>
+            This API is used to transfer the asset/s from a Company to sister Company
+            </summary>
+            <param name="interCompanyTransferReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CompanyController.UpdateAstCompany(ZulAssetsBackEnd_API.BAL.RequestParameters.InterCompanyTransferReqParams)">
+            <summary>
+            This API is used to transfer the asset from a Company to sister Company
+            </summary>
+            <param name="interCompanyTransferReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CostCenterController.GetAllCostCenters(ZulAssetsBackEnd_API.BAL.RequestParameters.CostCenterRequest)">
+            <summary>
+            Get all Cost Centers by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Cost Centers</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CostCenterController.InsertCostCenter(ZulAssetsBackEnd_API.BAL.RequestParameters.CostCenterRequest)">
+            <summary>
+            Insert a Cost Center by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CostCenterController.UpdateCostCenter(ZulAssetsBackEnd_API.BAL.RequestParameters.CostCenterRequest)">
+            <summary>
+            Update a Cost Center by passing all parameters with "Update = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CostCenterController.DeleteCostCenter(ZulAssetsBackEnd_API.BAL.RequestParameters.CostCenterRequest)">
+            <summary>
+            Delete a Cost Center by passing "Delete = 1" and CostCenterID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CustodiansController.GetAllCustodians(ZulAssetsBackEnd_API.BAL.RequestParameters.CustodianReqParams)">
+            <summary>
+            Get all Asset Coding Definitions by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <param name="custReqParams"></param>
+            <returns>This will return all the Asset Coding Definitions</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CustodiansController.InsertCustodian(ZulAssetsBackEnd_API.BAL.RequestParameters.CustodianReqParams)">
+            <summary>
+            Insert a Custodian by passing Name, Code, Phone, Email, Fax, Cell, Address, OrgHierID, DesignationID with "Add = 1" and others as empty
+            </summary>
+            /// <param name="custReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CustodiansController.UpdateCustodian(ZulAssetsBackEnd_API.BAL.RequestParameters.CustodianReqParams)">
+            <summary>
+            Update a Custodian by passing Name, Code, Phone, Email, Fax, Cell, Address, OrgHierID, DeisignationID with "Update = 1"
+            </summary>
+            /// <param name="custReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.CustodiansController.DeleteCustodian(ZulAssetsBackEnd_API.BAL.RequestParameters.CustodianReqParams)">
+            <summary>
+            Delete a Custodian by passing "Delete = 1" and CustodianID as parameters and others as empty
+            </summary>
+            /// <param name="custReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DashboardController.GetAllDashboardCounts">
+            <summary>
+            Get all Counts of AppUsers, AssetDetails, BrandCount, CategoryCount, CustodianCount, DepartmentCount, LocationCount and POCount without passing any parameter
+            </summary>
+            <returns>This will return all the counts</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DepreciationMethodController.GetAllDepMethods(ZulAssetsBackEnd_API.BAL.RequestParameters.DepreciationMethodsRequest)">
+            <summary>
+            Get all Deprecation Methods by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Depreciation Methods</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DepreciationMethodController.InsertDepMethod(ZulAssetsBackEnd_API.BAL.RequestParameters.DepreciationMethodsRequest)">
+            <summary>
+            Insert a Depreciation Method by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DepreciationMethodController.UpdateDepMethod(ZulAssetsBackEnd_API.BAL.RequestParameters.DepreciationMethodsRequest)">
+            <summary>
+            Update a Depreciation Method by passing all parameters with "Update = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DepreciationMethodController.DeleteDepMethod(ZulAssetsBackEnd_API.BAL.RequestParameters.DepreciationMethodsRequest)">
+            <summary>
+            Delete a Depreciation Method by passing "Delete = 1" and DesigatnionID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DepreciationMethodController.GetDepPolicyAgainstAstCatID(ZulAssetsBackEnd_API.BAL.RequestParameters.DepPolicyReqParams)">
+            <summary>
+            Get Depreciation Policy of a Category by passing "Get = 1 and AstCatID"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DepreciationMethodController.InsertDepPolicy(ZulAssetsBackEnd_API.BAL.RequestParameters.DepPolicyReqParams)">
+            <summary>
+            Insert a Depreciation Policy by passing all parameters with "Add = 1" and without CatDepID parameter
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DepreciationMethodController.UpdateDepPolicy(ZulAssetsBackEnd_API.BAL.RequestParameters.DepPolicyReqParams)">
+            <summary>
+            Update Depreciation Policy by passing all parameters with "Update = 1" and CatDepID as parameter
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DepreciationMethodController.GetAstBooksAgainstCompanyIDForDepreciation(ZulAssetsBackEnd_API.BAL.RequestParameters.DeprecitionEngineReqParams)">
+            <summary>
+            Get Asset Books to be applied on Assets for Depreciation Engine by passing "Get = 1 and CompanyID" as a parameter.
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DepreciationMethodController.RunDepreciationEngineonAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.DeprecitionEngineReqParams)">
+            <summary>
+            this api is used to apply depreciation engine on assets
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DesignationController.GetAllDesignations(ZulAssetsBackEnd_API.BAL.RequestParameters.DesignationRequest)">
+            <summary>
+            Get all Designations by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Designations</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DesignationController.InsertDesignation(ZulAssetsBackEnd_API.BAL.RequestParameters.DesignationRequest)">
+            <summary>
+            Insert a Designation by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DesignationController.UpdateDesignation(ZulAssetsBackEnd_API.BAL.RequestParameters.DesignationRequest)">
+            <summary>
+            Update a Designation by passing all parameters with "Update = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DesignationController.DeleteDesignation(ZulAssetsBackEnd_API.BAL.RequestParameters.DesignationRequest)">
+            <summary>
+            Delete a Designation by passing "Delete = 1" and DesigatnionID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="T:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController">
+            <summary>
+            Device Controller
+            </summary>
+            
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.InitializeDevice(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Initialize Device API
+            </summary>
+            <param name="deviceReg"></param>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.VerifyDeviceLicKey(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Verify Device License Key API
+            </summary>
+            <param name="deviceReg"></param>
+            <returns>Returns License Key</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.GenerateLicKey(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Generate License Key API
+            </summary>
+            <param name="deviceReg"></param>
+            <returns>Returns License Key</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.GetAllDevices(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Get all Devices by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <param name="deviceReg"></param>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.UpdateDevice(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Update a Device by passing Device Description parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.DeleteDevice(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Delete a Device by passing DeviceID with "Delete = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.GetProcessingData(ZulAssetsBackEnd_API.BAL.RequestParameters.DataProcessingReqParam)">
+            <summary>
+            This API is used to get Processing Data for Audit and Anonymous Records. For Audit Records, pass AuditData = 1 and for Anonymous Record, pass AuditData = 0
+            along with Get = 1
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.DeleteProcessingData(ZulAssetsBackEnd_API.BAL.RequestParameters.DeleteProcessingReqParam)">
+            <summary>
+            This API is used to delete Processing Data for Audit and Anonymous Records. For Audit Records, pass AuditData = 1 and for Anonymous Record, pass AuditData = 0
+            along with Delete = 1
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DeviceConfigurationController.ProcessAuditData(ZulAssetsBackEnd_API.BAL.RequestParameters.ProcessAuditData)">
+            <summary>
+            This API will used to Process Audit Data
+            </summary>
+            <param name="procAuditData"></param>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DisposalMethodController.GetAllDepMethods(ZulAssetsBackEnd_API.BAL.RequestParameters.DisposalMethodsRequest)">
+            <summary>
+            Get all Disposal Methods by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Disposal Methods</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DisposalMethodController.InsertDispMethod(ZulAssetsBackEnd_API.BAL.RequestParameters.DisposalMethodsRequest)">
+            <summary>
+            Insert a Disposal Method by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DisposalMethodController.UpdateDispMethod(ZulAssetsBackEnd_API.BAL.RequestParameters.DisposalMethodsRequest)">
+            <summary>
+            Update a Disposal Method by passing all parameters with "Update = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.DisposalMethodController.DeleteDispMethod(ZulAssetsBackEnd_API.BAL.RequestParameters.DisposalMethodsRequest)">
+            <summary>
+            Delete a Disposal Method by passing "Delete = 1" and DesigatnionID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.GLCodesController.GetAllGLCodes(ZulAssetsBackEnd_API.BAL.RequestParameters.GLCodeRequest)">
+            <summary>
+            Get all GLCodes by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the GLCodes</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.GLCodesController.InsertGLCode(ZulAssetsBackEnd_API.BAL.RequestParameters.GLCodeRequest)">
+            <summary>
+            Insert a GLCode by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.GLCodesController.UpdateGLCode(ZulAssetsBackEnd_API.BAL.RequestParameters.GLCodeRequest)">
+            <summary>
+            Update a GLCode by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.GLCodesController.DeleteGLCode(ZulAssetsBackEnd_API.BAL.RequestParameters.GLCodeRequest)">
+            <summary>
+            Delete a GLCode by passing "Delete = 1" and GLCodeID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ImportDataController.ImportData(ZulAssetsBackEnd_API.BAL.RequestParameters.ImportDataReqParams)">
+            <param name="importDataReqParams"></param>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.InsurerController.GetAllInsurers(ZulAssetsBackEnd_API.BAL.RequestParameters.InsurerReqParam)">
+            <summary>
+            Get all Insurers by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Insurers</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.InsurerController.InsertInsurer(ZulAssetsBackEnd_API.BAL.RequestParameters.InsurerReqParam)">
+            <summary>
+            Insert a Insurer by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.InsurerController.UpdateInsurer(ZulAssetsBackEnd_API.BAL.RequestParameters.InsurerReqParam)">
+            <summary>
+            Update a Insurer by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.InsurerController.DeleteInsurer(ZulAssetsBackEnd_API.BAL.RequestParameters.InsurerReqParam)">
+            <summary>
+            Delete a Insurer by passing "Delete = 1" and InsurerCode as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.InvSchController.GetAllInvSchs(ZulAssetsBackEnd_API.BAL.RequestParameters.InvSchReqParam)">
+            <summary>
+            Get all Inventory Schedules by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Inventory Schedules</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.InvSchController.InsertInvSch(ZulAssetsBackEnd_API.BAL.RequestParameters.InvSchReqParam)">
+            <summary>
+            Insert a Inventory Scheduler by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.InvSchController.UpdateInvSch(ZulAssetsBackEnd_API.BAL.RequestParameters.InvSchReqParam)">
+            <summary>
+            Update a Inventory Scheduler by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.InvSchController.DeleteInvSch(ZulAssetsBackEnd_API.BAL.RequestParameters.InvSchReqParam)">
+            <summary>
+            Delete a Inventory Scheduler by passing "Delete = 1" and InvSchCode as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LabelsController.GetAllBarcodeLabels(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeLabelsRequest)">
+            <summary>
+            Get all Barcode Labels by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Brands</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LabelsController.InsertBarcodeLabels(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeLabelsRequest)">
+            <summary>
+            Insert a Barcode Label by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LabelsController.UpdateBarcodeLabels(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeLabelsRequest)">
+            <summary>
+            Update a Barcode label by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LabelsController.DeleteBarcodeLabels(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeLabelsRequest)">
+            <summary>
+            Delete a Barcode Label by passing "Delete = 1" and LabelID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LabelsController.GetLabelDesignForPrinting(ZulAssetsBackEnd_API.BAL.RequestParameters.BarcodeLabelsRequest)">
+            <summary>
+            This endpoint will you to return the Label Design of passing Label Name
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LevelsController.GetAllLevels(ZulAssetsBackEnd_API.BAL.RequestParameters.LevelsParams)">
+            <summary>
+            Get all Company Levels by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Company Levels</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LevelsController.InsertLevel(ZulAssetsBackEnd_API.BAL.RequestParameters.LevelsParams)">
+            <summary>
+            Insert an Company Level by passing all parameters with "Add = 1" and without LevelID parameter
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LevelsController.UpdateLevel(ZulAssetsBackEnd_API.BAL.RequestParameters.LevelsParams)">
+            <summary>
+            Update an Company Level by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LevelsController.DeleteLevel(ZulAssetsBackEnd_API.BAL.RequestParameters.LevelsParams)">
+            <summary>
+            Delete an Company Level by passing "Delete = 1" and LvlID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LocationsController.GetAllLocations">
+            <summary>
+            Get All Locations API
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LocationsController.GetAllLocationsByHardwareID(ZulAssetsBackEnd_API.BAL.RequestParameters.DeviceReg)">
+            <summary>
+            Get All Locations API against DeviceID
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LocationsController.GetAssetsByLocationID(ZulAssetsBackEnd_API.BAL.RequestParameters.LocationRequest)">
+            <summary>
+            Get Location By ID API
+            </summary>
+            <returns>Returns a detail against Loc ID</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LocationsController.GetAllLocationsTreeView(ZulAssetsBackEnd_API.BAL.RequestParameters.LocationTree)">
+            <summary>
+            Get All Locations by passing the "Get = 1" and others as blank
+            </summary>
+            <returns>Returns a message "Device is created"</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LocationsController.InsertLocation(ZulAssetsBackEnd_API.BAL.RequestParameters.LocationTree)">
+            <summary>
+            Insert a Location by passing all parameters with "Add = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LocationsController.UpdateLocation(ZulAssetsBackEnd_API.BAL.RequestParameters.LocationTree)">
+            <summary>
+            Update a Location by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.LocationsController.DeleteLocation(ZulAssetsBackEnd_API.BAL.RequestParameters.LocationTree)">
+            <summary>
+            Delete a Location by passing "Delete = 1" and LocationID as parameters
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.MenusController.GetAllMenus(ZulAssetsBackEnd_API.BAL.RequestParameters.Menus)">
+            <summary>
+            Get all Menus by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Menus</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.MenusController.GetAllMenusWithNoRights">
+            <summary>
+            Get all Menus by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Menus</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.MenusController.GetMenuOptionsWithRights(ZulAssetsBackEnd_API.BAL.RequestParameters.MenuOptions)">
+            <summary>
+            Get all Menus by passing a parameter "RoleId as parameter"
+            </summary>
+            <returns>This will return all the Menus</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.OrgHierController.GetAllOrgHier(ZulAssetsBackEnd_API.BAL.RequestParameters.OrgHierReqParams)">
+            <summary>
+            Get all Organization Hierarchy by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Organization Hierarchy</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.OrgHierController.InsertOrgHier(ZulAssetsBackEnd_API.BAL.RequestParameters.OrgHierReqParams)">
+            <summary>
+            Insert an Organization Hierarchy by passing LvlID from DropDown, OrgHierName, ParentId, and Add=1 and else as empty.
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.OrgHierController.UpdateOrgHier(ZulAssetsBackEnd_API.BAL.RequestParameters.OrgHierReqParams)">
+            <summary>
+            Update a Organization Hierarchy by passing the OrgHierName, and LvlCode with Update = 1 and else as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.OrgHierController.DeleteOrgHier(ZulAssetsBackEnd_API.BAL.RequestParameters.OrgHierReqParams)">
+            <summary>
+            Delete a Organization Hierarchy by passing "Delete = 1" and OrgHierID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.POController.GetAllPurchaseOrders(ZulAssetsBackEnd_API.BAL.RequestParameters.POReqParams)">
+            <summary>
+            Get all Purchase Orders by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Purchase Orders</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.POController.InsertPOWithItems(ZulAssetsBackEnd_API.BAL.RequestParameters.POReqParams)">
+            <summary>
+            Insert a Purchase Order with Items by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.POController.UpdatePOWithItems(ZulAssetsBackEnd_API.BAL.RequestParameters.POReqParams)">
+            <summary>
+            Update Purchase Order Items by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.POController.DeletePOWithItems(ZulAssetsBackEnd_API.BAL.RequestParameters.POReqParams)">
+            <summary>
+            Delete a Purchase Order or Item/s by passing "Delete = 1" and POCode to delete Purchase Order with Items or POItmID to delete
+            Item from the list as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.POController.GetAllPOItems(ZulAssetsBackEnd_API.BAL.RequestParameters.PODetailsReqParams)">
+            <summary>
+            Get all Purchase Order Items by passing a parameter "Get = 1, POCode and others as empty"
+            </summary>
+            <returns>This will return all the Purchase Order Items</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.POController.GetPendingPOsForApproval(ZulAssetsBackEnd_API.BAL.RequestParameters.POReqParams)">
+            <summary>
+            Get Pending POs For Approval by passing no parameters
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.POController.ApprovePOWithItems(ZulAssetsBackEnd_API.BAL.RequestParameters.POReqParams)">
+            <summary>
+            Update Purchase Order Items by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.POController.GetApprovedPOsForTransit(ZulAssetsBackEnd_API.BAL.RequestParameters.POReqParams)">
+            <summary>
+            Get Approved POs by passing Get = 1 and other parameters as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.POController.TransferAssetsFromPOToERP(ZulAssetsBackEnd_API.BAL.RequestParameters.AssetsInTransit)">
+            <summary>
+            Transfer Assets From Purchasse Orders to ERP
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.GetAllAuditReportsDD">
+            <summary>
+            This API is used to get All Audit Reports for Dropdown
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.CompanyAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportReqParams)">
+            /// <param name="reportReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.AssetDetails(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportReqParams)">
+            /// <param name="reportReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.AssetLedger(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportReqParams)">
+            /// <param name="reportReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.AssetLog(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportReqParams)">
+            /// <param name="reportReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.AssetTagging(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportReqParams)">
+            /// <param name="reportReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.DisposedAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportReqParams)">
+            /// <param name="reportReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.ItemsInventory(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportReqParams)">
+            /// <param name="reportReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.NewTags(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportReqParams)">
+            /// <param name="reportReqParams"></param>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.MissingAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportAllAssetsReqParams)">
+            <summary>
+            This API is used to get Missing Assets against Inventory Schedule and Inventory Location
+            </summary>
+            <param name="reportAllAssetsReqParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.FoundAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportFoundMisplacedTransferredAssetsReqParams)">
+            <summary>
+            This API is used to get Found Assets against Inventory Schedule and Inventory Location
+            and posted or unposted data
+            </summary>
+            <param name="rptFMTAReqParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.MisplacedAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportFoundMisplacedTransferredAssetsReqParams)">
+            <summary>
+            This API is used to get all Misplaced Assets against Inventory Schedule and Inventory Location
+            and posted or unposted data
+            </summary>
+            <param name="rptFMTAReqParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.TransferredAssets(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportFoundMisplacedTransferredAssetsReqParams)">
+            <summary>
+            This API is used to get all Transferred Assets against Inventory Schedule and Inventory Location
+            and posted or unposted data
+            </summary>
+            <param name="rptFMTAReqParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.ReportController.AllAssetsAuditReport(ZulAssetsBackEnd_API.BAL.RequestParameters.ReportAllAssetsReqParams)">
+            <summary>
+            This API is used to get All Assets against Inventory Schedule and Inventory Location
+            </summary>
+            <param name="reportAllAssetsReqParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.RolesController.GetAllRoles(ZulAssetsBackEnd_API.BAL.RequestParameters.RoleRequest)">
+            <summary>
+            Get all Roles by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Roles</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.RolesController.GetRoleByID(ZulAssetsBackEnd_API.BAL.RequestParameters.RoleRequest)">
+            <summary>
+            Get all rights against a specific RoleID by passing the RoleID and GetByID parameter in the payload
+            </summary>
+            <returns>This will return all the Roles</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.RolesController.InsertRole(ZulAssetsBackEnd_API.BAL.RequestParameters.RoleRequest)">
+            <summary>
+            Insert a role by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.RolesController.UpdateRole(ZulAssetsBackEnd_API.BAL.RequestParameters.RoleRequest)">
+            <summary>
+            Update a role by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.RolesController.UpdateRoleRights(ZulAssetsBackEnd_API.BAL.RequestParameters.RoleRequest)">
+            <summary>
+            Update a role by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.RolesController.DeleteRole(ZulAssetsBackEnd_API.BAL.RequestParameters.RoleRequest)">
+            <summary>
+            Delete a role by passing "Delete = 1" and RoleID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.RolesController.GetAssignedMenus(ZulAssetsBackEnd_API.BAL.RequestParameters.RightsParams)">
+            <summary>
+            Get all rights against a specific RoleID by passing the RoleID and GetByID parameter in the payload
+            </summary>
+            <returns>This will return all the Roles</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.RolesController.GetAssignedMenuOptions(ZulAssetsBackEnd_API.BAL.RequestParameters.RightsParams)">
+            <summary>
+            Get all rights against a specific RoleID by passing the RoleID and GetByID parameter in the payload
+            </summary>
+            <returns>This will return all the Roles</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.SearchingController.ServerSideSearching(ZulAssetsBackEnd_API.BAL.RequestParameters.ServerSideSearchingParams)">
+            <summary>
+            Get all Asset Coding Definitions by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <param name="serverSearchingParams"></param>
+            <returns>This will return all the Asset Coding Definitions</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.SupplierController.GetAllSuppliers(ZulAssetsBackEnd_API.BAL.RequestParameters.SupplierRequest)">
+            <summary>
+            Get all suppliers by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Suppliers</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.SupplierController.InsertSupplier(ZulAssetsBackEnd_API.BAL.RequestParameters.SupplierRequest)">
+            <summary>
+            Insert a supplier by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.SupplierController.UpdateSupplier(ZulAssetsBackEnd_API.BAL.RequestParameters.SupplierRequest)">
+            <summary>
+            Update a supplier by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.SupplierController.DeleteSupplier(ZulAssetsBackEnd_API.BAL.RequestParameters.SupplierRequest)">
+            <summary>
+            Delete a supplier by passing "Delete = 1" and SupplierID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.SysConfigController.GetSysConfigInfo(ZulAssetsBackEnd_API.BAL.RequestParameters.SysConfigReqParams)">
+            <summary>
+            Get System Configuration Information by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return System Configuration Information</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.SysConfigController.InsertSysConfigInfo(ZulAssetsBackEnd_API.BAL.RequestParameters.SysConfigReqParams)">
+            <summary>
+            Insert System Configuration by passing all parameters with "Add = 1" and without ID parameter
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.SysConfigController.UpdateSysConfigInfo(ZulAssetsBackEnd_API.BAL.RequestParameters.SysConfigReqParams)">
+            <summary>
+            Update System Configuration by passing all parameters with "Update = 1" and ID
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UnitController.GetAllUnits(ZulAssetsBackEnd_API.BAL.RequestParameters.UnitRequestParam)">
+            <summary>
+            Get all units by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Units</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UnitController.InsertUnit(ZulAssetsBackEnd_API.BAL.RequestParameters.UnitRequestParam)">
+            <summary>
+            Insert a unit by passing all parameters with "Add = 1" and without UnitID parameter
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UnitController.UpdateUnit(ZulAssetsBackEnd_API.BAL.RequestParameters.UnitRequestParam)">
+            <summary>
+            Update a unit by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UnitController.DeleteUnit(ZulAssetsBackEnd_API.BAL.RequestParameters.UnitRequestParam)">
+            <summary>
+            Delete a unit by passing "Delete = 1" and UnitID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="T:ZulAssetsBackEnd_API.Controllers.UserController">
+            <summary>
+            User Controller
+            </summary>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.Login(ZulAssetsBackEnd_API.BAL.RequestParameters.Loginparam)">
+            <summary>
+            Login API
+            </summary>
+            <param name="loginParam"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.RefreshToken(ZulAssetsBackEnd_API.BAL.RequestParameters.RefreshTokenRequest)">
+            <summary>
+            Refreshing Token when Last token is valid
+            </summary>
+            <param name="refreshTokenRequest"></param>
+            <returns></returns>
+            <exception cref="T:Microsoft.IdentityModel.Tokens.SecurityTokenException"></exception>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.ChangePassword(ZulAssetsBackEnd_API.BAL.RequestParameters.ChangePassword)">
+            <summary>
+            This API will verify the old password first and if it is correct it will update it with New Password.
+            </summary>
+            <param name="changePassword"></param>
+            <returns>Returns Success Message of Change Password</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.ForgetPassword(ZulAssetsBackEnd_API.BAL.RequestParameters.ForgotPassword)">
+            <summary>
+            Reset Password API
+            </summary>
+            <param name="forgotPassword"></param>
+            <returns>Will check if user exists? if yes then will send an email to admin regarding password change</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.GeneratePasswordToken(ZulAssetsBackEnd_API.BAL.RequestParameters.GeneratePasswordTokenParam)">
+            <summary>
+            This API is used to Generate Password Reset Token, an email will be sent with a HEX String which will validate the Password change
+            </summary>
+            <param name="generatePasswordTokenParam"></param>
+            <returns>It will sent an email which contains a random hex string also update the Password Reset Token Date</returns>
+            
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.GetAllUsers(ZulAssetsBackEnd_API.BAL.RequestParameters.User)">
+            <summary>
+            Get all users by passing a parameter "Get = 1 and others as empty"
+            </summary>
+            <returns>This will return all the Users</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.InsertUser(ZulAssetsBackEnd_API.BAL.RequestParameters.User)">
+            <summary>
+            Insert a User by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.UpdateUser(ZulAssetsBackEnd_API.BAL.RequestParameters.User)">
+            <summary>
+            Update a user by passing all parameters with "Update = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.UserController.DeleteUser(ZulAssetsBackEnd_API.BAL.RequestParameters.User)">
+            <summary>
+            Delete a user by passing "Delete = 1" and LoginName as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ZulAssetsBackEnd_API.Controllers.UserController.CheckAdminUserRole" -->
+        <member name="M:ZulAssetsBackEnd_API.Controllers.WarrantyController.InsertWarranty(ZulAssetsBackEnd_API.BAL.RequestParameters.WarrantyReqParams)">
+            <summary>
+            Insert a Warranty Information by passing all parameters with "Add = 1" and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.WarrantyController.UpdateWarranty(ZulAssetsBackEnd_API.BAL.RequestParameters.WarrantyReqParams)">
+            <summary>
+            Update a Warranty Info by passing all parameters with "Update = 1"
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.WarrantyController.DeleteWarranty(ZulAssetsBackEnd_API.BAL.RequestParameters.WarrantyReqParams)">
+            <summary>
+            Delete a Warranty Info by passing "Delete = 1" and WarrantyID as parameters and others as empty
+            </summary>
+            <returns>This will return a message of success</returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Controllers.WarrantyController.GetAllWarrantyAssets">
+            <summary>
+            Get All Assets whose warranty are nearby to be expire
+            </summary>
+        </member>
+        <member name="T:ZulAssetsBackEnd_API.Services.IMailService">
+            <summary>
+            Mail Service
+            </summary>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Services.IMailService.ForgetPasswordEmail(ZulAssetsBackEnd_API.Model.MailRequest)">
+            <summary>
+            Forget Password Email Function
+            </summary>
+            <param name="mailRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZulAssetsBackEnd_API.Services.IMailService.GeneratePasswordResetTokenEmail(ZulAssetsBackEnd_API.Model.MailRequest)">
+            <summary>
+            Generate Password Reset Token Email Function
+            </summary>
+            <param name="mailRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZulAssetsBackEnd_API.Settings.MailSettings">
+            <summary>
+            Mail Settings Parameters
+            </summary>
+        </member>
+    </members>
+</doc>

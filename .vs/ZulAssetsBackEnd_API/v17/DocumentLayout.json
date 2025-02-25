@@ -1,0 +1,129 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|d:\\projects\\jeddah\\zulassets - zultec\\zulassetsapi\\zulassetsbackend_api\\dal\\generalfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|solutionrelative:zulassetsbackend_api\\dal\\generalfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|d:\\projects\\jeddah\\zulassets - zultec\\zulassetsapi\\zulassetsbackend_api\\controllers\\depreciationmethodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|solutionrelative:zulassetsbackend_api\\controllers\\depreciationmethodcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|d:\\projects\\jeddah\\zulassets - zultec\\zulassetsapi\\zulassetsbackend_api\\dal\\datalogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|solutionrelative:zulassetsbackend_api\\dal\\datalogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|d:\\projects\\jeddah\\zulassets - zultec\\zulassetsapi\\zulassetsbackend_api\\dal\\depreciationalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|solutionrelative:zulassetsbackend_api\\dal\\depreciationalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|d:\\projects\\jeddah\\zulassets - zultec\\zulassetsapi\\zulassetsbackend_api\\dal\\dbreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|solutionrelative:zulassetsbackend_api\\dal\\dbreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|d:\\projects\\jeddah\\zulassets - zultec\\zulassetsapi\\zulassetsbackend_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|solutionrelative:zulassetsbackend_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 365,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataLogic.cs",
+              "DocumentMoniker": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\DAL\\DataLogic.cs",
+              "RelativeDocumentMoniker": "ZulAssetsBackEnd_API\\DAL\\DataLogic.cs",
+              "ToolTip": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\DAL\\DataLogic.cs",
+              "RelativeToolTip": "ZulAssetsBackEnd_API\\DAL\\DataLogic.cs",
+              "ViewState": "AgIAABoLAAAAAAAAAAAAwH8LAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T11:16:24.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DepreciationAlgorithm.cs",
+              "DocumentMoniker": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\DAL\\DepreciationAlgorithm.cs",
+              "RelativeDocumentMoniker": "ZulAssetsBackEnd_API\\DAL\\DepreciationAlgorithm.cs",
+              "ToolTip": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\DAL\\DepreciationAlgorithm.cs",
+              "RelativeToolTip": "ZulAssetsBackEnd_API\\DAL\\DepreciationAlgorithm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:04:49.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DbReports.cs",
+              "DocumentMoniker": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\DAL\\DbReports.cs",
+              "RelativeDocumentMoniker": "ZulAssetsBackEnd_API\\DAL\\DbReports.cs",
+              "ToolTip": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\DAL\\DbReports.cs",
+              "RelativeToolTip": "ZulAssetsBackEnd_API\\DAL\\DbReports.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAowDAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T11:00:44.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GeneralFunctions.cs",
+              "DocumentMoniker": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\DAL\\GeneralFunctions.cs",
+              "RelativeDocumentMoniker": "ZulAssetsBackEnd_API\\DAL\\GeneralFunctions.cs",
+              "ToolTip": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\DAL\\GeneralFunctions.cs",
+              "RelativeToolTip": "ZulAssetsBackEnd_API\\DAL\\GeneralFunctions.cs",
+              "ViewState": "AgIAAJ0FAAAAAAAAAAAowLkFAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T06:25:21.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepreciationMethodController.cs",
+              "DocumentMoniker": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\Controllers\\DepreciationMethodController.cs",
+              "RelativeDocumentMoniker": "ZulAssetsBackEnd_API\\Controllers\\DepreciationMethodController.cs",
+              "ToolTip": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\Controllers\\DepreciationMethodController.cs",
+              "RelativeToolTip": "ZulAssetsBackEnd_API\\Controllers\\DepreciationMethodController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwPEBAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T06:25:35.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\appsettings.json",
+              "RelativeDocumentMoniker": "ZulAssetsBackEnd_API\\appsettings.json",
+              "ToolTip": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\appsettings.json",
+              "RelativeToolTip": "ZulAssetsBackEnd_API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-07T12:27:15.323Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

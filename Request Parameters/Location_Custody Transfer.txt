@@ -1,0 +1,39 @@
+{
+  "update": 1,
+  "locationCheckbox": 1,
+  "custodianCheckbox": 1,
+  "assetStatusCheckbox": 1,
+  "locTransferTree": [
+    {
+"historyID": 0,
+      "invSchCode": 0,
+      "astID": "23110702275086",
+      "fr_Loc": "1-3-1",
+      "to_Loc": "1-2-1",
+      "hisDate": "string",
+"status": 0,
+      "assetStatus": "string",
+      "lastEditBy": "kabeer",
+ "barcode": "string"
+    }
+  ],
+  "custTransferTree": [
+    {
+"historyID": 0,
+      "astID": "23110702275086",
+      "toCustodian": "2",
+      "fromCustodian": "1",
+      "hisDate": "string",
+      "lastEditBy": "kabeer"
+    }
+  ],
+  "assetStatusTransferTree": [
+    {
+      "astID": "23110702275086",
+      "status": 2,
+      "assetStatus": "2",
+      "lastEditBy": "kabeer"
+    }
+  ],
+  "loginName": "kabeer"
+}

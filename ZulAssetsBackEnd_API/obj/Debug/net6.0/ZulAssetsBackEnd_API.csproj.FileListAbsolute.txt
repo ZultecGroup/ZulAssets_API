@@ -1,0 +1,223 @@
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\appsettings.Development.json
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\appsettings.json
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.exe
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.deps.json
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.runtimeconfig.json
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.pdb
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.AssemblyReference.cache
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.GeneratedMSBuildEditorConfig.editorconfig
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.AssemblyInfoInputs.cache
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.AssemblyInfo.cs
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.CoreCompileInputs.cache
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.MvcApplicationPartsAssemblyInfo.cs
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.MvcApplicationPartsAssemblyInfo.cache
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.build.json
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.development.json
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\scopedcss\bundle\ZulAssetsBackEnd_API.styles.css
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.CopyComplete
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\refint\ZulAssetsBackEnd_API.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.pdb
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.genruntimeconfig.cache
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\obj\Debug\net6.0\ref\ZulAssetsBackEnd_API.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.xml
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\MailKit.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\MimeKit.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\NETCore.MailKit.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Newtonsoft.Json.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.Data.SqlClient.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Docs_Source Codes_SDKs\Zultec_KHI_JEDDAH\ZulAssets\Source Code\ZulAssets\ZulAssets4.0\ZulAssets4.0\API\ZulAssetsBackEnd_API\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\appsettings.Development.json
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\appsettings.json
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.exe
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.deps.json
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.runtimeconfig.json
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.pdb
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.xml
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\MailKit.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\MimeKit.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\NETCore.MailKit.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Newtonsoft.Json.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.Data.SqlClient.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.AssemblyReference.cache
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.GeneratedMSBuildEditorConfig.editorconfig
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.AssemblyInfoInputs.cache
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.AssemblyInfo.cs
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.CoreCompileInputs.cache
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.MvcApplicationPartsAssemblyInfo.cs
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.MvcApplicationPartsAssemblyInfo.cache
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.build.json
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.development.json
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\scopedcss\bundle\ZulAssetsBackEnd_API.styles.css
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.CopyComplete
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\refint\ZulAssetsBackEnd_API.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.pdb
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.genruntimeconfig.cache
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ref\ZulAssetsBackEnd_API.dll
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.ZulAssetsBackEnd_API.Microsoft.AspNetCore.StaticWebAssets.props
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.build.ZulAssetsBackEnd_API.props
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ZulAssetsBackEnd_API.props
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ZulAssetsBackEnd_API.props
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.pack.json
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.xml
+F:\Github Code\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\appsettings.Development.json
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\appsettings.json
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.exe
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.deps.json
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.runtimeconfig.json
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.pdb
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.xml
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\MailKit.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\MimeKit.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\NETCore.MailKit.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.AssemblyReference.cache
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.AssemblyInfoInputs.cache
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.AssemblyInfo.cs
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.CoreCompileInputs.cache
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.MvcApplicationPartsAssemblyInfo.cs
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.sourcelink.json
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.build.json
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.development.json
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.ZulAssetsBackEnd_API.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.build.ZulAssetsBackEnd_API.props
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ZulAssetsBackEnd_API.props
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ZulAssetsBackEnd_API.props
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\scopedcss\bundle\ZulAssetsBackEnd_API.styles.css
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAsset.100D78AD.Up2Date
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\refint\ZulAssetsBackEnd_API.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.xml
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.pdb
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.genruntimeconfig.cache
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ref\ZulAssetsBackEnd_API.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.CodeDom.dll
+D:\Projects\Jeddah\ZulAssets - Zultec\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.Management.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\appsettings.Development.json
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\appsettings.json
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.exe
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.deps.json
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.runtimeconfig.json
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.pdb
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\ZulAssetsBackEnd_API.xml
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\MailKit.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\MimeKit.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\NETCore.MailKit.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.CodeDom.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\System.Management.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.AssemblyReference.cache
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.AssemblyInfoInputs.cache
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.AssemblyInfo.cs
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.csproj.CoreCompileInputs.cache
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.MvcApplicationPartsAssemblyInfo.cs
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.MvcApplicationPartsAssemblyInfo.cache
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.sourcelink.json
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.build.json
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.development.json
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.ZulAssetsBackEnd_API.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.build.ZulAssetsBackEnd_API.props
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ZulAssetsBackEnd_API.props
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ZulAssetsBackEnd_API.props
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\scopedcss\bundle\ZulAssetsBackEnd_API.styles.css
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAsset.100D78AD.Up2Date
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\refint\ZulAssetsBackEnd_API.dll
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.xml
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.pdb
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ZulAssetsBackEnd_API.genruntimeconfig.cache
+D:\Freelancing\Github\ZulAssets API (BAJA) Office\ZulAssetsAPI\ZulAssetsBackEnd_API\obj\Debug\net6.0\ref\ZulAssetsBackEnd_API.dll
