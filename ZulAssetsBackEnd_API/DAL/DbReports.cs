@@ -66,6 +66,9 @@ namespace ZulAssetsBackEnd_API.DAL
             }
         }
 
+        //DeleteProcessingData x2 (In this method in DataLogic following function is using)
+        //GetAll_AssetTransferTemp (In this method in DataLogic following function is using)
+        //DeleteFromTempDB (In this method in DataLogic following function is using)
         public DataTable DTWithParamSecondDB(string storedProcedure, SqlParameter[] parameters, int connect)
         {
             SqlConnection sqlcon = new SqlConnection();
@@ -194,6 +197,7 @@ namespace ZulAssetsBackEnd_API.DAL
             }
         }
 
+        //GetProcessingData (In this method in DataLogic following function is using)
         public DataSet DSWithParamSecondDB(string storedProcedure, SqlParameter[] parameters, int connect)
         {
             SqlConnection sqlcon = new SqlConnection();

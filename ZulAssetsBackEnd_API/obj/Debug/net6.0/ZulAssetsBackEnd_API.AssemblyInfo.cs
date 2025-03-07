@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZulAssetsBackEnd_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77b6fecfc3467a01af8334916373023805962808")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6eaa04cdc336c625f42a0c64b95cb59ab8c16530")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZulAssetsBackEnd_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZulAssetsBackEnd_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

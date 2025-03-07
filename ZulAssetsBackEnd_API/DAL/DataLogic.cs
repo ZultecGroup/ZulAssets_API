@@ -143,7 +143,8 @@ namespace ZulAssetsBackEnd_API.DAL
                         new SqlParameter("@PageIndex", deviceReg.PaginationParam.PageIndex),
                         new SqlParameter("@PageSize", deviceReg.PaginationParam.PageSize),
                 };
-                    return CGD.DSWithParam(Storeprocedure, parameter, 2);
+                    return CGD.DSWithParam(Storeprocedure, parameter, 1);
+                    //return CGD.DSWithParam(Storeprocedure, parameter, 2);
                 }
                 else
                 {
@@ -154,7 +155,8 @@ namespace ZulAssetsBackEnd_API.DAL
                     new SqlParameter("@PageIndex", deviceReg.PaginationParam.PageIndex),
                     new SqlParameter("@PageSize", deviceReg.PaginationParam.PageSize),
                 };
-                    return CGD.DSWithParam(Storeprocedure, parameter, 2);
+                    return CGD.DSWithParam(Storeprocedure, parameter, 1);
+                    //return CGD.DSWithParam(Storeprocedure, parameter, 2);
                 }
             }
             catch (Exception)
@@ -183,7 +185,8 @@ namespace ZulAssetsBackEnd_API.DAL
                     new SqlParameter("@DevicePhNo", deviceReg.DevicePhNo),
                     new SqlParameter("@DeviceSerialNo", deviceReg.DeviceSrNo),
                 };
-                return CGD.DTWithParam(Storeprocedure, parameter, 2);
+                return CGD.DTWithParam(Storeprocedure, parameter, 1);
+                //return CGD.DTWithParam(Storeprocedure, parameter, 2);
             }
             catch (Exception)
             {
@@ -207,7 +210,8 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter("@Delete",deviceReg.Delete),
                 new SqlParameter("@DeviceID",deviceReg.DeviceID),
                 };
-                return CGD.DTWithParam(Storeprocedure, parameter, 2);
+                return CGD.DTWithParam(Storeprocedure, parameter, 1);
+                //return CGD.DTWithParam(Storeprocedure, parameter, 2);
             }
             catch (Exception)
             {
@@ -233,7 +237,8 @@ namespace ZulAssetsBackEnd_API.DAL
                     new SqlParameter("@PageIndex",dataProcReqParam.paginationParam.PageIndex),
                     new SqlParameter("@PageSize",dataProcReqParam.paginationParam.PageSize),
                 };
-                return CGD.DSWithParamSecondDB(Storeprocedure, parameter, 2);
+                return CGD.DSWithParam(Storeprocedure, parameter, 1);
+                //return CGD.DSWithParamSecondDB(Storeprocedure, parameter, 2);
             }
             catch (Exception)
             {
@@ -258,7 +263,8 @@ namespace ZulAssetsBackEnd_API.DAL
                         new SqlParameter("@Delete",deleteProcReqParams.Delete),
                         new SqlParameter("@auditProcessingData",dt),
                     };
-                    return CGD.DTWithParamSecondDB(Storeprocedure, parameter, 2);
+                    return CGD.DTWithParam(Storeprocedure, parameter, 1);
+                    //return CGD.DTWithParamSecondDB(Storeprocedure, parameter, 2);
                 }
                 else
                 {
@@ -268,7 +274,8 @@ namespace ZulAssetsBackEnd_API.DAL
                         new SqlParameter("@Delete",deleteProcReqParams.Delete),
                         new SqlParameter("@anonymousProcessingData",dt),
                     };
-                    return CGD.DTWithParamSecondDB(Storeprocedure, parameter, 2);
+                    return CGD.DTWithParam(Storeprocedure, parameter, 1);
+                    //return CGD.DTWithParamSecondDB(Storeprocedure, parameter, 2);
                 }
             }
             catch (Exception)
@@ -290,8 +297,9 @@ namespace ZulAssetsBackEnd_API.DAL
                 {
                     new SqlParameter("@AstID",AstID),
                 };
-                return CGD.DTWithParamSecondDB(Storeprocedure, parameter, 2);
-                
+                return CGD.DTWithParam(Storeprocedure, parameter, 1);
+                //return CGD.DTWithParamSecondDB(Storeprocedure, parameter, 2);
+
             }
             catch (Exception)
             {
@@ -336,7 +344,8 @@ namespace ZulAssetsBackEnd_API.DAL
                     new SqlParameter("@AstID",AstID),
                     new SqlParameter("@DeviceID",DeviceID),
                 };
-                return CGD.DTWithParamSecondDB(Storeprocedure, parameter, 2);
+                return CGD.DTWithParam(Storeprocedure, parameter, 1);
+                //return CGD.DTWithParamSecondDB(Storeprocedure, parameter, 2);
 
             }
             catch (Exception)

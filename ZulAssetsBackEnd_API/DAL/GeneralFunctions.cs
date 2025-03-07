@@ -1466,7 +1466,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     
                 }
 
-                return msg;
+                return "Depreciation Process Completed";
             }
             catch (Exception ex)
             {
