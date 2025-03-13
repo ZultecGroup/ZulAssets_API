@@ -1750,11 +1750,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
+      "projectUniqueName": "D:\\Projects\\Jeddah\\BAJA\\Assets Management System\\Cloud Solution of ZulAssets\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
       "projectName": "ZulAssetsBackEnd_API",
-      "projectPath": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
+      "projectPath": "D:\\Projects\\Jeddah\\BAJA\\Assets Management System\\Cloud Solution of ZulAssets\\API\\ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Jeddah\\ZulAssets - Zultec\\ZulAssetsAPI\\ZulAssetsBackEnd_API\\obj\\",
+      "outputPath": "D:\\Projects\\Jeddah\\BAJA\\Assets Management System\\Cloud Solution of ZulAssets\\API\\ZulAssetsBackEnd_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

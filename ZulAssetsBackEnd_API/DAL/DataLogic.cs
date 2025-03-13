@@ -614,7 +614,7 @@ namespace ZulAssetsBackEnd_API.DAL
             {
                 new SqlParameter ("@CompanyID", CompanyID),
             };
-            return CGD.DTWithOutParam(StoreProcedure, 1);
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
 
         #endregion
