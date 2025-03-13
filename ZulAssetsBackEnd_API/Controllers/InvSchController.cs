@@ -150,7 +150,11 @@ namespace ZulAssetsBackEnd_API.Controllers
                 {
                     deviceHardwareIDs = string.Join("|", invSchReqParam.deviceTrees.Select(tree => tree.DeviceHardwareID.ToString()));
                 }
-                DataTable dt = DataLogic.InsertInvSch(invSchReqParam, locIDs, deviceHardwareIDs, SP_GetInsertUpdateDeleteInvSch);
+
+                var locIDArray = locIDs.Split('|');
+                var formattedLocIDs = string.Join(", ", locIDArray.Select(id => $"'{id}'"));
+
+                DataTable dt = DataLogic.InsertInvSch(invSchReqParam, locIDs, deviceHardwareIDs, formattedLocIDs, SP_GetInsertUpdateDeleteInvSch);
                 if (dt.Rows.Count > 0)
                 {
                     if (dt.Columns.Contains("ErrorMessage"))
