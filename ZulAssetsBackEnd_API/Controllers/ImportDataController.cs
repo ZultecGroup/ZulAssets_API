@@ -360,6 +360,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                 string costcenterCount = CostCenterFulldt.Rows[costcenterCountt - 1]["CostID"].ToString();
                 string assetsCount = AssetsFulldt.Rows[assetsCountt - 1]["ItemCode"].ToString();
 
+                string astid = "";
 
                 for (int k = 0; k < importDataforCustomer.Rows.Count; k++)
                 {
@@ -371,7 +372,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                     int CostID = 1;
                     string thirdlocation = "";
                     string finalcat = "";
-                    string astid = "";
                     string refno = importDataforCustomer.Rows[k]["BatchNo"].ToString();
                     string astnum = importDataforCustomer.Rows[k]["BatchNo"].ToString();
                     string serial = importDataforCustomer.Rows[k]["Serial"].ToString();
@@ -1298,10 +1298,18 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 + now.ToString("ss")  // Seconds (2 digits)
                                 + microseconds.ToString("00");  // Microseconds (last 2 digits)
 
-                                if (astid == formatted)
+                                if (astid.Trim() == formatted.Trim())
                                 //if (astid == DateTime.Now.ToString("yyyymmddhhmmss").ToString())
                                 {
                                     Thread.Sleep(1000);
+                                    now = DateTime.Now;
+                                    formatted = now.ToString("yy")  // Year (2 digits)
+                                    + now.ToString("dd")  // Day (2 digits)
+                                    + now.ToString("MM")  // Month (2 digits)
+                                    + now.ToString("HH")  // Hour (2 digits, 24-hour format)
+                                    + now.ToString("mm")  // Minutes (2 digits)
+                                    + now.ToString("ss")  // Seconds (2 digits)
+                                    + microseconds.ToString("00");  // Microseconds (last 2 digits)
                                 }
 
                                 astid = formatted;
@@ -1725,6 +1733,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                 msg.status = "200";
 
                 #endregion
+
 
                 return Ok(msg);
             }
