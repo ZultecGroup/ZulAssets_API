@@ -437,7 +437,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     #region For Category
 
                     string searchElementforCategory = importDataforCategory.Rows[k]["CategoryName"].ToString();
-                    DataRow[] categoryrows = completeData.Tables["CategoryTable"].Select("AstCatDesc ='" + searchElementforCategory + "'");
+                    DataRow[] categoryrows = completeData.Tables["CategoryTable"].Select("AstCatDesc ='" + searchElementforCategory + "' AND catLevel = 0");
                     if (categoryrows.Length > 0)
                     {
                         foreach (DataRow row in categoryrows)
@@ -620,7 +620,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     #region For Location
 
                     string searchElementforMainLocation = importDataforLocation.Rows[k]["MainLocation"].ToString();
-                    DataRow[] mainlocationrows = completeData.Tables["LocationTable"].Select("LocDesc ='" + searchElementforMainLocation + "'");
+                    DataRow[] mainlocationrows = completeData.Tables["LocationTable"].Select("LocDesc ='" + searchElementforMainLocation + "' AND LocLevel = 0");
 
                     if (mainlocationrows.Length > 0)
                     {
@@ -656,7 +656,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             DataRow[] locationrows = completeData.Tables["LocationTable"].Select("LocationFullPath ='" + locfullPath + " \\ " + searchElementforLocation + "'");
 
                             if (locationrows.Length > 0)
-                            { 
+                            {
                                 //for second location if exist
                                 foreach (DataRow r in locationrows)
                                 {
@@ -912,7 +912,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRow3["LocationFullPath"] = importDataforLocation.Rows[k]["MainLocation"].ToString() + " \\ " + importDataforLocation.Rows[k]["Location"].ToString() + " \\ " + importDataforLocation.Rows[k]["SublocationName"].ToString();
                             insertItemRow3["ParentID"] = countforID1 + 1;
                             insertItemRow3["CompanyID"] = 1;
-
+                            insertItemRow3["isDeleted"] = 0;
                             insertLocation.Rows.Add(insertItemRow3);
                             //CostID = int.Parse(costcenterCount) + 1;
 
@@ -1006,6 +1006,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             DataRow insertItemRow = insertSupplier.NewRow();
                             insertItemRow["SuppID"] = importDataforSupplier.Rows[k]["VendorAccountNumber"].ToString();
                             insertItemRow["SuppName"] = importDataforSupplier.Rows[k]["VendorName"].ToString();
+                            insertItemRow["isDeleted"] = 0;
                             insertSupplier.Rows.Add(insertItemRow);
                             SuppID = importDataforDepartment.Rows[k]["VendorAccountNumber"].ToString();
 
@@ -1045,12 +1046,13 @@ namespace ZulAssetsBackEnd_API.Controllers
                             DataRow insertItemRow = insertDepartment.NewRow();
                             insertItemRow["DeptID"] = int.Parse(departmentCount) + 1;
                             insertItemRow["DeptName"] = importDataforDepartment.Rows[k]["Department"].ToString();
+                            insertItemRow["isDeleted"] = 0;
                             insertDepartment.Rows.Add(insertItemRow);
                             DeptID = int.Parse(departmentCount) + 1;
 
                             DataRow insertItemRowd = DepartmentFulldt.NewRow();
                             insertItemRowd["DeptID"] = int.Parse(departmentCount) + 1;
-                            insertItemRowd["DeptName"] = importDataforDepartment.Rows[k]["Brand"].ToString();
+                            insertItemRowd["DeptName"] = importDataforDepartment.Rows[k]["Department"].ToString();
                             insertItemRowd["isDeleted"] = 0;
                             DepartmentFulldt.Rows.Add(insertItemRowd);
                         }
@@ -1207,6 +1209,9 @@ namespace ZulAssetsBackEnd_API.Controllers
                         {
                             DataRow insertItemRow = insertAssets.NewRow();
                             insertItemRow["ItemCode"] = int.Parse(assetsCount) + 1;
+
+                            assetsCount = (Convert.ToInt32(assetsCount) + 1).ToString();
+
                             insertItemRow["AstBrandID"] = AstBrandID;
                             insertItemRow["AstCatID"] = finalcat;
                             insertItemRow["AstDesc"] = importDataforAssets.Rows[k]["AstDesc"].ToString();
@@ -1261,7 +1266,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             updateAssetDetailsRow["BarCode"] = astid;
                             updateAssetDetailsRow["SerailNo"] = serial;
                             updateAssetDetailsRow["AstDesc2"] = astDesc2;
-                            updateAssetDetailsRow["CostCenterID"] = CostID;         
+                            updateAssetDetailsRow["CostCenterID"] = CostID;
                             updateAssetDetailsRow["CreatedBY"] = "Import Process";
 
                             updateAssetDetails.Rows.Add(updateAssetDetailsRow);
@@ -1574,9 +1579,9 @@ namespace ZulAssetsBackEnd_API.Controllers
                         GeneralFunctions GF = new GeneralFunctions();
 
                         DataTable dtBookInfoAgainstCompanyID = DataLogic.GetBookAgainstCompanyID("1", "[dbo].[SP_GetBooksAgainstCompanyID]");
-                        for (int i = 0; i < importDataReqParams.importData.Count; i++)
+                        for (int i = 0; i < insertAssetDetails.Rows.Count; i++)
                         {
-                            DataTable dtGetDepPolicyAgainstItemCode = DataLogic.GetDepPolicyAgainstItemCode(insertAssets.Rows[i]["ItemCode"].ToString(), "[dbo].[SP_GetDepPolicyAgainstItemCode]");
+                            DataTable dtGetDepPolicyAgainstItemCode = DataLogic.GetDepPolicyAgainstItemCode(insertAssetDetails.Rows[i]["ItemCode"].ToString(), "[dbo].[SP_GetDepPolicyAgainstItemCode]");
                             if (GF.Check_BookExists(Convert.ToInt32(dtBookInfoAgainstCompanyID.Rows[0]["BookID"]), insertAssetDetails.Rows[i]["AstID"].ToString()) == false)
                             {
                                 DataRow AstBooksRow = insertAstBooks.NewRow();
@@ -1596,7 +1601,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 AstBooksRow["LastBV"] = 0.00;
 
                                 DateTime datetime = Convert.ToDateTime(insertAssetDetails.Rows[i]["SrvDate"].ToString());
-                                
+
                                 string formattedDate = datetime.ToString("yyyy-MM-dd HH:mm:ss.fff"); // This will format the datetime correctly
 
                                 double Tax = 0.00;
@@ -1652,7 +1657,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                         GeneralFunctions GF = new GeneralFunctions();
 
                         DataTable dtBookInfoAgainstCompanyID = DataLogic.GetBookAgainstCompanyID("1", "[dbo].[SP_GetBooksAgainstCompanyID]");
-                        for (int i = 0; i < importDataReqParams.importData.Count; i++)
+                        for (int i = 0; i < updateAssetDetails.Rows.Count; i++)
                         {
 
                             DataTable dtGetDepPolicyAgainstItemCode = DataLogic.GetDepPolicyAgainstItemCode(updateAssetDetails.Rows[i]["ItemCode"].ToString(), "[dbo].[SP_GetDepPolicyAgainstItemCode]");
@@ -1720,7 +1725,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                 msg.status = "200";
 
                 #endregion
-
 
                 return Ok(msg);
             }

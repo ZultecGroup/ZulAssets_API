@@ -20,6 +20,8 @@ namespace ZulAssetsBackEnd_API.Controllers
         #region Declaration
 
         private static string SP_GetInsertUpdateDeleteInvSch = "[dbo].[SP_GetInsertUpdateDeleteInvSch]";
+        private static string SP_CheckCountForAstHistoryAgainstInvSchCode = "[dbo].[SP_CheckCountForAstHistoryAgainstInvSchCode]";
+        private static string SP_DeleteAstHistoryAgainstInvSchCode = "[dbo].[SP_DeleteAstHistoryAgainstInvSchCode]";
 
         #endregion
 
@@ -203,40 +205,56 @@ namespace ZulAssetsBackEnd_API.Controllers
             Message msg = new Message();
             try
             {
-                string locIDs = "", deviceHardwareIDs = "";
-                if (invSchReqParam.locTrees.Count > 0)
+                if (Convert.ToInt32(DataLogic.CheckCountOfAstHistory(invSchReqParam, SP_CheckCountForAstHistoryAgainstInvSchCode).Rows[0]["TotalScannedAssets"]) == 0)  //If count = 0 means no data is processed yet
                 {
-                    locIDs = string.Join("|", invSchReqParam.locTrees.Select(tree => tree.LocID.ToString()));
-                }
-                if (invSchReqParam.deviceTrees.Count > 0)
-                {
-                    deviceHardwareIDs = string.Join("|", invSchReqParam.deviceTrees.Select(tree => tree.DeviceHardwareID.ToString()));
-                }
-                DataTable dt = DataLogic.UpdateInvSch(invSchReqParam, locIDs, deviceHardwareIDs, SP_GetInsertUpdateDeleteInvSch);
-                if (dt.Rows.Count > 0)
-                {
-                    if (dt.Columns.Contains("ErrorMessage"))
+
+                    DataTable deleteAstHistoryAgainstInvSchCode = DataLogic.DeleteAstHistoryAgainstInvSchCode(invSchReqParam, SP_DeleteAstHistoryAgainstInvSchCode);    //Delete Ast_History against InvSchCode to insert updated selected Location data
+
+                    string locIDs = "", deviceHardwareIDs = "";
+                    if (invSchReqParam.locTrees.Count > 0)
                     {
-                        msg.message = dt.Rows[0]["ErrorMessage"].ToString();
-                        msg.status = "401";
-                        return Ok(msg);
+                        locIDs = string.Join("|", invSchReqParam.locTrees.Select(tree => tree.LocID.ToString()));
+                    }
+                    if (invSchReqParam.deviceTrees.Count > 0)
+                    {
+                        deviceHardwareIDs = string.Join("|", invSchReqParam.deviceTrees.Select(tree => tree.DeviceHardwareID.ToString()));
+                    }
+
+                    var locIDArray = locIDs.Split('|');
+                    var formattedLocIDs = string.Join(", ", locIDArray.Select(id => $"'{id}'"));
+
+                    DataTable dt = DataLogic.UpdateInvSch(invSchReqParam, locIDs, deviceHardwareIDs, formattedLocIDs, SP_GetInsertUpdateDeleteInvSch);
+                    if (dt.Rows.Count > 0)
+                    {
+                        if (dt.Columns.Contains("ErrorMessage"))
+                        {
+                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                            msg.status = "401";
+                            return Ok(msg);
+                        }
+                        else
+                        {
+                            //var logResult = GeneralFunctions.CreateAndWriteToFile("Inventory Schedule", "Updated", invSchReqParam.LoginName);
+                            string msgFromDB = dt.Rows[0]["Message"].ToString();
+                            if (msgFromDB.Contains("successfully"))
+                            {
+                                DataTable dt2 = DataLogic.InsertAuditLogs("Inventory Schedule", 1, "Updated", invSchReqParam.LoginName, "dbo.Ast_INV_Schedule");
+                            }
+                            msg.message = dt.Rows[0]["Message"].ToString();
+                            msg.status = dt.Rows[0]["Status"].ToString();
+                            return Ok(msg);
+                        }
                     }
                     else
                     {
-                        //var logResult = GeneralFunctions.CreateAndWriteToFile("Inventory Schedule", "Updated", invSchReqParam.LoginName);
-                        string msgFromDB = dt.Rows[0]["Message"].ToString();
-                        if (msgFromDB.Contains("successfully"))
-                        {
-                            DataTable dt2 = DataLogic.InsertAuditLogs("Inventory Schedule", 1, "Updated", invSchReqParam.LoginName, "dbo.Ast_INV_Schedule");
-                        }
-                        msg.message = dt.Rows[0]["Message"].ToString();
-                        msg.status = dt.Rows[0]["Status"].ToString();
-                        return Ok(msg);
+                        return Ok(dt);
                     }
                 }
                 else
                 {
-                    return Ok(dt);
+                    msg.message = "Inventory Schedule cannot be updated as it has Inventory Data.";
+                    msg.status = "401";
+                    return Ok(msg);
                 }
             }
             catch (Exception ex)
@@ -261,31 +279,43 @@ namespace ZulAssetsBackEnd_API.Controllers
             Message msg = new Message();
             try
             {
-                DataTable dt = DataLogic.DeleteInvSch(invSchReqParam, SP_GetInsertUpdateDeleteInvSch);
-                if (dt.Rows.Count > 0)
+                if (Convert.ToInt32(DataLogic.CheckCountOfAstHistory(invSchReqParam, SP_CheckCountForAstHistoryAgainstInvSchCode).Rows[0]["TotalScannedAssets"]) == 0)  //If count = 0 means no data is processed yet
                 {
-                    if (dt.Columns.Contains("ErrorMessage"))
+
+                    DataTable deleteAstHistoryAgainstInvSchCode = DataLogic.DeleteAstHistoryAgainstInvSchCode(invSchReqParam, SP_DeleteAstHistoryAgainstInvSchCode);    //Delete Ast_History against InvSchCode
+
+                    DataTable dt = DataLogic.DeleteInvSch(invSchReqParam, SP_GetInsertUpdateDeleteInvSch);
+                    if (dt.Rows.Count > 0)
                     {
-                        msg.message = dt.Rows[0]["ErrorMessage"].ToString();
-                        msg.status = "401";
-                        return Ok(msg);
+                        if (dt.Columns.Contains("ErrorMessage"))
+                        {
+                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                            msg.status = "401";
+                            return Ok(msg);
+                        }
+                        else
+                        {
+                            //var logResult = GeneralFunctions.CreateAndWriteToFile("Inventory Schedule", "Deleted", invSchReqParam.LoginName);
+                            string msgFromDB = dt.Rows[0]["Message"].ToString();
+                            if (msgFromDB.Contains("successfully"))
+                            {
+                                DataTable dt2 = DataLogic.InsertAuditLogs("Inventory Schedule", 1, "Deleted", invSchReqParam.LoginName, "dbo.Ast_INV_Schedule");
+                            }
+                            msg.message = dt.Rows[0]["Message"].ToString();
+                            msg.status = dt.Rows[0]["Status"].ToString();
+                            return Ok(msg);
+                        }
                     }
                     else
                     {
-                        //var logResult = GeneralFunctions.CreateAndWriteToFile("Inventory Schedule", "Deleted", invSchReqParam.LoginName);
-                        string msgFromDB = dt.Rows[0]["Message"].ToString();
-                        if (msgFromDB.Contains("successfully"))
-                        {
-                            DataTable dt2 = DataLogic.InsertAuditLogs("Inventory Schedule", 1, "Deleted", invSchReqParam.LoginName, "dbo.Ast_INV_Schedule");
-                        }
-                        msg.message = dt.Rows[0]["Message"].ToString();
-                        msg.status = dt.Rows[0]["Status"].ToString();
-                        return Ok(msg);
+                        return Ok(dt);
                     }
                 }
                 else
                 {
-                    return Ok(dt);
+                    msg.message = "Inventory Schedule cannot be deleted as it has Inventory Data.";
+                    msg.status = "401";
+                    return Ok(msg);
                 }
             }
             catch (Exception ex)

@@ -3437,9 +3437,35 @@ namespace ZulAssetsBackEnd_API.DAL
 
         #endregion
 
+        #region Check Count Of Ast_History
+
+        public static DataTable CheckCountOfAstHistory(InvSchReqParam invSchReqParam, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                new SqlParameter ("@InvSchCode", invSchReqParam.InvSchCode),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Delete Ast_History Against Inv Sch Code
+
+        public static DataTable DeleteAstHistoryAgainstInvSchCode(InvSchReqParam invSchReqParam, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                new SqlParameter ("@InvSchCode", invSchReqParam.InvSchCode),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
         #region Update Inventory Schedules
 
-        public static DataTable UpdateInvSch(InvSchReqParam invSchReqParam, string locIDs, string deviceHardwareIDs, string StoreProcedure)
+        public static DataTable UpdateInvSch(InvSchReqParam invSchReqParam, string locIDs, string deviceHardwareIDs, string formattedLocIDs, string StoreProcedure)
         {
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
@@ -3452,6 +3478,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@SchType", invSchReqParam.SchType),
                 new SqlParameter ("@InvLoc", locIDs),
                 new SqlParameter ("@InvDev", deviceHardwareIDs),
+                new SqlParameter ("@FormattedLocIDs", formattedLocIDs),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
