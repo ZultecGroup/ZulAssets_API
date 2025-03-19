@@ -1288,28 +1288,57 @@ namespace ZulAssetsBackEnd_API.Controllers
                             for (int q = 0; q < quan; q++)
                             {
                                 DataRow insertItemRow = insertAssetDetails.NewRow();
+                                //DateTime now = DateTime.Now;
+                                //long microseconds = (now.Ticks / 10) % 100;  // Extract the last two digits as microseconds
+                                //string formatted = now.ToString("yy")  // Year (2 digits)
+                                //+ now.ToString("dd")  // Day (2 digits)
+                                //+ now.ToString("MM")  // Month (2 digits)
+                                //+ now.ToString("HH")  // Hour (2 digits, 24-hour format)
+                                //+ now.ToString("mm")  // Minutes (2 digits)
+                                //+ now.ToString("ss")  // Seconds (2 digits)
+                                //+ microseconds.ToString("00");  // Microseconds (last 2 digits)
+
+                                //if (astid.Trim() == formatted.Trim())
+                                ////if (astid == DateTime.Now.ToString("yyyymmddhhmmss").ToString())
+                                //{
+                                //    Thread.Sleep(1000);
+                                //    now = DateTime.Now;
+                                //    formatted = now.ToString("yy")  // Year (2 digits)
+                                //    + now.ToString("dd")  // Day (2 digits)
+                                //    + now.ToString("MM")  // Month (2 digits)
+                                //    + now.ToString("HH")  // Hour (2 digits, 24-hour format)
+                                //    + now.ToString("mm")  // Minutes (2 digits)
+                                //    + now.ToString("ss")  // Seconds (2 digits)
+                                //    + microseconds.ToString("00");  // Microseconds (last 2 digits)
+                                //}
+
+                                //astid = formatted;
                                 DateTime now = DateTime.Now;
                                 long microseconds = (now.Ticks / 10) % 100;  // Extract the last two digits as microseconds
                                 string formatted = now.ToString("yy")  // Year (2 digits)
-                                + now.ToString("dd")  // Day (2 digits)
-                                + now.ToString("MM")  // Month (2 digits)
-                                + now.ToString("HH")  // Hour (2 digits, 24-hour format)
-                                + now.ToString("mm")  // Minutes (2 digits)
-                                + now.ToString("ss")  // Seconds (2 digits)
-                                + microseconds.ToString("00");  // Microseconds (last 2 digits)
-
-                                if (astid.Trim() == formatted.Trim())
-                                //if (astid == DateTime.Now.ToString("yyyymmddhhmmss").ToString())
-                                {
-                                    Thread.Sleep(1000);
-                                    now = DateTime.Now;
-                                    formatted = now.ToString("yy")  // Year (2 digits)
                                     + now.ToString("dd")  // Day (2 digits)
                                     + now.ToString("MM")  // Month (2 digits)
                                     + now.ToString("HH")  // Hour (2 digits, 24-hour format)
                                     + now.ToString("mm")  // Minutes (2 digits)
                                     + now.ToString("ss")  // Seconds (2 digits)
                                     + microseconds.ToString("00");  // Microseconds (last 2 digits)
+
+                                if (astid.Trim() == formatted.Trim())
+                                {
+                                    Thread.Sleep(1000); // Sleep for 1 second
+
+                                    // After the sleep, update `now` and `microseconds`
+                                    now = DateTime.Now;
+                                    microseconds = (now.Ticks / 10) % 100;  // Recalculate microseconds with the updated `now`
+
+                                    // Generate the formatted string again with the new `now` and `microseconds`
+                                    formatted = now.ToString("yy")  // Year (2 digits)
+                                        + now.ToString("dd")  // Day (2 digits)
+                                        + now.ToString("MM")  // Month (2 digits)
+                                        + now.ToString("HH")  // Hour (2 digits, 24-hour format)
+                                        + now.ToString("mm")  // Minutes (2 digits)
+                                        + now.ToString("ss")  // Seconds (2 digits)
+                                        + microseconds.ToString("00");  // Microseconds (last 2 digits)
                                 }
 
                                 astid = formatted;
