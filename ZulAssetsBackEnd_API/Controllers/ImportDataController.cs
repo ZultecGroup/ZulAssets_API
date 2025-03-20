@@ -45,6 +45,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                 DateTime startTime = DateTime.Now;
 
                 #region Declarations
+
                 DataTable importDataforCustomer = new DataTable();
 
                 importDataforCustomer.Columns.Add("CustodianID");
@@ -362,6 +363,7 @@ namespace ZulAssetsBackEnd_API.Controllers
 
                 string astid = "";
 
+
                 for (int k = 0; k < importDataforCustomer.Rows.Count; k++)
                 {
                     int DesignationID = 1;
@@ -419,8 +421,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                             formattedDate = DateTime.ParseExact(importDataforCustomer.Rows[k]["ServiceDate"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture).ToString();
                             //formattedDate = PDate.ToString("dd-MM-yyyy HH:mm:ss.fff");
                         }
-                        // PDate = DateTime.ParseExact(importDataforCustomer.Rows[k]["ServiceDate"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
                     }
                     else
                     {
@@ -429,9 +429,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                             formattedDate = PDate.ToString("dd-MM-yyyy HH:mm:ss.fff");
                             // MessageBox.Show(formattedDate);
                         }
-                        //PDate = DateTime.Now;
-                        //PDate = DateTime.ParseExact(PDate.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
                     }
 
                     #region For Category
@@ -454,7 +451,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                             string subID1 = "";
                             string subcomcode = "";
                             string subcategoryfullpath = "";
-
 
                             string searchElementforSubCategory = importDataforLocation.Rows[k]["SubCategory"].ToString();
                             DataRow[] subcategoryrows = completeData.Tables["CategoryTable"].Select("catFullPath ='" + categoryfullpath + " \\ " + searchElementforSubCategory + "'");
@@ -499,8 +495,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 string subcatlevelloc = "1";
                                 thirdlocation = subloccompCodeloc;
 
-
-
                                 insertItemRowd["AstCatID"] = subcatIDloc;
                                 insertItemRowd["AstCatDesc"] = importDataforCategory.Rows[k]["SubCategory"].ToString();
                                 insertItemRowd["ID1"] = subcatID1;
@@ -509,7 +503,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRowd["CatLevel"] = 1;
                                 insertItemRowd["catFullPath"] = subcatfullPath;
                                 insertItemRowd["ParentID"] = ID1;
-                                //insertItemRowd["CompanyID"] = 1;
                                 insertItemRowd["isDeleted"] = 0;
 
                                 CategoryFulldt.Rows.Add(insertItemRowd);
@@ -522,7 +515,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRowforCategory["CatLevel"] = 1;
                                 insertItemRowforCategory["catFullPath"] = subcatfullPath;
                                 insertItemRowforCategory["ParentID"] = ID1;
-                                // insertItemRowforCategory["CompanyID"] = 1;
                                 insertItemRowforCategory["isDeleted"] = 0;
 
                                 insertCategory.Rows.Add(insertItemRowforCategory);
@@ -679,8 +671,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 int countForlocID2 = 0;
                                 int countForlocID2_1 = 0;
 
-
-
                                 int counted = LocationFulldt.AsEnumerable().Count(row =>
                                 {
                                     string cellValue = row.Field<string>("LocID");
@@ -698,7 +688,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 loccompCodeloc = loccompCode + " \\ " + Codeloc;
                                 locParentloc = locID1;
                                 loclevelloc = "1";
-
 
                                 insertItemRowd["LocID"] = locIDloc;
                                 insertItemRowd["LocDesc"] = importDataforLocation.Rows[k]["Location"].ToString();
@@ -742,8 +731,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                                     string subloclevelloc = ro["LocLevel"].ToString();
                                     string subCodeloc = ro["Code"].ToString();
                                     thirdlocation = sublocIDloc;
-
-
                                 }
                             }
 
@@ -753,8 +740,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 DataRow insertItemRowforlocationn = insertLocation.NewRow();
                                 int countForlocID2 = 0;
                                 int countForlocID2_1 = 0;
-
-
 
                                 int counted = LocationFulldt.AsEnumerable().Count(row =>
                                 {
@@ -803,11 +788,6 @@ namespace ZulAssetsBackEnd_API.Controllers
 
                         }
 
-
-
-                        //insertLocation.Rows.Add(insertItemRow);
-
-
                     }
                     else // if the main location is not created
                     {
@@ -827,8 +807,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                             int countforID1_3 = 0;
                             for (int i = 0; i < LocationFulldt.Rows.Count; i++)
                             {
-
-
                                 // Check if the column value does not contain a dash
                                 if (!LocationFulldt.Rows[i]["LocID"].ToString().Contains("-"))
                                 {
@@ -1169,7 +1147,6 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRow["isDeleted"] = 0;
 
                             insertCustodian.Rows.Add(insertItemRow);
-                            //CustodianFulldt.Rows.Add(insertItemRow);
                             CustodianID = int.Parse(custodianCount) + 1;
 
                             DataRow insertCustodianRowd = CustodianFulldt.NewRow();
@@ -1284,61 +1261,32 @@ namespace ZulAssetsBackEnd_API.Controllers
                         else
                         {
                             int quan = Convert.ToInt16(importDataforAssetDetails.Rows[k]["Quantity"]);
-
                             for (int q = 0; q < quan; q++)
                             {
                                 DataRow insertItemRow = insertAssetDetails.NewRow();
-                                //DateTime now = DateTime.Now;
-                                //long microseconds = (now.Ticks / 10) % 100;  // Extract the last two digits as microseconds
-                                //string formatted = now.ToString("yy")  // Year (2 digits)
-                                //+ now.ToString("dd")  // Day (2 digits)
-                                //+ now.ToString("MM")  // Month (2 digits)
-                                //+ now.ToString("HH")  // Hour (2 digits, 24-hour format)
-                                //+ now.ToString("mm")  // Minutes (2 digits)
-                                //+ now.ToString("ss")  // Seconds (2 digits)
-                                //+ microseconds.ToString("00");  // Microseconds (last 2 digits)
-
-                                //if (astid.Trim() == formatted.Trim())
-                                ////if (astid == DateTime.Now.ToString("yyyymmddhhmmss").ToString())
-                                //{
-                                //    Thread.Sleep(1000);
-                                //    now = DateTime.Now;
-                                //    formatted = now.ToString("yy")  // Year (2 digits)
-                                //    + now.ToString("dd")  // Day (2 digits)
-                                //    + now.ToString("MM")  // Month (2 digits)
-                                //    + now.ToString("HH")  // Hour (2 digits, 24-hour format)
-                                //    + now.ToString("mm")  // Minutes (2 digits)
-                                //    + now.ToString("ss")  // Seconds (2 digits)
-                                //    + microseconds.ToString("00");  // Microseconds (last 2 digits)
-                                //}
-
-                                //astid = formatted;
                                 DateTime now = DateTime.Now;
-                                long microseconds = (now.Ticks / 10) % 100;  // Extract the last two digits as microseconds
+                                long microseconds = (now.Ticks % TimeSpan.TicksPerSecond) / 10;
                                 string formatted = now.ToString("yy")  // Year (2 digits)
+                                + now.ToString("dd")  // Day (2 digits)
+                                + now.ToString("MM")  // Month (2 digits)
+                                + now.ToString("HH")  // Hour (2 digits, 24-hour format)
+                                + now.ToString("mm")  // Minutes (2 digits)
+                                + now.ToString("ss")  // Seconds (2 digits)
+                                + microseconds.ToString("000000").Substring(0, 2);
+
+                                if (astid.Trim() == formatted.Trim())
+                                {
+                                    Thread.Sleep(1000);
+                                    microseconds = (now.Ticks % TimeSpan.TicksPerSecond) / 10;
+                                    now = DateTime.Now;
+
+                                    formatted = now.ToString("yy")  // Year (2 digits)
                                     + now.ToString("dd")  // Day (2 digits)
                                     + now.ToString("MM")  // Month (2 digits)
                                     + now.ToString("HH")  // Hour (2 digits, 24-hour format)
                                     + now.ToString("mm")  // Minutes (2 digits)
                                     + now.ToString("ss")  // Seconds (2 digits)
-                                    + microseconds.ToString("00");  // Microseconds (last 2 digits)
-
-                                if (astid.Trim() == formatted.Trim())
-                                {
-                                    Thread.Sleep(1000); // Sleep for 1 second
-
-                                    // After the sleep, update `now` and `microseconds`
-                                    now = DateTime.Now;
-                                    microseconds = (now.Ticks / 10) % 100;  // Recalculate microseconds with the updated `now`
-
-                                    // Generate the formatted string again with the new `now` and `microseconds`
-                                    formatted = now.ToString("yy")  // Year (2 digits)
-                                        + now.ToString("dd")  // Day (2 digits)
-                                        + now.ToString("MM")  // Month (2 digits)
-                                        + now.ToString("HH")  // Hour (2 digits, 24-hour format)
-                                        + now.ToString("mm")  // Minutes (2 digits)
-                                        + now.ToString("ss")  // Seconds (2 digits)
-                                        + microseconds.ToString("00");  // Microseconds (last 2 digits)
+                                    + microseconds.ToString("000000").Substring(0, 2);
                                 }
 
                                 astid = formatted;
@@ -1364,9 +1312,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRow["CostCenterID"] = CostID;
                                 insertItemRow["CreatedBY"] = "Import Process";
 
-
                                 insertAssetDetails.Rows.Add(insertItemRow);
-
 
                                 DataRow insertItemRowd = AssetDetailsFulldt.NewRow();
                                 insertItemRowd["AstID"] = astid;
@@ -1391,11 +1337,11 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRowd["CostCenterID"] = CostID;
                                 insertItemRowd["CreatedBy"] = "Import Process";
                                 AssetDetailsFulldt.Rows.Add(insertItemRowd);
+
                             }
-
-
                         }
                     }
+
                     #endregion
 
                 }
