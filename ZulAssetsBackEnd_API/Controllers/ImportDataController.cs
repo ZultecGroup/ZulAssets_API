@@ -196,6 +196,11 @@ namespace ZulAssetsBackEnd_API.Controllers
                 insertSupplier.Columns.Add("SuppName");
                 insertSupplier.Columns.Add("isDeleted");
 
+                DataTable updateSupplier = new DataTable();
+                updateSupplier.Columns.Add("SuppID");
+                updateSupplier.Columns.Add("SuppName");
+                updateSupplier.Columns.Add("isDeleted");
+
                 DataTable insertCostCenter = new DataTable();
 
                 insertCostCenter.Columns.Add("CostID");
@@ -960,21 +965,36 @@ namespace ZulAssetsBackEnd_API.Controllers
 
                     #region For Vendor
 
-                    string searchElementforSupplier = importDataforBrand.Rows[k]["VendorName"].ToString();
-                    DataRow[] rowsssss = completeData.Tables["SupplierTable"].Select("SuppName ='" + searchElementforSupplier + "'");
+                    //string searchElementforSupplier = importDataforBrand.Rows[k]["VendorName"].ToString();    //searching Via Vendor Name
+                    string searchElementforSupplier = importDataforBrand.Rows[k]["VendorAccountNumber"].ToString(); //get SuppID from Import payload
+                    DataRow[] rowsssss = completeData.Tables["SupplierTable"].Select("SuppID ='" + searchElementforSupplier + "'"); //Check if SuppID exists in DB Table
 
-                    if (rowsssss.Length > 0)
+                    if (rowsssss.Length > 0)    //if length is > 0 means exists
                     {
                         foreach (DataRow row in rowsssss)
                         {
                             SuppID = row["SuppID"].ToString();
                             // Do something with the data
+
+                            //Insert in Update Table of Supplier in order to update Supplier Name if SuppID exists
+                            DataRow updateItemRow = updateSupplier.NewRow();
+                            updateItemRow["SuppID"] = importDataforSupplier.Rows[k]["VendorAccountNumber"].ToString();
+                            updateItemRow["SuppName"] = importDataforSupplier.Rows[k]["VendorName"].ToString();
+                            updateItemRow["isDeleted"] = 0;
+                            updateSupplier.Rows.Add(updateItemRow);
+
+                            //// Find if a row with the same SuppID already exists in Temporary master table
+                            //DataRow existingRow = SupplierFulldt.AsEnumerable().FirstOrDefault(row => row.Field<string>("SuppID") == importDataforSupplier.Rows[k]["VendorAccountNumber"].ToString());
+                            //// Update the existing row
+                            //existingRow["SuppName"] = importDataforSupplier.Rows[k]["VendorName"].ToString();
+                            //existingRow["isDeleted"] = 0;  // or your desired value
+
                         }
 
                     }
                     else
                     {
-                        DataRow[] rows1 = insertSupplier.Select("SuppName ='" + searchElementforSupplier + "'");
+                        DataRow[] rows1 = insertSupplier.Select("SuppID ='" + searchElementforSupplier + "'");    //
                         if (rows1.Length > 0)
                         {
                             string msg123 = "do nothing";
@@ -1368,7 +1388,7 @@ namespace ZulAssetsBackEnd_API.Controllers
 
                 #endregion
 
-                #region Supplier Insert
+                #region Vendor Insert
 
                 if (insertSupplier.Rows.Count > 0)
                 {
@@ -1384,6 +1404,27 @@ namespace ZulAssetsBackEnd_API.Controllers
                         msg.message = itemInsertResponse.Rows[0]["Message"].ToString();
                         addedItemRows = itemInsertResponse.Rows[0]["AddedRows"].ToString();
                     }
+                }
+
+                #endregion
+
+                #region Vendor Update
+
+                if (updateSupplier.Rows.Count > 0)
+                {
+                    DataTable itemInsertResponse = DataLogic.InsertItemsInBulk("Supplier", 0, updateSupplier, SP_ImportAssets);
+                    if (itemInsertResponse.Columns.Contains("ErrorMessage"))
+                    {
+                        msg.message = itemInsertResponse.Rows[0]["ErrorMessage"].ToString();
+                        msg.status = "401";
+                        return Ok(msg);
+                    }
+                    //No need to show Update message in response
+                    //else
+                    //{
+                    //    msg.message = itemInsertResponse.Rows[0]["Message"].ToString();
+                    //    addedItemRows = itemInsertResponse.Rows[0]["AddedRows"].ToString();
+                    //}
                 }
 
                 #endregion
