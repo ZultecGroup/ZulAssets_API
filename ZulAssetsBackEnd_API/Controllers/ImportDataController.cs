@@ -372,7 +372,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                 for (int k = 0; k < importDataforCustomer.Rows.Count; k++)
                 {
                     int DesignationID = 1;
-                    int CustodianID = 1;
+                    string CustodianID = "";
                     int AstBrandID = 1;
                     int DeptID = 1;
                     string SuppID = "Unknown";
@@ -1145,7 +1145,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     {
                         foreach (DataRow row in rows)
                         {
-                            CustodianID = Convert.ToInt16(row["CustodianID"]);
+                            CustodianID = row["CustodianID"].ToString();
                             // Do something with the data
                         }
 
@@ -1167,7 +1167,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRow["isDeleted"] = 0;
 
                             insertCustodian.Rows.Add(insertItemRow);
-                            CustodianID = int.Parse(custodianCount) + 1;
+                            CustodianID = (int.Parse(custodianCount) + 1).ToString();
 
                             DataRow insertCustodianRowd = CustodianFulldt.NewRow();
                             insertCustodianRowd["CustodianID"] = int.Parse(custodianCount) + 1;
@@ -1260,7 +1260,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             updateAssetDetailsRow["AstBrandId"] = AstBrandID;
                             updateAssetDetailsRow["AstDesc"] = itemDesc;
                             updateAssetDetailsRow["CompanyID"] = row["CompanyID"];
-                            updateAssetDetailsRow["BarCode"] = astid;
+                            updateAssetDetailsRow["BarCode"] = refno;
                             updateAssetDetailsRow["SerailNo"] = serial;
                             updateAssetDetailsRow["AstDesc2"] = astDesc2;
                             updateAssetDetailsRow["CostCenterID"] = CostID;
@@ -1326,7 +1326,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRow["AstBrandId"] = AstBrandID;
                                 insertItemRow["AstDesc"] = itemDesc;
                                 insertItemRow["CompanyID"] = "1";
-                                insertItemRow["BarCode"] = astid;
+                                insertItemRow["BarCode"] = refno;
                                 insertItemRow["SerailNo"] = serial;
                                 insertItemRow["AstDesc2"] = astDesc2;
                                 insertItemRow["CostCenterID"] = CostID;
@@ -1351,7 +1351,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRowd["AstBrandId"] = AstBrandID;
                                 insertItemRowd["AstDesc"] = itemDesc;
                                 insertItemRowd["CompanyID"] = "1";
-                                insertItemRowd["BarCode"] = astid;
+                                insertItemRowd["BarCode"] = refno;
                                 insertItemRowd["SerailNo"] = serial;
                                 insertItemRowd["AstDesc2"] = astDesc2;
                                 insertItemRowd["CostCenterID"] = CostID;
