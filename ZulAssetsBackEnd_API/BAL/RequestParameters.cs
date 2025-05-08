@@ -383,6 +383,7 @@ namespace ZulAssetsBackEnd_API.BAL
             public string AstCatID { get; set; } = "";
             public string CustodianID { get; set; } = "";
             public PaginationParam PaginationParam { get; set; } = new PaginationParam();
+            public string LoginName { get; set; } = "";
         }
         #endregion
 
@@ -648,10 +649,16 @@ namespace ZulAssetsBackEnd_API.BAL
             public string Description { get; set; } = "";
             public string Var { get; set; } = "";
             public string LoginName { get; set; } = "";
+
+            public List<RoleCompanies> roleCompanies_list { get; set; } = new List<RoleCompanies> { };
             public List<RoleAssignOptions> roleAssignOptions_list { get; set; } = new List<RoleAssignOptions> { };
             public PaginationParam PaginationParam { get; set; } = new PaginationParam();
         }
 
+        public class RoleCompanies
+        {
+            public string Companies { get; set; } = "";
+        }
         #endregion
 
         #region GLCode Parameters
@@ -1149,7 +1156,7 @@ namespace ZulAssetsBackEnd_API.BAL
             public int BarcodeStructureID { get; set; }
             public string LoginName { get; set; }
             public List<ItemCodeTrees> itemCodeTree { get; set; } = new List<ItemCodeTrees>();
-            
+
         }
 
         public class ItemCodeTrees
@@ -1341,6 +1348,8 @@ namespace ZulAssetsBackEnd_API.BAL
             public string ServiceDate { get; set; }
             public string SalvageYear { get; set; }
             public string Quantity { get; set; }
+            public string ElectronicSerialNumber { get; set; }
+            public string CompanyName { get; set; }
 
         }
         #endregion
@@ -1351,19 +1360,44 @@ namespace ZulAssetsBackEnd_API.BAL
 
         public class ReportReqParams
         {
-            public string PurchaseDate { get; set; }
-            public string LocID { get; set; }
-            public string AstBrandID { get; set; }
-            public string ItemCode { get; set; }
-            public string BaseCost { get; set; }
-            public string Tax { get; set; }
-            public string InvStatus { get; set; }
-            public string StatusID { get; set; }
-            public string AstCatID { get; set; }
-            public string CustodianID { get; set; }
-            public string SuppID { get; set; }
-            public string CompanyID { get; set; }
-            public string DeptID { get; set; }
+            public string PurchaseDate { get; set; } = "";
+            public string LocID { get; set; } = "";
+            public string AstBrandID { get; set; } = "";
+            public string ItemCode { get; set; } = "";
+            public string BaseCost { get; set; } = "";
+            public string Tax { get; set; } = "";
+            public string InvStatus { get; set; } = "";
+            public string StatusID { get; set; } = "";
+            public string AstCatID { get; set; } = "";
+            public string CustodianID { get; set; } = "";
+            public string SuppID { get; set; } = "";
+            public string CompanyID { get; set; } = "";
+            public string DeptID { get; set; } = "";
+            public PaginationParam paginationParam { get; set; }
+
+        }
+
+        #endregion
+
+        #region Disposed Assets Report
+
+        public class DisposedAssetsReportReqParams
+        {
+            public string PurchaseDate { get; set; } = "";
+            public string LocID { get; set; } = "";
+            public string AstBrandID { get; set; } = "";
+            public string ItemCode { get; set; } = "";
+            public string BaseCost { get; set; } = "";
+            public string Tax { get; set; } = "";
+            public string InvStatus { get; set; } = "";
+            public string StatusID { get; set; } = "";
+            public string AstCatID { get; set; } = "";
+            public string CustodianID { get; set; } = "";
+            public string SuppID { get; set; } = "";
+            public string CompanyID { get; set; } = "";
+            public string DeptID { get; set; } = "";
+            public string Disposed { get; set; } = "";
+            public PaginationParam paginationParam { get; set; }
 
         }
 

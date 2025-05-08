@@ -19,6 +19,7 @@ namespace ZulAssetsBackEnd_API.Controllers
         #region Declaration
 
         private static string SP_GetAllAuditReportsDD = "[dbo].[SP_GetAllAuditReportsDD]";
+        private static string SP_GetAllStandardReportsDD = "[dbo].[SP_GetAllStandardReportsDD]";
 
         #region Standard Reports
 
@@ -37,7 +38,7 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         private static string SP_AnnonymousAssets = "[dbo].[SP_Report_AnnonymousAssets]";
         private static string SP_MissingAssets = "[dbo].[SP_MissingAssets_AuditReport]";
-        
+
         private static string SP_FoundAssets = "[dbo].[SP_Report_FoundMisplacedTransferredAssets]";
         private static string SP_MisplacedAssets = "[dbo].[SP_Report_FoundMisplacedTransferredAssets]";
         private static string SP_TransferredAssets = "[dbo].[SP_Report_FoundMisplacedTransferredAssets]";
@@ -63,7 +64,7 @@ namespace ZulAssetsBackEnd_API.Controllers
             Message msg = new Message();
             try
             {
-                
+
                 DataTable dt = DataLogic.GetAllAuditReportsDD(SP_GetAllAuditReportsDD);
 
                 if (dt.Rows.Count > 0)
@@ -93,44 +94,108 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
+        #region Get All Standard Reports
+        /// <summary>
+        /// This API is used to get All Audit Reports for Dropdown
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("GetAllStandardReportsDD")]
+        [Authorize]
+        public IActionResult GetAllStandardReportsDD()
+        {
+            Message msg = new Message();
+            try
+            {
+
+                DataTable dt = DataLogic.GetAllAuditReportsDD(SP_GetAllStandardReportsDD);
+
+                if (dt.Rows.Count > 0)
+                {
+                    if (dt.Columns.Contains("ErrorMessage"))
+                    {
+                        msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                        msg.status = "401";
+                        return Ok(msg);
+                    }
+                    else
+                    {
+                        return Ok(dt);
+                    }
+                }
+                else
+                {
+                    return BadRequest(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                msg.message = ex.Message;
+                return Ok(msg);
+            }
+        }
+        #endregion
+
         #region Standard Reports
 
-        #region CompanyAssets
+        #region Company Assets
 
-
-        /// /// <param name="reportReqParams"></param>
+        /// <param name="reportReqParams"></param>
+        /// <summary>
+        /// This API is used to get Company Assets
+        /// </summary>
         /// <returns>This will return a message of success</returns>
         [HttpPost("CompanyAssets")]
-        //[Authorize]
+        [Authorize]
         public IActionResult CompanyAssets([FromBody] ReportReqParams reportReqParams)
         {
             Message msg = new Message();
             try
             {
-                DataTable dt = DataLogic.StandardReport(reportReqParams, SP_Report_CompanyAssets);
-                if (dt.Rows.Count > 0)
+                DataSet ds = DataLogic.StandardReport(reportReqParams, SP_Report_CompanyAssets);
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    if (dt.Rows.Count > 0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        if (dt.Columns.Contains("ErrorMessage"))
+                        if (ds.Tables[0].Columns.Contains("ErrorMessage"))
                         {
-                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                            msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
                             msg.status = "401";
                             return Ok(msg);
                         }
                         else
                         {
-                            return Ok(dt);
+                            //return Ok(ds);
+
+                            #region Replace Table Names
+
+                            DataTable table = ds.Tables["Table"];
+                            DataTable table1 = ds.Tables["Table1"];
+
+                            table.TableName = "TotalRowsCount";
+                            table1.TableName = "data";
+
+                            #endregion
+
+                            int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
+                            string totalAssetsCost = table.Rows[0][1].ToString();
+
+                            return Ok(
+                            new
+                            {
+                                totalRowsCount = totalRowsCounts,
+                                totalAssetsCost = totalAssetsCost,
+                                data = table1
+                            });
                         }
                     }
                     else
                     {
-                        return Ok(dt);
+                        return Ok(ds);
                     }
                 }
                 else
                 {
-                    return Ok(dt);
+                    return Ok(ds);
                 }
             }
             catch (Exception ex)
@@ -142,42 +207,65 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
-        #region AssetDetails
+        #region Asset Details
 
-
-        /// /// <param name="reportReqParams"></param>
+        /// <param name="reportReqParams"></param>
+        /// <summary>
+        /// This API is used to get Complete Asset Details
+        /// </summary>
         /// <returns>This will return a message of success</returns>
         [HttpPost("AssetDetails")]
-        //[Authorize]
+        [Authorize]
         public IActionResult AssetDetails([FromBody] ReportReqParams reportReqParams)
         {
             Message msg = new Message();
             try
             {
-                DataTable dt = DataLogic.StandardReport(reportReqParams, SP_Report_AssetDetails);
-                if (dt.Rows.Count > 0)
+                DataSet ds = DataLogic.StandardReport(reportReqParams, SP_Report_AssetDetails);
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    if (dt.Rows.Count > 0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        if (dt.Columns.Contains("ErrorMessage"))
+                        if (ds.Tables[0].Columns.Contains("ErrorMessage"))
                         {
-                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                            msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
                             msg.status = "401";
                             return Ok(msg);
                         }
                         else
                         {
-                            return Ok(dt);
+                            //return Ok(ds);
+
+                            #region Replace Table Names
+
+                            DataTable table = ds.Tables["Table"];
+                            DataTable table1 = ds.Tables["Table1"];
+
+                            table.TableName = "TotalRowsCount";
+                            table1.TableName = "data";
+
+                            #endregion
+
+                            int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
+                            string totalAssetsCost = table.Rows[0][1].ToString();
+
+                            return Ok(
+                            new
+                            {
+                                totalRowsCount = totalRowsCounts,
+                                totalAssetsCost = totalAssetsCost,
+                                data = table1
+                            });
                         }
                     }
                     else
                     {
-                        return Ok(dt);
+                        return Ok(ds);
                     }
                 }
                 else
                 {
-                    return Ok(dt);
+                    return Ok(ds);
                 }
             }
             catch (Exception ex)
@@ -189,42 +277,66 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
-        #region AssetLedger
+        #region Asset Ledger
 
-
-        /// /// <param name="reportReqParams"></param>
+        /// <param name="reportReqParams"></param>
+        /// <summary>
+        /// This API is used to get Asset Ledger Details
+        /// </summary>
         /// <returns>This will return a message of success</returns>
         [HttpPost("AssetLedger")]
-        //[Authorize]
+        [Authorize]
         public IActionResult AssetLedger([FromBody] ReportReqParams reportReqParams)
         {
             Message msg = new Message();
             try
             {
-                DataTable dt = DataLogic.StandardReport(reportReqParams, SP_Report_AssetLedger);
-                if (dt.Rows.Count > 0)
+                DataSet ds = DataLogic.StandardReport(reportReqParams, SP_Report_AssetLedger);
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    if (dt.Rows.Count > 0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        if (dt.Columns.Contains("ErrorMessage"))
+                        if (ds.Tables[0].Columns.Contains("ErrorMessage"))
                         {
-                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                            msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
                             msg.status = "401";
                             return Ok(msg);
                         }
                         else
                         {
-                            return Ok(dt);
+
+                            //return Ok(ds);
+
+                            #region Replace Table Names
+
+                            DataTable table = ds.Tables["Table"];
+                            DataTable table1 = ds.Tables["Table1"];
+
+                            table.TableName = "TotalRowsCount";
+                            table1.TableName = "data";
+
+                            #endregion
+
+                            int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
+                            string totalAssetsCost = table.Rows[0][1].ToString();
+
+                            return Ok(
+                            new
+                            {
+                                totalRowsCount = totalRowsCounts,
+                                totalAssetsCost = totalAssetsCost,
+                                data = table1
+                            });
                         }
                     }
                     else
                     {
-                        return Ok(dt);
+                        return Ok(ds);
                     }
                 }
                 else
                 {
-                    return Ok(dt);
+                    return Ok(ds);
                 }
             }
             catch (Exception ex)
@@ -236,89 +348,134 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
-        #region AssetLog
+        //#region Asset Log
 
+        ///// <param name="reportReqParams"></param>
 
-        /// /// <param name="reportReqParams"></param>
-        /// <returns>This will return a message of success</returns>
-        [HttpPost("AssetLog")]
-        //[Authorize]
-        public IActionResult AssetLog([FromBody] ReportReqParams reportReqParams)
-        {
-            Message msg = new Message();
-            try
-            {
-                DataTable dt = DataLogic.StandardReport(reportReqParams, SP_Report_AssetLog);
-                if (dt.Rows.Count > 0)
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        if (dt.Columns.Contains("ErrorMessage"))
-                        {
-                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
-                            msg.status = "401";
-                            return Ok(msg);
-                        }
-                        else
-                        {
-                            return Ok(dt);
-                        }
-                    }
-                    else
-                    {
-                        return Ok(dt);
-                    }
-                }
-                else
-                {
-                    return Ok(dt);
-                }
-            }
-            catch (Exception ex)
-            {
-                msg.message = ex.Message;
-                return Ok(msg);
-            }
-        }
+        ///// <returns>This will return a message of success</returns>
+        //[HttpPost("AssetLog")]
+        ////[Authorize]
+        //public IActionResult AssetLog([FromBody] ReportReqParams reportReqParams)
+        //{
+        //    Message msg = new Message();
+        //    try
+        //    {
+        //        DataSet ds = DataLogic.StandardReport(reportReqParams, SP_Report_AssetLog);
+        //        if (ds.Tables[0].Rows.Count > 0)
+        //        {
+        //            if (ds.Tables[0].Rows.Count > 0)
+        //            {
+        //                if (ds.Tables[0].Columns.Contains("ErrorMessage"))
+        //                {
+        //                    msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+        //                    msg.status = "401";
+        //                    return Ok(msg);
+        //                }
+        //                else
+        //                {
+        //                    //return Ok(ds);
 
-        #endregion
+        //                    #region Replace Table Names
 
-        #region AssetTagging
+        //                    DataTable table = ds.Tables["Table"];
+        //                    DataTable table1 = ds.Tables["Table1"];
 
+        //                    table.TableName = "TotalRowsCount";
+        //                    table1.TableName = "data";
 
-        /// /// <param name="reportReqParams"></param>
+        //                    #endregion
+
+        //                    int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
+        //                    string totalAssetsCost = table.Rows[0][1].ToString();
+
+        //                    return Ok(
+        //                    new
+        //                    {
+        //                        totalRowsCount = totalRowsCounts,
+        //                        totalAssetsCost = totalAssetsCost,
+        //                        data = table1
+        //                    });
+        //                }
+        //            }
+        //            else
+        //            {
+        //                return Ok(ds);
+        //            }
+        //        }
+        //        else
+        //        {
+        //            return Ok(ds);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        msg.message = ex.Message;
+        //        return Ok(msg);
+        //    }
+        //}
+
+        //#endregion
+
+        #region Asset Tagging
+
+        /// <param name="reportReqParams"></param>
+        /// <summary>
+        /// This API is used to generate Asset Tagging Report
+        /// </summary>
         /// <returns>This will return a message of success</returns>
         [HttpPost("AssetTagging")]
-        //[Authorize]
+        [Authorize]
         public IActionResult AssetTagging([FromBody] ReportReqParams reportReqParams)
         {
             Message msg = new Message();
             try
             {
-                DataTable dt = DataLogic.StandardReport(reportReqParams, SP_Report_AssetTagging);
-                if (dt.Rows.Count > 0)
+                DataSet ds = DataLogic.StandardReport(reportReqParams, SP_Report_AssetTagging);
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    if (dt.Rows.Count > 0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        if (dt.Columns.Contains("ErrorMessage"))
+                        if (ds.Tables[0].Columns.Contains("ErrorMessage"))
                         {
-                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                            msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
                             msg.status = "401";
                             return Ok(msg);
                         }
                         else
                         {
-                            return Ok(dt);
+
+                            //return Ok(ds);
+
+                            #region Replace Table Names
+
+                            DataTable table = ds.Tables["Table"];
+                            DataTable table1 = ds.Tables["Table1"];
+
+                            table.TableName = "TotalRowsCount";
+                            table1.TableName = "data";
+
+                            #endregion
+
+                            int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
+                            string totalAssetsCost = table.Rows[0][1].ToString();
+
+                            return Ok(
+                            new
+                            {
+                                totalRowsCount = totalRowsCounts,
+                                totalAssetsCost = totalAssetsCost,
+                                data = table1
+                            });
                         }
                     }
                     else
                     {
-                        return Ok(dt);
+                        return Ok(ds);
                     }
                 }
                 else
                 {
-                    return Ok(dt);
+                    return Ok(ds);
                 }
             }
             catch (Exception ex)
@@ -330,42 +487,66 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
-        #region DisposedAssets
+        #region Disposed Assets
 
-
-        /// /// <param name="reportReqParams"></param>
+        /// <param name="disposedAssetsReportReqParams"></param>
+        /// <summary>
+        /// This API is used to generate Disposed Assets Report
+        /// </summary>
         /// <returns>This will return a message of success</returns>
         [HttpPost("DisposedAssets")]
-        //[Authorize]
-        public IActionResult DisposedAssets([FromBody] ReportReqParams reportReqParams)
+        [Authorize]
+        public IActionResult DisposedAssets([FromBody] DisposedAssetsReportReqParams disposedAssetsReportReqParams)
         {
             Message msg = new Message();
             try
             {
-                DataTable dt = DataLogic.StandardReport(reportReqParams, SP_Report_DisposedAssets);
-                if (dt.Rows.Count > 0)
+                DataSet ds = DataLogic.DisposedAssetsReport(disposedAssetsReportReqParams, SP_Report_DisposedAssets);
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    if (dt.Rows.Count > 0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        if (dt.Columns.Contains("ErrorMessage"))
+                        if (ds.Tables[0].Columns.Contains("ErrorMessage"))
                         {
-                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                            msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
                             msg.status = "401";
                             return Ok(msg);
                         }
                         else
                         {
-                            return Ok(dt);
+
+                            //return Ok(ds);
+
+                            #region Replace Table Names
+
+                            DataTable table = ds.Tables["Table"];
+                            DataTable table1 = ds.Tables["Table1"];
+
+                            table.TableName = "TotalRowsCount";
+                            table1.TableName = "data";
+
+                            #endregion
+
+                            int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
+                            string totalAssetsCost = table.Rows[0][1].ToString();
+
+                            return Ok(
+                            new
+                            {
+                                totalRowsCount = totalRowsCounts,
+                                totalAssetsCost = totalAssetsCost,
+                                data = table1
+                            });
                         }
                     }
                     else
                     {
-                        return Ok(dt);
+                        return Ok(ds);
                     }
                 }
                 else
                 {
-                    return Ok(dt);
+                    return Ok(ds);
                 }
             }
             catch (Exception ex)
@@ -377,42 +558,65 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
-        #region ItemsInventory
+        #region Items Inventory
 
-
-        /// /// <param name="reportReqParams"></param>
+        /// <param name="reportReqParams"></param>
+        /// <summary>
+        /// This API is used to generate Asset items count Report
+        /// </summary>
         /// <returns>This will return a message of success</returns>
         [HttpPost("ItemsInventory")]
-        //[Authorize]
+        [Authorize]
         public IActionResult ItemsInventory([FromBody] ReportReqParams reportReqParams)
         {
             Message msg = new Message();
             try
             {
-                DataTable dt = DataLogic.StandardReport(reportReqParams, SP_Report_ItemsInventory);
-                if (dt.Rows.Count > 0)
+                DataSet ds = DataLogic.StandardReport(reportReqParams, SP_Report_ItemsInventory);
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    if (dt.Rows.Count > 0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        if (dt.Columns.Contains("ErrorMessage"))
+                        if (ds.Tables[0].Columns.Contains("ErrorMessage"))
                         {
-                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                            msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
                             msg.status = "401";
                             return Ok(msg);
                         }
                         else
                         {
-                            return Ok(dt);
+                            //return Ok(ds);
+
+                            #region Replace Table Names
+
+                            DataTable table = ds.Tables["Table"];
+                            DataTable table1 = ds.Tables["Table1"];
+
+                            table.TableName = "TotalRowsCount";
+                            table1.TableName = "data";
+
+                            #endregion
+
+                            int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
+                            string totalAssetsCost = table.Rows[0][1].ToString();
+
+                            return Ok(
+                            new
+                            {
+                                totalAssetCount = totalRowsCounts,
+                                totalAssetItemsCount = totalAssetsCost,
+                                data = table1
+                            });
                         }
                     }
                     else
                     {
-                        return Ok(dt);
+                        return Ok(ds);
                     }
                 }
                 else
                 {
-                    return Ok(dt);
+                    return Ok(ds);
                 }
             }
             catch (Exception ex)
@@ -424,41 +628,65 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
-        #region NewTags
+        #region New Tags
 
-        /// /// <param name="reportReqParams"></param>
+        /// <param name="reportReqParams"></param>
+        /// <summary>
+        /// This API is used to generate New Tag Assets Report
+        /// </summary>
         /// <returns>This will return a message of success</returns>
         [HttpPost("NewTags")]
-        //[Authorize]
+        [Authorize]
         public IActionResult NewTags([FromBody] ReportReqParams reportReqParams)
         {
             Message msg = new Message();
             try
             {
-                DataTable dt = DataLogic.StandardReport(reportReqParams, SP_Report_NewTags);
-                if (dt.Rows.Count > 0)
+                DataSet ds = DataLogic.StandardReport(reportReqParams, SP_Report_NewTags);
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    if (dt.Rows.Count > 0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        if (dt.Columns.Contains("ErrorMessage"))
+                        if (ds.Tables[0].Columns.Contains("ErrorMessage"))
                         {
-                            msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                            msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
                             msg.status = "401";
                             return Ok(msg);
                         }
                         else
                         {
-                            return Ok(dt);
+                            //return Ok(ds);
+
+                            #region Replace Table Names
+
+                            DataTable table = ds.Tables["Table"];
+                            DataTable table1 = ds.Tables["Table1"];
+
+                            table.TableName = "TotalRowsCount";
+                            table1.TableName = "data";
+
+                            #endregion
+
+                            int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
+                            string totalAssetsCost = table.Rows[0][1].ToString();
+
+                            return Ok(
+                            new
+                            {
+                                totalAssetCount = totalRowsCounts,
+                                totalAssetsCost = totalAssetsCost,
+                                data = table1
+                            });
                         }
                     }
                     else
                     {
-                        return Ok(dt);
+                        return Ok(ds);
                     }
                 }
                 else
                 {
-                    return Ok(dt);
+                    return Ok(ds);
                 }
             }
             catch (Exception ex)
@@ -551,11 +779,11 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
 
                                 return Ok(
-                                    new
-                                    {
-                                        totalRowsCount = totalRowsCounts,
-                                        data = table1
-                                    });
+                                new
+                                {
+                                    totalRowsCount = totalRowsCounts,
+                                    data = table1
+                                });
                             }
                         }
                         else
@@ -999,7 +1227,7 @@ namespace ZulAssetsBackEnd_API.Controllers
 
                                 int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
 
-                                return Ok( new
+                                return Ok(new
                                 {
                                     totalRowsCount = totalRowsCounts,
                                     data = data,

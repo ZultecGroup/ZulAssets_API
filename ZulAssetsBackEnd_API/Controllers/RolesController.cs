@@ -23,6 +23,7 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
+
         #region Get All Roles
         /// <summary>
         /// Get all Roles by passing a parameter "Get = 1 and others as empty"
@@ -58,12 +59,25 @@ namespace ZulAssetsBackEnd_API.Controllers
 
                         int totalRowsCounts = Convert.ToInt32(table.Rows[0][0]);
 
-                        return Ok(
-                            new
-                            {
-                                totalRowsCount = totalRowsCounts,
-                                data = table1
-                            });
+                        //return Ok(
+                        //    new
+                        //    {
+                        //        totalRowsCount = totalRowsCounts,
+                        //        data = table1
+                        //    });
+                        var dataTransformed = table1.AsEnumerable().Select(row => new
+                        {
+                            rowNo = Convert.ToInt32(row["rowNo"]),
+                            roleID = Convert.ToInt32(row["roleID"]),
+                            description = row["description"].ToString(),
+                            companies = row["companies"].ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(c => new { companies = c.Trim() }).ToList()
+                        }).ToList();
+
+                        return Ok(new
+                        {
+                            totalRowsCount = totalRowsCounts,
+                            data = dataTransformed
+                        });
                         //return Ok(ds);
                     }
                 }
@@ -154,6 +168,29 @@ namespace ZulAssetsBackEnd_API.Controllers
             Message msg = new Message();
             try
             {
+                DataTable roleCompanies = new DataTable();
+
+                roleCompanies.Columns.Add("Companies");
+
+                #region Conversion of List Tree to DataTable
+
+                if (roleReq.roleCompanies_list != null)
+                {
+                    roleCompanies = ListintoDataTable.ToDataTable2(roleReq.roleCompanies_list);
+                }
+
+                #endregion
+
+                string result = "";
+
+                if (roleCompanies.Rows.Count == 1)
+                {
+                    result = roleCompanies.Rows[0]["Companies"].ToString();
+                }
+                else if (roleCompanies.Rows.Count > 1)
+                {
+                    result = string.Join(",", roleCompanies.AsEnumerable().Select(row => row["Companies"].ToString()));
+                }
 
                 if (roleReq.Description == "" || roleReq.Description == null)
                 {
@@ -162,7 +199,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     return BadRequest(msg);
                 }
 
-                DataTable dt = DataLogic.InsertRole(roleReq, SP_GetInsertUpdateDeleteRole);
+                DataTable dt = DataLogic.InsertRole(roleReq, result, SP_GetInsertUpdateDeleteRole);
 
                 return Ok(dt);
             }
@@ -189,8 +226,31 @@ namespace ZulAssetsBackEnd_API.Controllers
             Message msg = new Message();
             try
             {
+                DataTable roleCompanies = new DataTable();
 
-                DataTable dt = DataLogic.UpdateRole(roleReq, SP_UpdateRole);
+                roleCompanies.Columns.Add("Companies");
+
+                #region Conversion of List Tree to DataTable
+
+                if (roleReq.roleCompanies_list != null)
+                {
+                    roleCompanies = ListintoDataTable.ToDataTable2(roleReq.roleCompanies_list);
+                }
+
+                #endregion
+
+                string result = "";
+
+                if (roleCompanies.Rows.Count == 1)
+                {
+                    result = roleCompanies.Rows[0]["Companies"].ToString();
+                }
+                else if (roleCompanies.Rows.Count > 1)
+                {
+                    result = string.Join(",", roleCompanies.AsEnumerable().Select(row => row["Companies"].ToString()));
+                }
+
+                DataTable dt = DataLogic.UpdateRole(roleReq, result, SP_UpdateRole);
                 if (dt.Rows.Count > 0)
                 {
                     if (dt.Columns.Contains("ErrorMessage"))
@@ -355,7 +415,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     }
                     else
                     {
-                       
+
                         return Ok(ds);
                     }
                 }
@@ -396,7 +456,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     }
                     else
                     {
-                       
+
                         return Ok(ds);
                     }
                 }
@@ -413,6 +473,7 @@ namespace ZulAssetsBackEnd_API.Controllers
         }
 
         #endregion
+
 
     }
 }

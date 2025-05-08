@@ -44,7 +44,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@AstID", AstID)
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
-            
+
         }
 
         #endregion
@@ -174,7 +174,7 @@ namespace ZulAssetsBackEnd_API.DAL
         {
             try
             {
-                
+
                 DbReports CGD = new DbReports();
                 SqlParameter[] parameter =
                 {
@@ -614,7 +614,7 @@ namespace ZulAssetsBackEnd_API.DAL
             {
                 new SqlParameter ("@CompanyID", CompanyID),
             };
-            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+            return CGD.DTWithOutParam(StoreProcedure, 1);
         }
 
         #endregion
@@ -724,14 +724,14 @@ namespace ZulAssetsBackEnd_API.DAL
 
         public static DataTable VerifyAssetCodingRange(int startSerial, int endSerial, string StoreProcedure)
         {
-            
+
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@startSerial", startSerial.ToString()),
                 new SqlParameter ("@endSerial", endSerial.ToString()),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
-            
+
 
         }
 
@@ -800,7 +800,7 @@ namespace ZulAssetsBackEnd_API.DAL
 
         public static DataTable GetAstCodingDefAgainstCompanyID(string CompanyID, string StoreProcedure)
         {
-            
+
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@CompanyID", CompanyID),
@@ -881,7 +881,7 @@ namespace ZulAssetsBackEnd_API.DAL
         #region Get Asset Items Against AstCatID
 
         public static DataSet GetAssetItemsAgainstCatID(AssetItemReq astItemReq, string StoreProcedure)
-        {            
+        {
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@AstCatID", astItemReq.AstCatID),
@@ -919,7 +919,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -942,7 +942,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
 
         }
@@ -1027,6 +1027,7 @@ namespace ZulAssetsBackEnd_API.DAL
                         new SqlParameter ("@Searching", astAdmin.Searching),
                         new SqlParameter ("@DropDown", astAdmin.DropDown),
                         new SqlParameter ("@Var", astAdmin.Var),
+                        new SqlParameter ("@LoginName", astAdmin.LoginName),
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
@@ -1042,7 +1043,8 @@ namespace ZulAssetsBackEnd_API.DAL
                             new SqlParameter ("@AstCatID", "''"),
                             new SqlParameter ("@CustodianID", "''"),
                             new SqlParameter ("@PageIndex", astAdmin.PaginationParam.PageIndex),
-                            new SqlParameter ("@PageSize", astAdmin.PaginationParam.PageSize)
+                            new SqlParameter ("@PageSize", astAdmin.PaginationParam.PageSize),
+                            new SqlParameter ("@LoginName", astAdmin.LoginName),
                         };
                         return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                     }
@@ -1057,6 +1059,7 @@ namespace ZulAssetsBackEnd_API.DAL
                             new SqlParameter ("@CustodianID", "''"),
                             new SqlParameter ("@PageIndex", astAdmin.PaginationParam.PageIndex),
                             new SqlParameter ("@PageSize", astAdmin.PaginationParam.PageSize),
+                            new SqlParameter ("@LoginName", astAdmin.LoginName),
                         };
                         return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                     }
@@ -1071,6 +1074,7 @@ namespace ZulAssetsBackEnd_API.DAL
                             new SqlParameter ("@CustodianID", astAdmin.CustodianID),
                             new SqlParameter ("@PageIndex", astAdmin.PaginationParam.PageIndex),
                             new SqlParameter ("@PageSize", astAdmin.PaginationParam.PageSize),
+                            new SqlParameter ("@LoginName", astAdmin.LoginName),
                         };
                         return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                     }
@@ -1085,6 +1089,7 @@ namespace ZulAssetsBackEnd_API.DAL
                             new SqlParameter ("@CustodianID", "''"),
                             new SqlParameter ("@PageIndex", astAdmin.PaginationParam.PageIndex),
                             new SqlParameter ("@PageSize", astAdmin.PaginationParam.PageSize),
+                            new SqlParameter ("@LoginName", astAdmin.LoginName),
                         };
                         return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                     }
@@ -1098,9 +1103,10 @@ namespace ZulAssetsBackEnd_API.DAL
                     SqlParameter[] sqlParameters = {
                         new SqlParameter("@Get", astAdmin.Get),
                         new SqlParameter("@DropDown", astAdmin.DropDown),
+                        new SqlParameter ("@LoginName", astAdmin.LoginName),
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
-                    
+
                 }
                 else
                 {
@@ -1112,11 +1118,12 @@ namespace ZulAssetsBackEnd_API.DAL
                         new SqlParameter ("@CustodianID", astAdmin.CustodianID),
                         new SqlParameter ("@PageIndex", astAdmin.PaginationParam.PageIndex),
                         new SqlParameter ("@PageSize", astAdmin.PaginationParam.PageSize),
+                        new SqlParameter ("@LoginName", astAdmin.LoginName),
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
-                    
+
                 }
-                
+
             }
 
         }
@@ -1198,7 +1205,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@EvaluationGroup1", astInfoReqParam.EvaluationGroup1),
                 new SqlParameter ("@EvaluationGroup2", astInfoReqParam.EvaluationGroup2),
                 new SqlParameter ("@EvaluationGroup3", astInfoReqParam.EvaluationGroup3),
-                new SqlParameter ("@EvaluationGroup4", astInfoReqParam.EvaluationGroup4),  
+                new SqlParameter ("@EvaluationGroup4", astInfoReqParam.EvaluationGroup4),
                 new SqlParameter ("@CreatedBy", astInfoReqParam.LoginName),
                 new SqlParameter ("@CustomFld1", astInfoReqParam.CustomFld1),
                 new SqlParameter ("@CustomFld2", astInfoReqParam.CustomFld2),
@@ -1208,8 +1215,8 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@Warranty", astInfoReqParam.Warranty),
                 new SqlParameter ("@StatusID", astInfoReqParam.StatusID),
                 new SqlParameter ("@OldAssetID", astInfoReqParam.OldAssetID),
-                new SqlParameter ("@DisposalComments", astInfoReqParam.DisposalComments),      
-                new SqlParameter ("@ImageBase64", astInfoReqParam.ImageBase64)            
+                new SqlParameter ("@DisposalComments", astInfoReqParam.DisposalComments),
+                new SqlParameter ("@ImageBase64", astInfoReqParam.ImageBase64)
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -1300,7 +1307,7 @@ namespace ZulAssetsBackEnd_API.DAL
 
         public static DataSet SearchAssets(SearchAstsParams searchAstsParams, string StoreProcedure)
         {
-            
+
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Get", searchAstsParams.Get),
@@ -1313,7 +1320,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@OrgHierID", searchAstsParams.OrgHierID),
                 new SqlParameter ("@CustID", searchAstsParams.CustID),
                 new SqlParameter ("@LocID", searchAstsParams.LocID),
-                new SqlParameter ("@AstCatID", searchAstsParams.AstCatID),       
+                new SqlParameter ("@AstCatID", searchAstsParams.AstCatID),
                 new SqlParameter ("@PageIndex", searchAstsParams.PaginationParam.PageIndex),
                 new SqlParameter ("@PageSize", searchAstsParams.PaginationParam.PageSize),
             };
@@ -1322,17 +1329,17 @@ namespace ZulAssetsBackEnd_API.DAL
 
 
         #endregion
-        
+
         #endregion
 
         #region Locations Logics
 
-            #region Get All Locations
+        #region Get All Locations
 
-            public static DataTable GetAllLocations(string StoreProcedure)
+        public static DataTable GetAllLocations(string StoreProcedure)
         {
             DbReports CGD = new DbReports();
-            SqlParameter[] sqlParameters = {};
+            SqlParameter[] sqlParameters = { };
             return CGD.DTWithOutParam(StoreProcedure, 1);
         }
 
@@ -1372,7 +1379,8 @@ namespace ZulAssetsBackEnd_API.DAL
         {
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
-                    new SqlParameter ("@Get", locTree.Get)
+                    new SqlParameter ("@Get", locTree.Get),
+                    new SqlParameter ("@LoginName", locTree.LoginName),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -1491,7 +1499,7 @@ namespace ZulAssetsBackEnd_API.DAL
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Add", catTree.Add),
                 new SqlParameter ("@AstCatCode", catTree.CatCode),
-                new SqlParameter ("@AstCatDesc", catTree.CatDesc), 
+                new SqlParameter ("@AstCatDesc", catTree.CatDesc),
                 new SqlParameter ("@ParentId", catTree.ParentId),
                 new SqlParameter ("@ParentId2", catTree.ParentId2),
             };
@@ -1562,7 +1570,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -1585,9 +1593,9 @@ namespace ZulAssetsBackEnd_API.DAL
                 };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
-            
+
         }
 
         #endregion
@@ -1697,9 +1705,9 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-               
+
             }
-            
+
         }
 
         #endregion
@@ -1778,7 +1786,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -1801,7 +1809,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
         }
 
@@ -1885,7 +1893,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -1908,7 +1916,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
         }
 
@@ -2068,19 +2076,20 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@RoleID", roleReq.RoleID),
             };
             return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
-            
+
         }
 
         #endregion
 
         #region Insert Role
 
-        public static DataTable InsertRole(RoleRequest roleReq, string StoreProcedure)
+        public static DataTable InsertRole(RoleRequest roleReq, string companies, string StoreProcedure)
         {
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter("@Description",roleReq.Description),
                 new SqlParameter("@add",roleReq.Add),
+                new SqlParameter("@Companies", companies),
                 new SqlParameter("@LoginName",roleReq.LoginName),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
@@ -2090,12 +2099,13 @@ namespace ZulAssetsBackEnd_API.DAL
 
         #region Update Role
 
-        public static DataTable UpdateRole(RoleRequest roleReq,string StoreProcedure)
+        public static DataTable UpdateRole(RoleRequest roleReq, string companies, string StoreProcedure)
         {
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter("@RoleId",roleReq.RoleID),
                 new SqlParameter("@Description",roleReq.Description),
+                new SqlParameter("@Companies", companies),
                 new SqlParameter("@Update",roleReq.Update),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
@@ -2149,7 +2159,7 @@ namespace ZulAssetsBackEnd_API.DAL
         }
 
         #endregion
-        
+
         #region Get Assigned Menu Options
 
         public static DataSet GetAssignedMenuOptions(RightsParams rightParams, string StoreProcedure)
@@ -2197,7 +2207,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -2210,7 +2220,8 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                else {
+                else
+                {
                     DbReports CGD = new DbReports();
                     SqlParameter[] sqlParameters = {
                         new SqlParameter ("@Get", glCodeReq.Get),
@@ -2219,7 +2230,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
         }
 
@@ -2233,8 +2244,8 @@ namespace ZulAssetsBackEnd_API.DAL
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Add", glcodeReq.Add),
                 new SqlParameter ("@GLCode", glcodeReq.GLCode),
-                new SqlParameter ("@GLDesc", glcodeReq.GLDesc), 
-                new SqlParameter ("@CompanyId", glcodeReq.CompanyId), 
+                new SqlParameter ("@GLDesc", glcodeReq.GLDesc),
+                new SqlParameter ("@CompanyId", glcodeReq.CompanyId),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -2302,7 +2313,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -2325,7 +2336,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
         }
 
@@ -2428,7 +2439,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
         }
 
@@ -2442,7 +2453,7 @@ namespace ZulAssetsBackEnd_API.DAL
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Add", brandReq.Add),
                 new SqlParameter ("@AstBrandID", brandReq.AstBrandID),
-                new SqlParameter ("@AstBrandName", brandReq.AstBrandName), 
+                new SqlParameter ("@AstBrandName", brandReq.AstBrandName),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -2509,7 +2520,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -2532,9 +2543,9 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
-            
+
         }
 
         #endregion
@@ -2547,7 +2558,7 @@ namespace ZulAssetsBackEnd_API.DAL
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Add", dispMethodsReq.Add),
                 new SqlParameter ("@DispCode", dispMethodsReq.DispCode),
-                new SqlParameter ("@DispDesc", dispMethodsReq.DispDesc), 
+                new SqlParameter ("@DispDesc", dispMethodsReq.DispDesc),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -2562,7 +2573,7 @@ namespace ZulAssetsBackEnd_API.DAL
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Update", dispMethodsReq.Update),
                 new SqlParameter ("@DispCode", dispMethodsReq.DispCode),
-                new SqlParameter ("@DispDesc", dispMethodsReq.DispDesc), 
+                new SqlParameter ("@DispDesc", dispMethodsReq.DispDesc),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -2616,7 +2627,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -2639,9 +2650,9 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
-            
+
         }
 
         #endregion
@@ -2654,7 +2665,7 @@ namespace ZulAssetsBackEnd_API.DAL
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Add", depMethodReq.Add),
                 new SqlParameter ("@DepCode", depMethodReq.DepCode),
-                new SqlParameter ("@DepDesc", depMethodReq.DepDesc), 
+                new SqlParameter ("@DepDesc", depMethodReq.DepDesc),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -2701,7 +2712,7 @@ namespace ZulAssetsBackEnd_API.DAL
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Get", depPolicyReqParams.Get),
-                new SqlParameter ("@AstCatID", depPolicyReqParams.AstCatID),  
+                new SqlParameter ("@AstCatID", depPolicyReqParams.AstCatID),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -2721,8 +2732,8 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@SalvageValue", depPolicyReqParams.SalvageValue),
                 new SqlParameter ("@SalvageYear", Convert.ToInt32(depPolicyReqParams.SalvageYear)),
                 new SqlParameter ("@SalvageMonth", Convert.ToInt32(depPolicyReqParams.SalvageMonth)),
-                new SqlParameter ("@SalvagePercent", Convert.ToDouble(depPolicyReqParams.SalvagePercent)),    
-                new SqlParameter ("@IsSalvageValuePercentage", depPolicyReqParams.IsSalvageValuePercentage),    
+                new SqlParameter ("@SalvagePercent", Convert.ToDouble(depPolicyReqParams.SalvagePercent)),
+                new SqlParameter ("@IsSalvageValuePercentage", depPolicyReqParams.IsSalvageValuePercentage),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -2742,7 +2753,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@BookID", depPolicy_History.BookID),
                 new SqlParameter ("@AstID", depPolicy_History.AstID),
                 new SqlParameter ("@CurrentBV", depPolicy_History.CurrentBV),
-                new SqlParameter ("@BVUpdate", depPolicy_History.BVUpdate),          
+                new SqlParameter ("@BVUpdate", depPolicy_History.BVUpdate),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -2854,12 +2865,12 @@ namespace ZulAssetsBackEnd_API.DAL
 
         public static DataTable GetAssetsCountAgainstBookID(string selectedBookID, string StoreProcedure)
         {
-            
-                DbReports CGD = new DbReports();
-                SqlParameter[] sqlParameters = {
+
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
                     new SqlParameter ("@BookID", Convert.ToInt32(selectedBookID)),
                 };
-                return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
 
         #endregion
@@ -2932,7 +2943,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 };
                 return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
             }
-            
+
         }
 
         #endregion
@@ -2950,7 +2961,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@totAstValue", totAstValue),
                 new SqlParameter ("@month", month),
                 new SqlParameter ("@year", year),
-                new SqlParameter ("@bookID", bookID),          
+                new SqlParameter ("@bookID", bookID),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
 
@@ -2973,9 +2984,9 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@SalvageYear", astBookReqParams.SalvageYear),
                 new SqlParameter ("@LastBV", astBookReqParams.LastBV),
                 new SqlParameter ("@CurrentBV", astBookReqParams.CurrentBV),
-                new SqlParameter ("@BVUpdate", astBookReqParams.BVUpdate),           
-                new SqlParameter ("@SalvageValuePercent", astBookReqParams.SalvagePercent),           
-                new SqlParameter ("@SalvageMonth", astBookReqParams.SalvageMonth),           
+                new SqlParameter ("@BVUpdate", astBookReqParams.BVUpdate),
+                new SqlParameter ("@SalvageValuePercent", astBookReqParams.SalvagePercent),
+                new SqlParameter ("@SalvageMonth", astBookReqParams.SalvageMonth),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -3012,7 +3023,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -3036,7 +3047,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
             }
-            
+
         }
 
         #endregion
@@ -3109,7 +3120,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 };
                 return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
             }
-            
+
         }
 
         #endregion
@@ -3130,7 +3141,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@PhoneNo", compInfoReqParam.PhoneNo),
                 new SqlParameter ("@Fax", compInfoReqParam.Fax),
                 new SqlParameter ("@Email", compInfoReqParam.Email),
-                new SqlParameter ("@ImageToBase64", compInfoReqParam.ImageToBase64),  
+                new SqlParameter ("@ImageToBase64", compInfoReqParam.ImageToBase64),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -3207,13 +3218,13 @@ namespace ZulAssetsBackEnd_API.DAL
 
         public static DataTable UpdateAstInfo(InterCompanyTransferReqParams interCompanyTransferReqParams, string StoreProcedure)
         {
-           
-                DbReports CGD = new DbReports();
-                SqlParameter[] sqlParameters = {
+
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Get", interCompanyTransferReqParams.Get),
                 new SqlParameter ("@AstID", interCompanyTransferReqParams.AstID),
             };
-                return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
 
         #endregion
@@ -3282,7 +3293,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -3305,7 +3316,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
         }
 
@@ -3319,7 +3330,7 @@ namespace ZulAssetsBackEnd_API.DAL
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Add", insReqParam.Add),
                 new SqlParameter ("@InsCode", insReqParam.InsCode),
-                new SqlParameter ("@InsName", insReqParam.InsName),    
+                new SqlParameter ("@InsName", insReqParam.InsName),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -3333,8 +3344,8 @@ namespace ZulAssetsBackEnd_API.DAL
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Update", insReqParam.Update),
-                new SqlParameter ("@InsCode", insReqParam.InsCode),    
-                new SqlParameter ("@InsName", insReqParam.InsName),    
+                new SqlParameter ("@InsCode", insReqParam.InsCode),
+                new SqlParameter ("@InsName", insReqParam.InsName),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -3408,9 +3419,9 @@ namespace ZulAssetsBackEnd_API.DAL
                 };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
-            
+
         }
 
         #endregion
@@ -3424,7 +3435,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@Add", invSchReqParam.Add),
                 new SqlParameter ("@InvSchCode", invSchReqParam.InvSchCode),
                 new SqlParameter ("@InvDesc", invSchReqParam.InvDesc),
-                new SqlParameter ("@InvStartDate", invSchReqParam.InvStartDate), 
+                new SqlParameter ("@InvStartDate", invSchReqParam.InvStartDate),
                 new SqlParameter ("@InvEndDate", invSchReqParam.InvEndDate),
                 new SqlParameter ("@Closed", invSchReqParam.Closed),
                 new SqlParameter ("@SchType", invSchReqParam.SchType),
@@ -3485,7 +3496,7 @@ namespace ZulAssetsBackEnd_API.DAL
 
         #endregion
 
-        #region Delete Insurer
+        #region Delete Inventory Schedules
 
         public static DataTable DeleteInvSch(InvSchReqParam invSchReqParam, string StoreProcedure)
         {
@@ -3528,7 +3539,7 @@ namespace ZulAssetsBackEnd_API.DAL
             };
                 return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
             }
-            
+
         }
 
         #endregion
@@ -3605,7 +3616,7 @@ namespace ZulAssetsBackEnd_API.DAL
             };
                 return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
             }
-            
+
         }
 
         #endregion
@@ -3786,7 +3797,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
 
         }
@@ -3831,7 +3842,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@CustodianCell", custReqParams.CustodianCell),
                 new SqlParameter ("@CustodianAddress", custReqParams.CustodianAddress),
                 new SqlParameter ("@OrgHierID", custReqParams.OrgHierID),
-                new SqlParameter ("@DesignationID", custReqParams.DesignationID),     
+                new SqlParameter ("@DesignationID", custReqParams.DesignationID),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -3958,7 +3969,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -3981,7 +3992,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
         }
 
@@ -3991,7 +4002,7 @@ namespace ZulAssetsBackEnd_API.DAL
 
         public static DataTable GetBookAgainstCompanyID(string CompanyID, string StoreProcedure)
         {
-            
+
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@CompanyID", CompanyID),
@@ -4054,12 +4065,12 @@ namespace ZulAssetsBackEnd_API.DAL
 
         public static DataSet GetAllBarcodingPolicy(string StoreProcedure)
         {
-            
+
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = { };
 
             return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
-            
+
         }
 
         #endregion
@@ -4159,13 +4170,13 @@ namespace ZulAssetsBackEnd_API.DAL
             //}
             //else
             //{
-                DbReports CGD = new DbReports();
-                SqlParameter[] sqlParameters = {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
                     new SqlParameter ("@Get", barcodeStructureReqParam.Get),
                     //new SqlParameter ("@PageIndex", barcodeStructureReqParam.PaginationParam.PageIndex),
                     //new SqlParameter ("@PageSize", barcodeStructureReqParam.PaginationParam.PageSize),
                 };
-                return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
+            return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
             //}
         }
 
@@ -4201,7 +4212,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@BarStructLength", barcodeStructureReqParam.BarStructLength),
                 new SqlParameter ("@BarStructPrefix", barcodeStructureReqParam.BarStructPrefix),
                 new SqlParameter ("@ValueSep", barcodeStructureReqParam.ValueSep),
-                new SqlParameter ("@Barcode", barcodeStructureReqParam.Barcode),                    
+                new SqlParameter ("@Barcode", barcodeStructureReqParam.Barcode),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -4326,8 +4337,8 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@ImgType", sysConfigReqParams.ImgType),
                 new SqlParameter ("@ImgPath", sysConfigReqParams.ImgPath),
                 new SqlParameter ("@IsOfflineMachine", sysConfigReqParams.IsOfflineMachine),
-                new SqlParameter ("@ShowAlarmOnStartup", sysConfigReqParams.ShowAlarmOnStartup),  
-                new SqlParameter ("@AlarmBeforeDays", sysConfigReqParams.AlarmBeforeDays),    
+                new SqlParameter ("@ShowAlarmOnStartup", sysConfigReqParams.ShowAlarmOnStartup),
+                new SqlParameter ("@AlarmBeforeDays", sysConfigReqParams.AlarmBeforeDays),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -4370,7 +4381,7 @@ namespace ZulAssetsBackEnd_API.DAL
         public static DataTable Count(string StoreProcedure)
         {
             DbReports CGD = new DbReports();
-            SqlParameter[] sqlParameters = {};
+            SqlParameter[] sqlParameters = { };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
 
@@ -4418,7 +4429,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
             else
             {
@@ -4441,7 +4452,7 @@ namespace ZulAssetsBackEnd_API.DAL
                     };
                     return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
                 }
-                
+
             }
         }
 
@@ -4484,7 +4495,7 @@ namespace ZulAssetsBackEnd_API.DAL
 
         public static DataTable InsertPOWithItems(POReqParams POReqParams, DataTable POItemDT, string StoreProcedure)
         {
-        
+
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Add", POReqParams.Add),
@@ -4504,7 +4515,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@RequestedBy", POReqParams.RequestedBy),
                 new SqlParameter ("@CostID", POReqParams.CostID),
                 new SqlParameter ("@RefNo", POReqParams.RefNo),
-                new SqlParameter ("@Discount", POReqParams.Discount),      
+                new SqlParameter ("@Discount", POReqParams.Discount),
                 new SqlParameter ("@poDetailsListToData", POItemDT),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
@@ -4696,7 +4707,7 @@ namespace ZulAssetsBackEnd_API.DAL
         {
 
             DbReports CGD = new DbReports();
-            SqlParameter[] sqlParameters = {};
+            SqlParameter[] sqlParameters = { };
             return CGD.DTWithOutParam(StoreProcedure, 1);
         }
 
@@ -4792,7 +4803,7 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@CurrentBookValue", CurrentBookValue),
                 new SqlParameter ("@BVUpdate", BVUpdate),
                 new SqlParameter ("@SalvageMonth", salvageMonth),
-                new SqlParameter ("@SalvageValuePercentage", salvageValuePercentage),    
+                new SqlParameter ("@SalvageValuePercentage", salvageValuePercentage),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -4804,7 +4815,7 @@ namespace ZulAssetsBackEnd_API.DAL
         public static DataTable GenerateAstNum(string StoreProcedure)
         {
             DbReports CGD = new DbReports();
-            SqlParameter[] sqlParameters = {};
+            SqlParameter[] sqlParameters = { };
             return CGD.DTWithOutParam(StoreProcedure, 1);
         }
 
@@ -4847,7 +4858,7 @@ namespace ZulAssetsBackEnd_API.DAL
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@LocID", backendInvReqParams.LocID),
-                new SqlParameter ("@InvSchCode", backendInvReqParams.InvSchCode),  
+                new SqlParameter ("@InvSchCode", backendInvReqParams.InvSchCode),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -4862,7 +4873,7 @@ namespace ZulAssetsBackEnd_API.DAL
         public static DataTable GetHighestHistoryID(string StoreProcedure)
         {
             DbReports CGD = new DbReports();
-            SqlParameter[] sqlParameters = {};
+            SqlParameter[] sqlParameters = { };
             return CGD.DTWithOutParam(StoreProcedure, 1);
         }
 
@@ -4881,7 +4892,7 @@ namespace ZulAssetsBackEnd_API.DAL
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@LocationCheckbox", locCustTransferReqParams.LocationCheckbox),
                 new SqlParameter ("@CustodianCheckbox", locCustTransferReqParams.CustodianCheckbox),
-                new SqlParameter ("@AssetStatusCheckbox", locCustTransferReqParams.AssetStatusCheckbox), 
+                new SqlParameter ("@AssetStatusCheckbox", locCustTransferReqParams.AssetStatusCheckbox),
                 new SqlParameter ("@DataTable", dt),
                 new SqlParameter ("@Ast_Cust_His_DataTable", dt2),
                 new SqlParameter ("@Ast_AssetStatus_DataTable", dt3),
@@ -5026,7 +5037,7 @@ namespace ZulAssetsBackEnd_API.DAL
 
         #region Standard Report
 
-        public static DataTable StandardReport(ReportReqParams reportReqParams, string StoreProcedure)
+        public static DataSet StandardReport(ReportReqParams reportReqParams, string StoreProcedure)
         {
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
@@ -5043,8 +5054,34 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@SuppID", reportReqParams.SuppID),
                 new SqlParameter ("@CompanyID", reportReqParams.CompanyID),
                 new SqlParameter ("@DeptID", reportReqParams.DeptID),
+                new SqlParameter ("@PageIndex", reportReqParams.paginationParam.PageIndex),
+                new SqlParameter ("@PageSize", reportReqParams.paginationParam.PageSize),
             };
-            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+            return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        public static DataSet DisposedAssetsReport(DisposedAssetsReportReqParams disposedAssetsReportReqParams, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                new SqlParameter ("@PurDate", disposedAssetsReportReqParams.PurchaseDate),
+                new SqlParameter ("@LocID", disposedAssetsReportReqParams.LocID),
+                new SqlParameter ("@AstBrandID", disposedAssetsReportReqParams.AstBrandID),
+                new SqlParameter ("@ItemCode", disposedAssetsReportReqParams.ItemCode),
+                new SqlParameter ("@BaseCost", disposedAssetsReportReqParams.BaseCost),
+                new SqlParameter ("@Tax", disposedAssetsReportReqParams.Tax),
+                new SqlParameter ("@InvStatus", disposedAssetsReportReqParams.InvStatus),
+                new SqlParameter ("@StatusID", disposedAssetsReportReqParams.StatusID),
+                new SqlParameter ("@AstCatID", disposedAssetsReportReqParams.AstCatID),
+                new SqlParameter ("@CustodianID", disposedAssetsReportReqParams.CustodianID),
+                new SqlParameter ("@SuppID", disposedAssetsReportReqParams.SuppID),
+                new SqlParameter ("@CompanyID", disposedAssetsReportReqParams.CompanyID),
+                new SqlParameter ("@DeptID", disposedAssetsReportReqParams.DeptID),
+                new SqlParameter ("@Disposed", disposedAssetsReportReqParams.Disposed),
+                new SqlParameter ("@PageIndex", disposedAssetsReportReqParams.paginationParam.PageIndex),
+                new SqlParameter ("@PageSize", disposedAssetsReportReqParams.paginationParam.PageSize),
+            };
+            return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
         }
 
         #endregion

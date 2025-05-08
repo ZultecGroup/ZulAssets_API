@@ -138,6 +138,8 @@ namespace ZulAssetsBackEnd_API.Controllers
                 importDataforAssetDetails.Columns.Add("AstDesc2");
                 importDataforAssetDetails.Columns.Add("CostCenterID");
                 importDataforAssetDetails.Columns.Add("CreatedBy");
+                importDataforAssetDetails.Columns.Add("ElectronicSerialNo");
+                importDataforAssetDetails.Columns.Add("CompanyName");
 
                 DataSet completeData = DataLogic.GetCustodianData(SP_GetAllData);
 
@@ -151,6 +153,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                 DataTable AssetsFulldt = completeData.Tables["Table7"];
                 DataTable AssetDetailsFulldt = completeData.Tables["Table8"];
                 DataTable CategoryFulldt = completeData.Tables["Table9"];
+                DataTable CompanyFulldt = completeData.Tables["Table10"];
 
                 CustodianFulldt.TableName = "CustodianTable";
                 DesignationFulldt.TableName = "DesignationTable";
@@ -162,6 +165,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                 AssetsFulldt.TableName = "AssetsTable";
                 AssetDetailsFulldt.TableName = "AssetDetailsTable";
                 CategoryFulldt.TableName = "CategoryTable";
+                CompanyFulldt.TableName = "CompanyTable";
 
 
                 DataTable insertCustodian = new DataTable();
@@ -271,6 +275,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                 insertAssetDetails.Columns.Add("AstDesc2");
                 insertAssetDetails.Columns.Add("CostCenterID");
                 insertAssetDetails.Columns.Add("CreatedBY");
+                insertAssetDetails.Columns.Add("ElectronicSerialNo");
 
                 DataTable updateAssetDetails = new DataTable();
 
@@ -295,6 +300,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                 updateAssetDetails.Columns.Add("AstDesc2");
                 updateAssetDetails.Columns.Add("CostCenterID");
                 updateAssetDetails.Columns.Add("CreatedBY");
+                updateAssetDetails.Columns.Add("ElectronicSerialNo");
 
 
                 string checkInItem = "Custodiann";
@@ -367,7 +373,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                 string assetsCount = AssetsFulldt.Rows[assetsCountt - 1]["ItemCode"].ToString();
 
                 string astid = "";
-
+                string companyIDfromFullDT = "";
 
                 for (int k = 0; k < importDataforCustomer.Rows.Count; k++)
                 {
@@ -384,7 +390,31 @@ namespace ZulAssetsBackEnd_API.Controllers
                     string serial = importDataforCustomer.Rows[k]["Serial"].ToString();
                     string itemDesc = "";
                     string astDesc2 = "";
+                    string electronicSerialNumber = importDataforAssetDetails.Rows[k]["ElectronicSerialNumber"].ToString();
                     int ItemCode = 0;
+
+                    string companyName = importDataforAssetDetails.Rows[k]["CompanyName"].ToString().Trim();
+
+                    // Find matching row in CompanyFulldt
+                    DataRow[] matchingRows = CompanyFulldt.Select($"CompanyName = '{companyName.Replace("'", "''")}'");
+
+                    companyIDfromFullDT = matchingRows.Length > 0 ? matchingRows[0]["CompanyID"].ToString() : "0"; //if matchingRows length > 0 then companyID will be from CompanyFulldt otherwise it will be 1.
+
+                    if (companyIDfromFullDT == "0")
+                    {
+                        msg.message = "Company '" + companyName + "' isn't exists. Create the Company first and then import the data again.";
+                        msg.status = "401";
+                        return Ok(msg);
+                    }
+                    DataTable dtBookInfoAgainstCompanyID = DataLogic.GetBookAgainstCompanyID(companyIDfromFullDT, "[dbo].[SP_GetBooksAgainstCompanyID]");
+
+                    if (dtBookInfoAgainstCompanyID.Rows.Count == 0)
+                    {
+                        msg.message = "Book isn't exists for Company '" + companyName + "'. Please create the Book first then import the data again.";
+                        msg.status = "401";
+                        return Ok(msg);
+                    }
+
                     if (importDataforCustomer.Rows[k]["DescriptionEnglish"] == "")
                     {
                         itemDesc = "N/A";
@@ -617,7 +647,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                     #region For Location
 
                     string searchElementforMainLocation = importDataforLocation.Rows[k]["MainLocation"].ToString();
-                    DataRow[] mainlocationrows = completeData.Tables["LocationTable"].Select("LocDesc ='" + searchElementforMainLocation + "' AND LocLevel = 0");
+                    DataRow[] mainlocationrows = completeData.Tables["LocationTable"].Select("LocDesc ='" + searchElementforMainLocation + "' AND LocLevel = 0 AND CompanyID=" + companyIDfromFullDT);
 
                     if (mainlocationrows.Length > 0)
                     {
@@ -650,7 +680,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             string Codeloc = "";
 
                             string searchElementforLocation = importDataforLocation.Rows[k]["Location"].ToString();
-                            DataRow[] locationrows = completeData.Tables["LocationTable"].Select("LocationFullPath ='" + locfullPath + " \\ " + searchElementforLocation + "'");
+                            DataRow[] locationrows = completeData.Tables["LocationTable"].Select("LocationFullPath ='" + locfullPath + " \\ " + searchElementforLocation + "'AND CompanyID=" + companyIDfromFullDT);
 
                             if (locationrows.Length > 0)
                             {
@@ -702,7 +732,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRowd["LocLevel"] = 1;
                                 insertItemRowd["LocationFullPath"] = locfullPathloc;
                                 insertItemRowd["ParentID"] = locParentloc;
-                                insertItemRowd["CompanyID"] = 1;
+                                insertItemRowd["CompanyID"] = companyIDfromFullDT;
                                 insertItemRowd["isDeleted"] = 0;
 
                                 LocationFulldt.Rows.Add(insertItemRowd);
@@ -715,14 +745,14 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRowforlocation["LocLevel"] = 1;
                                 insertItemRowforlocation["LocationFullPath"] = locfullPathloc;
                                 insertItemRowforlocation["ParentID"] = locParentloc;
-                                insertItemRowforlocation["CompanyID"] = 1;
+                                insertItemRowforlocation["CompanyID"] = companyIDfromFullDT;
                                 insertItemRowforlocation["isDeleted"] = 0;
 
                                 insertLocation.Rows.Add(insertItemRowforlocation);
                             }
                             //for third location
                             string searchElementforSubLocation = importDataforLocation.Rows[k]["SubLocationName"].ToString();
-                            DataRow[] sublocationrows = completeData.Tables["LocationTable"].Select("LocationFullPath ='" + locfullPathloc + " \\ " + searchElementforSubLocation + "'");
+                            DataRow[] sublocationrows = completeData.Tables["LocationTable"].Select("LocationFullPath ='" + locfullPathloc + " \\ " + searchElementforSubLocation + "'AND CompanyID=" + companyIDfromFullDT);
 
                             if (sublocationrows.Length > 0)
                             {// if third location exist
@@ -772,7 +802,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRowdd["LocLevel"] = 1;
                                 insertItemRowdd["LocationFullPath"] = sublocfullPathloc;
                                 insertItemRowdd["ParentID"] = locID1loc;
-                                insertItemRowdd["CompanyID"] = 1;
+                                insertItemRowdd["CompanyID"] = companyIDfromFullDT;
                                 insertItemRowdd["isDeleted"] = 0;
 
                                 LocationFulldt.Rows.Add(insertItemRowdd);
@@ -785,7 +815,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRowforlocationn["LocLevel"] = 1;
                                 insertItemRowforlocationn["LocationFullPath"] = sublocfullPathloc;
                                 insertItemRowforlocationn["ParentID"] = locID1loc;
-                                insertItemRowforlocationn["CompanyID"] = 1;
+                                insertItemRowforlocationn["CompanyID"] = companyIDfromFullDT;
                                 insertItemRowforlocationn["isDeleted"] = 0;
 
                                 insertLocation.Rows.Add(insertItemRowforlocationn);
@@ -833,7 +863,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRow["LocLevel"] = 0;
                             insertItemRow["LocationFullPath"] = importDataforLocation.Rows[k]["MainLocation"].ToString();
                             insertItemRow["ParentID"] = "";
-                            insertItemRow["CompanyID"] = 1;
+                            insertItemRow["CompanyID"] = companyIDfromFullDT;
                             insertItemRow["isDeleted"] = 0;
                             insertLocation.Rows.Add(insertItemRow);
                             //CostID = int.Parse(costcenterCount) + 1;
@@ -848,7 +878,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRowd["LocLevel"] = 0;
                             insertItemRowd["LocationFullPath"] = importDataforLocation.Rows[k]["MainLocation"].ToString();
                             insertItemRowd["ParentID"] = "";
-                            insertItemRowd["CompanyID"] = 1;
+                            insertItemRowd["CompanyID"] = companyIDfromFullDT;
                             insertItemRowd["isDeleted"] = 0;
 
                             LocationFulldt.Rows.Add(insertItemRowd);
@@ -864,7 +894,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRow2["LocLevel"] = 1;
                             insertItemRow2["LocationFullPath"] = importDataforLocation.Rows[k]["MainLocation"].ToString() + " \\ " + importDataforLocation.Rows[k]["Location"].ToString();
                             insertItemRow2["ParentID"] = countforID1;
-                            insertItemRow2["CompanyID"] = 1;
+                            insertItemRow2["CompanyID"] = companyIDfromFullDT;
                             insertItemRow2["isDeleted"] = 0;
                             insertLocation.Rows.Add(insertItemRow2);
                             //CostID = int.Parse(costcenterCount) + 1;
@@ -878,7 +908,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRowd2["LocLevel"] = 1;
                             insertItemRowd2["LocationFullPath"] = importDataforLocation.Rows[k]["MainLocation"].ToString() + " \\ " + importDataforLocation.Rows[k]["Location"].ToString();
                             insertItemRowd2["ParentID"] = countforID1;
-                            insertItemRowd2["CompanyID"] = 1;
+                            insertItemRowd2["CompanyID"] = companyIDfromFullDT;
                             insertItemRowd2["isDeleted"] = 0;
                             thirdlocation = importDataforLocation.Rows[k]["MainLocation"].ToString() + " \\ " + importDataforLocation.Rows[k]["Location"].ToString();
                             LocationFulldt.Rows.Add(insertItemRowd2);
@@ -894,7 +924,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRow3["LocLevel"] = 2;
                             insertItemRow3["LocationFullPath"] = importDataforLocation.Rows[k]["MainLocation"].ToString() + " \\ " + importDataforLocation.Rows[k]["Location"].ToString() + " \\ " + importDataforLocation.Rows[k]["SublocationName"].ToString();
                             insertItemRow3["ParentID"] = countforID1 + 1;
-                            insertItemRow3["CompanyID"] = 1;
+                            insertItemRow3["CompanyID"] = companyIDfromFullDT;
                             insertItemRow3["isDeleted"] = 0;
                             insertLocation.Rows.Add(insertItemRow3);
                             //CostID = int.Parse(costcenterCount) + 1;
@@ -908,7 +938,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRowd3["LocLevel"] = 2;
                             insertItemRowd3["LocationFullPath"] = importDataforLocation.Rows[k]["MainLocation"].ToString() + " \\ " + importDataforLocation.Rows[k]["Location"].ToString() + " \\ " + importDataforLocation.Rows[k]["SublocationName"].ToString();
                             insertItemRowd3["ParentID"] = countforID1 + 1;
-                            insertItemRowd3["CompanyID"] = 1;
+                            insertItemRowd3["CompanyID"] = companyIDfromFullDT;
                             insertItemRowd3["isDeleted"] = 0;
 
                             LocationFulldt.Rows.Add(insertItemRowd3);
@@ -947,7 +977,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRow["CostID"] = int.Parse(costcenterCount) + 1;
                             insertItemRow["CostName"] = importDataforCostCenter.Rows[k]["CCDescriptionLocation"].ToString();
                             insertItemRow["CostNumber"] = importDataforCostCenter.Rows[k]["CC"].ToString();
-                            insertItemRow["CompanyID"] = 1;
+                            insertItemRow["CompanyID"] = companyIDfromFullDT;
                             insertCostCenter.Rows.Add(insertItemRow);
                             CostID = int.Parse(costcenterCount) + 1;
 
@@ -955,7 +985,7 @@ namespace ZulAssetsBackEnd_API.Controllers
                             insertItemRowd["CostID"] = int.Parse(costcenterCount) + 1;
                             insertItemRowd["CostName"] = importDataforCostCenter.Rows[k]["CCDescriptionLocation"].ToString();
                             insertItemRowd["CostNumber"] = importDataforCostCenter.Rows[k]["CC"].ToString();
-                            insertItemRowd["CompanyID"] = 1;
+                            insertItemRowd["CompanyID"] = companyIDfromFullDT;
                             insertItemRowd["isDeleted"] = 0;
                             CostCenterFulldt.Rows.Add(insertItemRowd);
                         }
@@ -1259,12 +1289,14 @@ namespace ZulAssetsBackEnd_API.Controllers
                             updateAssetDetailsRow["AstNum"] = astnum;
                             updateAssetDetailsRow["AstBrandId"] = AstBrandID;
                             updateAssetDetailsRow["AstDesc"] = itemDesc;
-                            updateAssetDetailsRow["CompanyID"] = row["CompanyID"];
+                            updateAssetDetailsRow["CompanyID"] = companyIDfromFullDT;
+                            //updateAssetDetailsRow["CompanyID"] = row["CompanyID"];
                             updateAssetDetailsRow["BarCode"] = refno;
                             updateAssetDetailsRow["SerailNo"] = serial;
                             updateAssetDetailsRow["AstDesc2"] = astDesc2;
                             updateAssetDetailsRow["CostCenterID"] = CostID;
                             updateAssetDetailsRow["CreatedBY"] = "Import Process";
+                            updateAssetDetailsRow["ElectronicSerialNo"] = electronicSerialNumber;
 
                             updateAssetDetails.Rows.Add(updateAssetDetailsRow);
 
@@ -1325,12 +1357,13 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRow["AstNum"] = astnum;
                                 insertItemRow["AstBrandId"] = AstBrandID;
                                 insertItemRow["AstDesc"] = itemDesc;
-                                insertItemRow["CompanyID"] = "1";
+                                insertItemRow["CompanyID"] = companyIDfromFullDT;
                                 insertItemRow["BarCode"] = refno;
                                 insertItemRow["SerailNo"] = serial;
                                 insertItemRow["AstDesc2"] = astDesc2;
                                 insertItemRow["CostCenterID"] = CostID;
                                 insertItemRow["CreatedBY"] = "Import Process";
+                                insertItemRow["ElectronicSerialNo"] = electronicSerialNumber;
 
                                 insertAssetDetails.Rows.Add(insertItemRow);
 
@@ -1350,11 +1383,12 @@ namespace ZulAssetsBackEnd_API.Controllers
                                 insertItemRowd["AstNum"] = astnum;
                                 insertItemRowd["AstBrandId"] = AstBrandID;
                                 insertItemRowd["AstDesc"] = itemDesc;
-                                insertItemRowd["CompanyID"] = "1";
+                                insertItemRowd["CompanyID"] = companyIDfromFullDT;
                                 insertItemRowd["BarCode"] = refno;
                                 insertItemRowd["SerailNo"] = serial;
                                 insertItemRowd["AstDesc2"] = astDesc2;
                                 insertItemRowd["CostCenterID"] = CostID;
+                                insertItemRowd["ElectronicSerialNumber"] = electronicSerialNumber;
                                 insertItemRowd["CreatedBy"] = "Import Process";
                                 AssetDetailsFulldt.Rows.Add(insertItemRowd);
 
@@ -1602,7 +1636,7 @@ namespace ZulAssetsBackEnd_API.Controllers
 
                         GeneralFunctions GF = new GeneralFunctions();
 
-                        DataTable dtBookInfoAgainstCompanyID = DataLogic.GetBookAgainstCompanyID("1", "[dbo].[SP_GetBooksAgainstCompanyID]");
+                        DataTable dtBookInfoAgainstCompanyID = DataLogic.GetBookAgainstCompanyID(companyIDfromFullDT, "[dbo].[SP_GetBooksAgainstCompanyID]");
                         for (int i = 0; i < insertAssetDetails.Rows.Count; i++)
                         {
                             DataTable dtGetDepPolicyAgainstItemCode = DataLogic.GetDepPolicyAgainstItemCode(insertAssetDetails.Rows[i]["ItemCode"].ToString(), "[dbo].[SP_GetDepPolicyAgainstItemCode]");
@@ -1680,7 +1714,7 @@ namespace ZulAssetsBackEnd_API.Controllers
 
                         GeneralFunctions GF = new GeneralFunctions();
 
-                        DataTable dtBookInfoAgainstCompanyID = DataLogic.GetBookAgainstCompanyID("1", "[dbo].[SP_GetBooksAgainstCompanyID]");
+                        DataTable dtBookInfoAgainstCompanyID = DataLogic.GetBookAgainstCompanyID(companyIDfromFullDT, "[dbo].[SP_GetBooksAgainstCompanyID]");
                         for (int i = 0; i < updateAssetDetails.Rows.Count; i++)
                         {
 
