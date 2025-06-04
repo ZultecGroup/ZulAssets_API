@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\Jeddah\\BAJA\\Assets Management System\\Cloud Solution of ZulAssets\\API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|d:\\projects\\jeddah\\baja\\assets management system\\cloud solution of zulassets\\api\\zulassetsbackend_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B2E196B-E724-42C6-B99E-8BA615FF2656}|ZulAssetsBackEnd_API\\ZulAssetsBackEnd_API.csproj|solutionrelative:zulassetsbackend_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 365,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\Jeddah\\BAJA\\Assets Management System\\Cloud Solution of ZulAssets\\API\\ZulAssetsBackEnd_API\\appsettings.json",
+              "RelativeDocumentMoniker": "ZulAssetsBackEnd_API\\appsettings.json",
+              "ToolTip": "D:\\Projects\\Jeddah\\BAJA\\Assets Management System\\Cloud Solution of ZulAssets\\API\\ZulAssetsBackEnd_API\\appsettings.json",
+              "RelativeToolTip": "ZulAssetsBackEnd_API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T09:39:53.509Z",
+              "EditorCaption": ""
             }
           ]
         }

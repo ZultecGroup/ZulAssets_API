@@ -49,6 +49,17 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
+        #region Extended Reports
+
+        private static string SP_ExtendedAssetStatementReport = "[dbo].[SP_ExtendedAssetStatementReport]";
+        private static string SP_GetInvSchsForExtendedReport = "[dbo].[SP_GetInvSchsForExtendedReport]";
+        private static string SP_GetLocationsOfLocLevel0 = "[dbo].[SP_GetLocationsOfLocLevel0]";
+        private static string SP_GetAst_HistoryAssets = "[dbo].[SP_GetAst_HistoryAssets]";
+        private static string SP_GetLocAgainstLocID = "[dbo].[SP_GetLocAgainstLocID]";
+        private static string SP_GetAllAssetsAgainstLocID = "[dbo].[SP_GetAllAssetsAgainstLocID]";
+
+        #endregion
+
         #endregion
 
         #region Get All Audit Reports
@@ -1388,6 +1399,602 @@ namespace ZulAssetsBackEnd_API.Controllers
         //}
 
         //#endregion
+
+        #endregion
+
+        #region Extended Reports
+
+        #region Asset Statement Report
+
+        /// <summary>
+        /// This API is used to get all the asset against the selected custodian(s). This report will be consider as a part of Extended Reports
+        /// </summary>
+        /// <param name="bulkSelectionParametersReq"></param>
+        /// <returns></returns>
+        [HttpPost("AssetStatementReport")]
+        [Authorize]
+        public IActionResult AssetStatementReport([FromBody] BulkSelectionParameters bulkSelectionParametersReq)
+        {
+            Message msg = new Message();
+            try
+            {
+                //DataSet ds = new DataSet();
+
+                //var result = GeneralFunctions.ConvertInvSchCodesInvLocs(reportAllAssetsReqParams.InvSchCode, reportAllAssetsReqParams.InvLoc);
+
+                DataSet ds = new DataSet();
+
+                DataTable CustodiansDT = new DataTable();
+
+                CustodiansDT.Columns.Add("CustodianID");
+
+                if (bulkSelectionParametersReq.Custodian != null)
+                {
+                    CustodiansDT = ListintoDataTable.ToDataTable2(bulkSelectionParametersReq.Custodian);
+                }
+
+                List<string> CustodianList = new List<string>();
+
+                for (int i = 0; i < CustodiansDT.Rows.Count; i++)
+                {
+
+                    string custodianID = CustodiansDT.Rows[i]["CustodianID"].ToString();
+                    CustodianList.Add(custodianID);
+
+                }
+
+                var result = GeneralFunctions.ConvertCustodianIDs(CustodianList);
+
+                string selCustodians = result.SelCustodians; int rowCount = result.rowCount;
+
+                if (rowCount > 0)
+                {
+                    ds = DataLogic.AssetStatementReport(selCustodians, SP_ExtendedAssetStatementReport);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            if (ds.Tables[0].Columns.Contains("ErrorMessage"))
+                            {
+                                msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                                msg.status = "401";
+                                return Ok(msg);
+                            }
+                            else
+                            {
+                                #region Replace Table Names
+
+                                DataTable table = ds.Tables["Table"];
+                                table.TableName = "data";
+
+                                #endregion
+
+                                return Ok(ds);
+                            }
+                        }
+                        else
+                        {
+                            return Ok(ds);
+                        }
+                    }
+                    else
+                    {
+                        return Ok(ds);
+                    }
+
+                }
+                return Ok(ds);
+            }
+            catch (Exception ex)
+            {
+                msg.message = ex.Message;
+                return Ok(msg);
+            }
+        }
+
+        #endregion
+
+        #region Quarterly Report
+
+        /// <summary>
+        /// This API is used to get all the asset against the selected custodian(s). This report will be consider as a part of Extended Reports
+        /// </summary>
+        /// <param name="quarterlyReportRequestParams"></param>
+        /// <returns></returns>
+        [HttpPost("QuarterlyReport")]
+        [Authorize]
+        public IActionResult QuarterlyReport([FromBody] QuarterlyReportRequestParams quarterlyReportRequestParams)
+        {
+            Message msg = new Message();
+            try
+            {
+                //DateTime startTime = DateTime.Now;
+                DataTable dt = new DataTable();
+
+                if (quarterlyReportRequestParams.Year == "" || quarterlyReportRequestParams.Year == null)
+                {
+                    quarterlyReportRequestParams.Year = DateTime.Now.Year.ToString();
+                }
+
+                if (quarterlyReportRequestParams.Quarterly == "")
+                {
+                    quarterlyReportRequestParams.Quarterly = null;
+                }
+
+
+                dt = DataLogic.QuarterlyReport(quarterlyReportRequestParams.Quarterly, quarterlyReportRequestParams.Year, SP_GetInvSchsForExtendedReport);
+
+                List<string> invSchList = new List<string>();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+
+                    string invSchCode = dt.Rows[i]["InvSchCode"].ToString();
+                    invSchList.Add(invSchCode);
+
+                }
+
+                var result = GeneralFunctions.ConvertInvSchs(invSchList);
+
+                string selInvSchs = result.SelInvSchs; int rowCount = result.rowCount;
+
+                // Final SQL query string
+
+                DataTable dt2 = DataLogic.GetAllLocationsOfLocLevel0AgainstLocID(quarterlyReportRequestParams, SP_GetLocAgainstLocID);  //LocID, LocDesc
+
+                #region Finding Inventory Schedules
+
+                dt2.Columns.Add("PhysicalCount", typeof(string));
+                dt2.Columns.Add("LocationCount", typeof(string));
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    string[] invLocSplit = dt.Rows[i]["InvLoc"].ToString().Split("|");  //3-1-1|3-2-1|15-1-1
+                    string invScCode = dt.Rows[i]["InvSchCode"].ToString();
+                    string invSchDesc = dt.Rows[i]["InvDesc"].ToString();
+                    string locDesc = string.Empty;
+                    int inc = 0;
+                    string previousSubString = string.Empty;
+                    for (int j = 0; j < invLocSplit.Length; j++)    //3-1-1     3-2-1    15-1-1
+                    {
+                        if (j > 0)
+                        {
+                            string previousValue = invLocSplit[j - 1];
+                            previousSubString = previousValue.Substring(0, previousValue.IndexOf("-"));
+                        }
+                        string invLocSubString = invLocSplit[j].Substring(0, invLocSplit[j].IndexOf("-"));  //3 3 
+                        if (previousSubString != invLocSubString)
+                        {
+                            DataRow[] foundRows = dt2.Select("LocID = '" + invLocSubString + "'");
+                            if (foundRows.Length > 0)
+                            {
+                                string numOfPhyCount = foundRows[0]["PhysicalCount"].ToString();
+                                if (numOfPhyCount == "")
+                                {
+                                    inc = 1;
+                                    foundRows[0]["PhysicalCount"] = inc;
+                                }
+                                else
+                                {
+                                    foundRows[0]["PhysicalCount"] = Convert.ToInt32(foundRows[0]["PhysicalCount"]) + 1;
+                                }
+                            }
+                        }
+
+
+                    };
+                };
+
+                #endregion
+
+                #region Finding Total Locations
+
+                //DataTable originalTable = /* your input table */;
+                // Step 2: Flatten all locations into another table
+                DataTable locationSummaryTable = new DataTable();
+                locationSummaryTable.Columns.Add("Location", typeof(string));
+                locationSummaryTable.Columns.Add("Count", typeof(int));
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    string invLoc = row["InvLoc"]?.ToString();
+                    if (string.IsNullOrWhiteSpace(invLoc)) continue;
+
+                    foreach (string loc in invLoc.Split('|'))
+                    {
+                        if (!string.IsNullOrWhiteSpace(loc))
+                        {
+                            locationSummaryTable.Rows.Add(loc.Trim(), 1);
+                        }
+                    }
+                }
+
+                // Step 3: Group by Location and Sum the Count
+                DataTable groupedTable = new DataTable();
+                groupedTable.Columns.Add("Location", typeof(string));
+                groupedTable.Columns.Add("TotalCount", typeof(int));
+
+                var grouped1 = locationSummaryTable.AsEnumerable()
+                    .GroupBy(r => r.Field<string>("Location"))
+                    .Select(g => new
+                    {
+                        Location = g.Key,
+                        TotalCount = g.Sum(r => r.Field<int>("Count"))
+                    });
+
+                foreach (var item in grouped1)
+                {
+                    groupedTable.Rows.Add(item.Location, item.TotalCount);
+                }
+
+                // Step 3: Group by the value before the first hyphen and sum the TotalCounts
+                DataTable finalGroupTable = new DataTable();
+                finalGroupTable.Columns.Add("RegionID", typeof(string));      // The left-most value
+                finalGroupTable.Columns.Add("RegionCount", typeof(int));      // Summed count
+
+                var regionGrouped = groupedTable.AsEnumerable()
+                    .Select(row => new
+                    {
+                        RegionID = row.Field<string>("Location").Split('-')[0],        // Get value before first hyphen
+                        Count = row.Field<int>("TotalCount")
+                    })
+                    .GroupBy(x => x.RegionID)
+                    .Select(g => new
+                    {
+                        RegionID = g.Key,
+                        RegionCount = g.Sum(x => x.Count)
+                    });
+
+                foreach (var item in regionGrouped)
+                {
+                    finalGroupTable.Rows.Add(item.RegionID, item.RegionCount);
+                }
+
+                for (int i = 0; i < dt2.Rows.Count; i++)
+                {
+                    string locIDfrom_DT2 = dt2.Rows[i]["LocID"].ToString();
+                    for (int j = 0; j < finalGroupTable.Rows.Count; j++)
+                    {
+                        string locIDfrom_finalGroupTable = finalGroupTable.Rows[j]["RegionID"].ToString();
+
+                        if (locIDfrom_finalGroupTable == locIDfrom_DT2)
+                        {
+                            dt2.Rows[i]["LocationCount"] = finalGroupTable.Rows[j]["RegionCount"].ToString();
+                        }
+                    }
+
+                }
+
+                #endregion
+
+                #region Finding Total Assets Found, Transferred, Missing and Found Assets Percentage in a Main Location
+
+                //using this condition so that in any case of assetFoundColumn, assetTransferredColumn or assetMissingColumn it will fill the ast_History_Table
+                DataTable ast_History_Table = new DataTable();
+
+                quarterlyReportRequestParams.AssetFoundColumn = (quarterlyReportRequestParams.AssetFoundPercentage == 1) ? 1 : quarterlyReportRequestParams.AssetFoundColumn;
+
+                if (quarterlyReportRequestParams.AssetFoundColumn == 1 || quarterlyReportRequestParams.AssetTransferredColumn == 1 || quarterlyReportRequestParams.AssetMissingColumn == 1 || quarterlyReportRequestParams.AssetFoundPercentage == 1)
+                {
+                    ast_History_Table = DataLogic.GetAllAssetsAgainstInvSchs(selInvSchs, SP_GetAst_HistoryAssets);
+                }
+
+                #region Assets Count Column
+
+                if (quarterlyReportRequestParams.AssetsCountColumn == 1)
+                {
+                    dt2.Columns.Add("AssetsCount", typeof(string));
+                }
+
+                DataTable totalAssetsLocWise = new DataTable();
+
+                if (quarterlyReportRequestParams.AssetFoundPercentage == 1 || quarterlyReportRequestParams.AssetsCountColumn == 1)
+                {
+                    totalAssetsLocWise = DataLogic.GetAllAssetsAgainstLocID(quarterlyReportRequestParams, SP_GetAllAssetsAgainstLocID);
+                }
+
+                if (quarterlyReportRequestParams.AssetsCountColumn == 1)
+                {
+                    for (int percentageLoop = 0; percentageLoop < totalAssetsLocWise.Rows.Count; percentageLoop++)
+                    {
+                        int? mainLocationValue = Convert.ToInt32(totalAssetsLocWise.Rows[percentageLoop]["MainLocation"]);
+                        int? totalAssetsLocWiseValue = Convert.ToInt32(totalAssetsLocWise.Rows[percentageLoop]["TotalNumberOfAssetsExists"]);
+
+                        for (int dt2Loop = 0; dt2Loop < dt2.Rows.Count; dt2Loop++)
+                        {
+                            int? dt2_LocIDValue = Convert.ToInt32(dt2.Rows[dt2Loop]["LocID"]);
+
+                            if (mainLocationValue == dt2_LocIDValue)
+                            {
+                                string locID = dt2.Rows[dt2Loop]["LocID"].ToString();
+
+                                DataRow[] targetRows = dt2.Select($"LocID = '{locID}'");
+
+                                if (targetRows.Length > 0)
+                                {
+                                    targetRows[0]["AssetsCount"] = totalAssetsLocWiseValue;
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+
+                #endregion
+
+                if (selInvSchs == "")
+                {
+                    if (quarterlyReportRequestParams.AssetFoundColumn == 1)
+                    {
+                        dt2.Columns.Add("AssetsFound", typeof(string));
+                    }
+                    if (quarterlyReportRequestParams.AssetTransferredColumn == 1)
+                    {
+                        dt2.Columns.Add("AssetsTransferred", typeof(string));
+                    }
+                    if (quarterlyReportRequestParams.AssetMissingColumn == 1)
+                    {
+                        dt2.Columns.Add("AssetsMissing", typeof(string));
+                    }
+                    if (quarterlyReportRequestParams.AssetFoundPercentage == 1)
+                    {
+                        dt2.Columns.Add("%OfAssetsFound", typeof(string));
+                    }
+
+                    return Ok(dt2);
+                }
+
+                #region Asset Found Column Case
+
+                if (quarterlyReportRequestParams.AssetFoundColumn == 1)
+                {
+                    if (quarterlyReportRequestParams.AssetFoundPercentage == 1)
+                    {
+                        if (!dt2.Columns.Contains("AssetsCount"))
+                        {
+                            dt2.Columns.Add("AssetsCount", typeof(string));
+                        }
+
+                    }
+                    dt2.Columns.Add("AssetsFound", typeof(string));
+
+                    DataTable ast_history_TempDT = new DataTable();
+                    ast_history_TempDT.Columns.Add("MainLocation", typeof(string));
+                    ast_history_TempDT.Columns.Add("AssetCount", typeof(int));
+
+                    for (int i = 0; i < ast_History_Table.Rows.Count; i++)
+                    {
+                        string? fullLoc = ast_History_Table.Rows[i]["CurrLoc"]?.ToString();
+                        int? Status = Convert.ToInt32(ast_History_Table.Rows[i]["Status"]);
+
+                        if (Status == 1)
+                        {
+
+                            if (!string.IsNullOrWhiteSpace(fullLoc) && fullLoc.Contains("-"))
+                            {
+                                string[] parts = fullLoc.Split('-');
+                                string mainLocation = parts[0]; // safer than Substring
+
+                                // Check if mainLocation already exists in the temp table
+                                DataRow[] existingRows = ast_history_TempDT.Select($"MainLocation = '{mainLocation}'");
+
+                                if (existingRows.Length > 0)
+                                {
+                                    // Increment the existing count
+                                    existingRows[0]["AssetCount"] = Convert.ToInt32(existingRows[0]["AssetCount"]) + 1;
+                                }
+                                else
+                                {
+                                    // Add a new row
+                                    ast_history_TempDT.Rows.Add(mainLocation, 1);
+                                }
+                            }
+                        }
+                    }
+
+                    // Loop through ast_history_TempDT to update dt2
+                    foreach (DataRow sourceRow in ast_history_TempDT.Rows)
+                    {
+                        string mainLocation = sourceRow["MainLocation"].ToString();
+                        int assetCount = Convert.ToInt32(sourceRow["AssetCount"]);
+
+                        // Match LocID with MainLocation
+                        DataRow[] targetRows = dt2.Select($"LocID = '{mainLocation}'");
+
+                        if (targetRows.Length > 0)
+                        {
+                            targetRows[0]["AssetsFound"] = assetCount;
+                        }
+                    }
+                }
+
+                #endregion
+
+                #region Asset Transferred Column Case
+
+                if (quarterlyReportRequestParams.AssetTransferredColumn == 1)
+                {
+
+                    dt2.Columns.Add("AssetsTransferred", typeof(string));
+
+                    DataTable ast_history_TempDT = new DataTable();
+                    ast_history_TempDT.Columns.Add("MainLocation", typeof(string));
+                    ast_history_TempDT.Columns.Add("AssetCount", typeof(int));
+
+                    for (int i = 0; i < ast_History_Table.Rows.Count; i++)
+                    {
+                        string? fullLoc = ast_History_Table.Rows[i]["CurrLoc"]?.ToString();
+                        int? Status = Convert.ToInt32(ast_History_Table.Rows[i]["Status"]);
+
+                        if (Status == 3)
+                        {
+
+                            if (!string.IsNullOrWhiteSpace(fullLoc) && fullLoc.Contains("-"))
+                            {
+                                string[] parts = fullLoc.Split('-');
+                                string mainLocation = parts[0]; // safer than Substring
+
+                                // Check if mainLocation already exists in the temp table
+                                DataRow[] existingRows = ast_history_TempDT.Select($"MainLocation = '{mainLocation}'");
+
+                                if (existingRows.Length > 0)
+                                {
+                                    // Increment the existing count
+                                    existingRows[0]["AssetCount"] = Convert.ToInt32(existingRows[0]["AssetCount"]) + 1;
+                                }
+                                else
+                                {
+                                    // Add a new row
+                                    ast_history_TempDT.Rows.Add(mainLocation, 1);
+                                }
+                            }
+                        }
+                    }
+
+                    // Loop through ast_history_TempDT to update dt2
+                    foreach (DataRow sourceRow in ast_history_TempDT.Rows)
+                    {
+                        string mainLocation = sourceRow["MainLocation"].ToString();
+                        int assetCount = Convert.ToInt32(sourceRow["AssetCount"]);
+
+                        // Match LocID with MainLocation
+                        DataRow[] targetRows = dt2.Select($"LocID = '{mainLocation}'");
+
+                        if (targetRows.Length > 0)
+                        {
+                            targetRows[0]["AssetsTransferred"] = assetCount;
+                        }
+                    }
+                }
+
+                #endregion
+
+                #region Asset Missing Column Case
+
+                if (quarterlyReportRequestParams.AssetMissingColumn == 1)
+                {
+
+                    dt2.Columns.Add("AssetsMissing", typeof(string));
+
+                    DataTable ast_history_TempDT = new DataTable();
+                    ast_history_TempDT.Columns.Add("MainLocation", typeof(string));
+                    ast_history_TempDT.Columns.Add("AssetCount", typeof(int));
+
+                    for (int i = 0; i < ast_History_Table.Rows.Count; i++)
+                    {
+                        string? fullLoc = ast_History_Table.Rows[i]["CurrLoc"]?.ToString();
+                        int? Status = Convert.ToInt32(ast_History_Table.Rows[i]["Status"]);
+
+                        if (Status == 0)
+                        {
+
+                            if (!string.IsNullOrWhiteSpace(fullLoc) && fullLoc.Contains("-"))
+                            {
+                                string[] parts = fullLoc.Split('-');
+                                string mainLocation = parts[0]; // safer than Substring
+
+                                // Check if mainLocation already exists in the temp table
+                                DataRow[] existingRows = ast_history_TempDT.Select($"MainLocation = '{mainLocation}'");
+
+                                if (existingRows.Length > 0)
+                                {
+                                    // Increment the existing count
+                                    existingRows[0]["AssetCount"] = Convert.ToInt32(existingRows[0]["AssetCount"]) + 1;
+                                }
+                                else
+                                {
+                                    // Add a new row
+                                    ast_history_TempDT.Rows.Add(mainLocation, 1);
+                                }
+                            }
+                        }
+                    }
+
+                    // Loop through ast_history_TempDT to update dt2
+                    foreach (DataRow sourceRow in ast_history_TempDT.Rows)
+                    {
+                        string mainLocation = sourceRow["MainLocation"].ToString();
+                        int assetCount = Convert.ToInt32(sourceRow["AssetCount"]);
+
+                        // Match LocID with MainLocation
+                        DataRow[] targetRows = dt2.Select($"LocID = '{mainLocation}'");
+
+                        if (targetRows.Length > 0)
+                        {
+                            targetRows[0]["AssetsMissing"] = assetCount;
+                        }
+                    }
+                }
+
+                #endregion
+
+                #region Finding Percentage of Assets Found
+
+                if (quarterlyReportRequestParams.AssetFoundPercentage == 1)
+                {
+
+                    dt2.Columns.Add("%OfAssetsFound", typeof(string));
+
+                    for (int percentageLoop = 0; percentageLoop < totalAssetsLocWise.Rows.Count; percentageLoop++)
+                    {
+                        int? mainLocationValue = Convert.ToInt32(totalAssetsLocWise.Rows[percentageLoop]["MainLocation"]);
+                        int? totalAssetsLocWiseValue = Convert.ToInt32(totalAssetsLocWise.Rows[percentageLoop]["TotalNumberOfAssetsExists"]);
+
+                        for (int dt2Loop = 0; dt2Loop < dt2.Rows.Count; dt2Loop++)
+                        {
+                            int? dt2_LocIDValue = Convert.ToInt32(dt2.Rows[dt2Loop]["LocID"]);
+                            int? dt2_AssetFoundColumnValue = dt2.Rows[dt2Loop]["AssetsFound"] != DBNull.Value ? Convert.ToInt32(dt2.Rows[dt2Loop]["AssetsFound"]) : 0;
+
+                            if (mainLocationValue == dt2_LocIDValue)
+                            {
+                                //double percentageValue = Convert.ToDouble((dt2_AssetFoundColumnValue / totalAssetsLocWiseValue) * 100);
+                                double percentageValue = ((double)(dt2_AssetFoundColumnValue ?? 0) / (double)(totalAssetsLocWiseValue ?? 1)) * 100;
+
+                                string locID = dt2.Rows[dt2Loop]["LocID"].ToString();
+
+                                DataRow[] targetRows = dt2.Select($"LocID = '{locID}'");
+
+                                if (targetRows.Length > 0)
+                                {
+                                    double assetsFoundPercentage = Math.Round(percentageValue, 2);
+                                    targetRows[0]["%OfAssetsFound"] = assetsFoundPercentage.ToString() + " %";
+                                    targetRows[0]["AssetsCount"] = totalAssetsLocWiseValue;
+                                }
+
+                            }
+                        }
+
+                    }
+
+                    if (quarterlyReportRequestParams.AssetsCountColumn != 1)
+                    {
+                        if (dt2.Columns.Contains("AssetsCount"))
+                        {
+                            dt2.Columns.Remove("AssetsCount");
+                        }
+                    }
+                }
+
+                #endregion
+
+                #endregion
+
+                //DateTime endTime = DateTime.Now;
+
+                //TimeSpan duration = endTime - startTime;
+
+                return Ok(dt2);
+
+            }
+            catch (Exception ex)
+            {
+                msg.message = ex.Message;
+                return Ok(msg);
+            }
+        }
+
+        #endregion
 
         #endregion
 

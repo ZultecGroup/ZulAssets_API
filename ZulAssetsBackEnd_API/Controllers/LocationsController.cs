@@ -25,6 +25,7 @@ namespace ZulAssetsBackEnd_API.Controllers
         private static string SP_CheckAssetsCountAgainstLocID = "[dbo].[SP_CheckAssetsCountAgainstLocID]";
         private static string SP_CheckChildForLocation = "[dbo].[SP_CheckChildForLocation]";
         private static string SP_GetInvLocAgainstDevSerialNo = "[dbo].[SP_GetInvLocAgainstDevSerialNo]";
+        private static string SP_GetLocationsOfLocLevel0 = "[dbo].[SP_GetLocationsOfLocLevel0]";
 
         private readonly IConfiguration _configuration;
 
@@ -432,6 +433,47 @@ namespace ZulAssetsBackEnd_API.Controllers
                             return Ok(dt);
                         }
                     }
+                }
+            }
+            catch (Exception ex)
+            {
+                msg.message = ex.Message;
+                return Ok(msg);
+            }
+        }
+
+        #endregion
+
+        #region Get All Locations of LocLevel = 0
+
+        /// <summary>
+        /// Get All Locations of LocLevel 0 by passing the "LoginName" and others as blank to get Locations of current user company
+        /// </summary>
+        /// <returns>Returns a message "Device is created"</returns>
+        [HttpPost("GetAllLocationsOfLocLevel0")]
+        [Authorize]
+        public IActionResult GetAllLocationsOfLocLevel0(QuarterlyReportRequestParams quarterlyReportRequestParams)
+        {
+            Message msg = new Message();
+            try
+            {
+                DataTable dt = DataLogic.GetAllLocationsOfLocLevel0(quarterlyReportRequestParams, SP_GetLocationsOfLocLevel0);
+                if (dt.Rows.Count > 0)
+                {
+                    if (dt.Columns.Contains("ErrorMessage"))
+                    {
+                        msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                        msg.status = "401";
+                        return Ok(msg);
+                    }
+                    else
+                    {
+                        return Ok(dt);
+                    }
+                }
+                else
+                {
+                    return Ok(dt);
                 }
             }
             catch (Exception ex)

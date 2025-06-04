@@ -1818,5 +1818,56 @@ namespace ZulAssetsBackEnd_API.DAL
 
         #endregion
 
+        #region CustodianIDs
+
+        public static (string SelCustodians, int rowCount) ConvertCustodianIDs(List<string> custodianIDs)
+        {
+            string SelCustodians = string.Empty;
+            int rowCount = 0;
+
+            for (int i = 0; i < custodianIDs.Count; i++)
+            {
+                rowCount = i + 1; // Increment count with each item
+                string formatted = "'" + custodianIDs[i].Replace("|", "','") + "'";
+                SelCustodians = string.IsNullOrWhiteSpace(SelCustodians) ? formatted : SelCustodians + "," + formatted;
+            }
+
+            if (!string.IsNullOrWhiteSpace(SelCustodians))
+            {
+                SelCustodians = "(" + SelCustodians + ")";
+            }
+
+            return (SelCustodians, rowCount);
+        }
+
+        #endregion
+
+        #region InvSchs
+
+        public static (string SelInvSchs, int rowCount) ConvertInvSchs(List<string> invSchs)
+        {
+            string SelInvSchs = string.Empty;
+            int rowCount = 0;
+
+            for (int i = 0; i < invSchs.Count; i++)
+            {
+                //rowCount = i + 1; // Increment count with each item
+                //string formatted = "'" + invSchs[i].Replace("|", "','") + "'";
+                //SelInvSchs = string.IsNullOrWhiteSpace(SelInvSchs) ? formatted : SelInvSchs + "," + formatted;
+                rowCount = i + 1;
+                // Building SelInvCode
+                SelInvSchs = SelInvSchs.Trim().Length == 0 ? invSchs[i] : SelInvSchs + "','" + invSchs[i];
+            }
+
+            if (!string.IsNullOrWhiteSpace(SelInvSchs))
+            {
+                SelInvSchs = "('" + SelInvSchs + "')";
+            }
+
+            return (SelInvSchs, rowCount);
+        }
+
+        #endregion
+
     }
 }

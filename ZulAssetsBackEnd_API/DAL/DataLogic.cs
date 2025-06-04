@@ -604,6 +604,20 @@ namespace ZulAssetsBackEnd_API.DAL
 
         #endregion
 
+        #region Get All Assets From Ast_History Against Inv Schs
+
+        public static DataTable GetAllAssetsAgainstInvSchs(string InvSchs, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters =
+            {
+                new SqlParameter("@invSchs", InvSchs)
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
         #region Get Assets Details
 
         #region Get All Assets Details
@@ -1457,6 +1471,19 @@ namespace ZulAssetsBackEnd_API.DAL
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@LocID", locTree.LocId),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Get All Locations of LocLevel = 0
+
+        public static DataTable GetAllLocationsOfLocLevel0(QuarterlyReportRequestParams quarterlyReportRequestParams, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                    new SqlParameter ("@LoginName", quarterlyReportRequestParams.LoginName),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -3426,6 +3453,19 @@ namespace ZulAssetsBackEnd_API.DAL
 
         #endregion
 
+        #region Get All In Process Inventory Schedules
+
+        public static DataSet GetInProcessInvSchs(string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                };
+            return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
+
+        }
+
+        #endregion
+
         #region Insert Inventory Schedules
 
         public static DataTable InsertInvSch(InvSchReqParam invSchReqParam, string locIDs, string deviceHardwareIDs, string formattedLocIDs, string StoreProcedure)
@@ -3503,6 +3543,19 @@ namespace ZulAssetsBackEnd_API.DAL
             DbReports CGD = new DbReports();
             SqlParameter[] sqlParameters = {
                 new SqlParameter ("@Delete", invSchReqParam.Delete),
+                new SqlParameter ("@InvSchCode", invSchReqParam.InvSchCode),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Validate Inventory Schedules
+
+        public static DataTable ValidateInvSch(InvSchReqParam invSchReqParam, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
                 new SqlParameter ("@InvSchCode", invSchReqParam.InvSchCode),
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
@@ -4339,6 +4392,8 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@IsOfflineMachine", sysConfigReqParams.IsOfflineMachine),
                 new SqlParameter ("@ShowAlarmOnStartup", sysConfigReqParams.ShowAlarmOnStartup),
                 new SqlParameter ("@AlarmBeforeDays", sysConfigReqParams.AlarmBeforeDays),
+                new SqlParameter ("@DescForLabelPrinting", sysConfigReqParams.DescForLabelPrinting),
+
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -4366,6 +4421,8 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@IsOfflineMachine", sysConfigReqParams.IsOfflineMachine),
                 new SqlParameter ("@ShowAlarmOnStartup", sysConfigReqParams.ShowAlarmOnStartup),
                 new SqlParameter ("@AlarmBeforeDays", sysConfigReqParams.AlarmBeforeDays),
+                new SqlParameter ("@DescForLabelPrinting", sysConfigReqParams.DescForLabelPrinting),
+
             };
             return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
         }
@@ -5180,6 +5237,67 @@ namespace ZulAssetsBackEnd_API.DAL
                 new SqlParameter ("@PageSize", pageSize),
             };
             return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Extended Reports
+
+        #region Asset Statement Report
+
+        public static DataSet AssetStatementReport(string selCustodians, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                new SqlParameter ("@Custodians", selCustodians)
+            };
+            return CGD.DSWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Quarterly Report
+
+        public static DataTable QuarterlyReport(string Quarter, string Year, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                new SqlParameter ("@Quarter", Quarter),
+                new SqlParameter ("@Year", Year),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Get Location of LocLevel = 1 Against LocID
+
+        public static DataTable GetAllLocationsOfLocLevel0AgainstLocID(QuarterlyReportRequestParams quarterlyReportRequestParams, string StoreProcedure)
+        {
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                    new SqlParameter ("@LoginName", quarterlyReportRequestParams.LoginName),
+                    new SqlParameter ("@LocID", quarterlyReportRequestParams.LocID),
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+        }
+
+        #endregion
+
+        #region Get All Assets Against LocID
+
+        public static DataTable GetAllAssetsAgainstLocID(QuarterlyReportRequestParams quarterlyReportRequestParams, string StoreProcedure)
+        {
+
+            DbReports CGD = new DbReports();
+            SqlParameter[] sqlParameters = {
+                new SqlParameter ("@LoginName", quarterlyReportRequestParams.LoginName),
+                new SqlParameter ("@LocID", quarterlyReportRequestParams.LocID)
+            };
+            return CGD.DTWithParam(StoreProcedure, sqlParameters, 1);
+
         }
 
         #endregion

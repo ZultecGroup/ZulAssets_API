@@ -1190,6 +1190,8 @@ namespace ZulAssetsBackEnd_API.BAL
             public bool ShowAlarmOnStartup { get; set; } = false;
             public int AlarmBeforeDays { get; set; } = 0;
             public string LoginName { get; set; } = "";
+            public bool DescForLabelPrinting { get; set; } = false;
+
         }
 
         #endregion
@@ -1352,6 +1354,7 @@ namespace ZulAssetsBackEnd_API.BAL
             public string CompanyName { get; set; }
 
         }
+
         #endregion
 
         #region Reports
@@ -1439,6 +1442,41 @@ namespace ZulAssetsBackEnd_API.BAL
             public string LocID { get; set; }
         }
 
+        #endregion
+
+        #endregion
+
+        #region Extended Reports
+
+        #region General Parameters for Reports
+
+        public class BulkSelectionParameters
+        {
+            public List<Custodian> Custodian { get; set; } = new List<Custodian>();
+        }
+
+        public class Custodian
+        {
+            public string CustodianID { get; set; }
+        }
+
+        #endregion
+
+        #region Quarterly Report parameters
+
+        public class QuarterlyReportRequestParams
+        {
+            public string? LoginName { get; set; } = "";
+            public int? LocID { get; set; }
+            public int? AssetsCountColumn { get; set; } = 0;
+            public int? AssetFoundColumn { get; set; } = 0;
+            public int? AssetTransferredColumn { get; set; } = 0;
+            public int? AssetMissingColumn { get; set; } = 0;
+            public int? AssetFoundPercentage { get; set; } = 0;
+            public string? Year { get; set; } = "";
+            public string? Quarterly { get; set; } = "";
+
+        }
         #endregion
 
         #endregion

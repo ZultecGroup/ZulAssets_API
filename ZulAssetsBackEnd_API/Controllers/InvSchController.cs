@@ -22,6 +22,8 @@ namespace ZulAssetsBackEnd_API.Controllers
         private static string SP_GetInsertUpdateDeleteInvSch = "[dbo].[SP_GetInsertUpdateDeleteInvSch]";
         private static string SP_CheckCountForAstHistoryAgainstInvSchCode = "[dbo].[SP_CheckCountForAstHistoryAgainstInvSchCode]";
         private static string SP_DeleteAstHistoryAgainstInvSchCode = "[dbo].[SP_DeleteAstHistoryAgainstInvSchCode]";
+        private static string SP_GetInProcessInventorySchedules = "[dbo].[SP_GetInProcessInventorySchedules]";
+        private static string SP_ValidateAst_HistoryData = "[dbo].[SP_ValidateAst_HistoryData]";
 
         #endregion
 
@@ -113,6 +115,70 @@ namespace ZulAssetsBackEnd_API.Controllers
                         {
                             totalRowsCount = totalRowsCounts,
                             data = resultList
+                        });
+                    }
+                }
+                else
+                {
+                    return Ok(ds);
+                }
+            }
+            catch (Exception ex)
+            {
+                msg.message = ex.Message;
+                return Ok(msg);
+            }
+        }
+
+        #endregion
+
+        #region Get All In Process Inventory Schedules
+        /// <summary>
+        /// Get all In Process Inventory Schedules
+        /// </summary>
+        /// <returns>This will return all the Inventory Schedules</returns>
+        [HttpPost("GetInProcessInvSchs")]
+        [Authorize]
+        public IActionResult GetInProcessInvSchs()
+        {
+            Message msg = new Message();
+            try
+            {
+                DataSet ds = DataLogic.GetInProcessInvSchs(SP_GetInProcessInventorySchedules);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    if (ds.Tables[0].Columns.Contains("ErrorMessage"))
+                    {
+                        msg.message = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                        msg.status = "401";
+                        return Ok(msg);
+                    }
+                    else
+                    {
+
+                        #region Replace Table Names
+
+                        DataTable table = ds.Tables["Table"];
+                        DataTable table1 = ds.Tables["Table1"];
+
+                        // Set table names for clarity
+                        table.TableName = "data";
+
+                        #endregion
+
+                        #region Total Rows Count
+
+                        // Convert the TotalRowsCount to the integer
+                        int totalRowsCounts = Convert.ToInt32(table.Rows.Count);
+
+                        #endregion
+
+
+                        // Return the final structured response
+                        return Ok(new
+                        {
+                            totalRowsCount = totalRowsCounts,
+                            data = ds
                         });
                     }
                 }
@@ -317,6 +383,57 @@ namespace ZulAssetsBackEnd_API.Controllers
                     msg.status = "401";
                     return Ok(msg);
                 }
+
+            }
+            catch (Exception ex)
+            {
+                msg.message = ex.Message;
+                return Ok(msg);
+            }
+        }
+
+        #endregion
+
+        #region Validate Inventory Scheduler
+
+        /// <summary>
+        /// Delete a Inventory Scheduler by passing "Delete = 1" and InvSchCode as parameters and others as empty
+        /// </summary>
+        /// <returns>This will return a message of success</returns>
+        [HttpPost("ValidateInvSch")]
+        [Authorize]
+        public IActionResult ValidateInvSch([FromBody] InvSchReqParam invSchReqParam)
+        {
+            Message msg = new Message();
+            try
+            {
+                DataTable dt = DataLogic.ValidateInvSch(invSchReqParam, SP_ValidateAst_HistoryData);
+                if (dt.Rows.Count > 0)
+                {
+                    if (dt.Columns.Contains("ErrorMessage"))
+                    {
+                        msg.message = dt.Rows[0]["ErrorMessage"].ToString();
+                        msg.status = "401";
+                        return Ok(msg);
+                    }
+                    else
+                    {
+                        //var logResult = GeneralFunctions.CreateAndWriteToFile("Inventory Schedule", "Deleted", invSchReqParam.LoginName);
+                        string msgFromDB = dt.Rows[0]["Message"].ToString();
+                        if (msgFromDB.Contains("successfully"))
+                        {
+                            DataTable dt2 = DataLogic.InsertAuditLogs("Inventory Schedule", 1, "Insert", invSchReqParam.LoginName, "dbo.Ast_History");
+                        }
+                        msg.message = dt.Rows[0]["Message"].ToString();
+                        msg.status = dt.Rows[0]["Status"].ToString();
+                        return Ok(msg);
+                    }
+                }
+                else
+                {
+                    return Ok(dt);
+                }
+
             }
             catch (Exception ex)
             {

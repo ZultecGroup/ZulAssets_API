@@ -23,7 +23,6 @@ namespace ZulAssetsBackEnd_API.Controllers
 
         #endregion
 
-
         #region Get All Roles
         /// <summary>
         /// Get all Roles by passing a parameter "Get = 1 and others as empty"
