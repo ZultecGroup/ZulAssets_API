@@ -173,7 +173,6 @@ namespace ZulAssetsBackEnd_API.Controllers
 
                         #endregion
 
-
                         // Return the final structured response
                         return Ok(new
                         {
@@ -184,7 +183,12 @@ namespace ZulAssetsBackEnd_API.Controllers
                 }
                 else
                 {
-                    return Ok(ds);
+                    // Return the final structured response
+                    return Ok(new
+                    {
+                        totalRowsCount = 0,
+                        data = ds
+                    });
                 }
             }
             catch (Exception ex)
