@@ -96,7 +96,8 @@ namespace ZulAssetsBackEnd_API.Controllers
                 string LocIDs = GeneralFunctions.MergeAllRowsWithQuotes(mergeDT).Replace("|", "','");
                 DataTable dataTable = new DataTable();
                 string connectionString = _configuration.GetConnectionString("DefaultConnection");
-                string query = @"SELECT locid, LocationFullPath AS [Values], LocLevel, REPLACE(CompCode, '\', '-') AS ID FROM Location WHERE LocLevel = (SELECT MAX(locLevel) FROM location) AND locid IN (@LocIDs) ORDER BY LocID;";
+
+                string query = @"SELECT locid, LocationFullPath AS [Values], LocLevel, REPLACE(CompCode, '\', '-') AS ID FROM Location WHERE LocLevel = (SELECT MAX(locLevel) FROM location WHERE locid IN (@LocIDs)) AND locid IN (@LocIDs) ORDER BY LocID;";
 
                 // Replace @LocIDs with the actual string in the query
                 query = query.Replace("@LocIDs", LocIDs);
